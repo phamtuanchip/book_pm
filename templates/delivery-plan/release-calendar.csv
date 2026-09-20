@@ -1,0 +1,37 @@
+﻿Start_Date,End_Date,Type,Event,Environment,Tag,Owner,Deploy_Allowed,Notes
+2026-01-05,2026-01-05,Mốc,Kickoff,—,,Hà,Có,
+2026-01-30,2026-01-30,Quyết định,"Chốt chiến lược nhánh + Delivery Plan (GitFlow-lite, SemVer)",—,,"Dũng, Hà",Có,DL-005
+2026-02-16,2026-02-20,Nghỉ lễ,Tết Nguyên Đán,Tất cả,,—,Không deploy,Đóng băng mọi thay đổi
+2026-02-27,2026-02-27,Phát hành nội bộ,Kết thúc Sprint 1 → staging,Staging,v0.1.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 8
+2026-03-13,2026-03-13,Phát hành nội bộ,Kết thúc Sprint 2 → staging,Staging,v0.2.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 10
+2026-03-27,2026-03-27,Phát hành nội bộ,Kết thúc Sprint 3 → staging,Staging,v0.3.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 12
+2026-04-10,2026-04-10,Phát hành nội bộ,Kết thúc Sprint 4 → staging,Staging,v0.4.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 14
+2026-04-24,2026-04-24,Phát hành nội bộ,Kết thúc Sprint 5 → staging,Staging,v0.5.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 16
+2026-04-27,2026-04-27,Nghỉ lễ,Nghỉ bù Giỗ Tổ,Tất cả,,—,Không deploy,
+2026-04-30,2026-05-01,Nghỉ lễ,30/4–1/5,Tất cả,,—,Không deploy,
+2026-05-08,2026-05-08,Phát hành nội bộ,Kết thúc Sprint 6 → staging,Staging,v0.6.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 18
+2026-05-22,2026-05-22,Phát hành nội bộ,Kết thúc Sprint 7 → staging,Staging,v0.7.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 20
+2026-06-03,2026-06-03,Mốc,Demo chạy thật cho HĐQT,Staging,v0.8.0 (bản trước),Hà,Có,
+2026-06-05,2026-06-05,Phát hành nội bộ,Kết thúc Sprint 8 → staging,Staging,v0.8.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 22
+2026-06-19,2026-06-19,Phát hành nội bộ,Kết thúc Sprint 9 → staging,Staging,v0.9.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 24
+2026-07-03,2026-07-03,Phát hành nội bộ,Kết thúc Sprint 10 → staging,Staging,v0.10.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 26
+2026-07-13,2026-07-13,Freeze,Scope Freeze (không nhận phạm vi mới),—,,"Hà, Châu",—,
+2026-07-17,2026-07-17,Phát hành nội bộ,Kết thúc Sprint 11 → staging,Staging,v0.11.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 28
+2026-07-17,2026-07-17,Freeze,Feature complete,Develop,v0.11.0,Dũng,—,
+2026-07-24,2026-07-24,Freeze,Cắt release/1.0.0; code freeze cho rc,Release,,"Dũng, Ánh",Có,Chỉ sửa lỗi từ đây
+2026-07-27,2026-08-21,UAT,UAT vòng 1 (rc.1),UAT,v1.0.0-rc.1,"Châu, Huy, Nam",Có (theo yêu cầu),
+2026-07-31,2026-07-31,Phát hành nội bộ,Kết thúc Sprint 12 → staging,Staging,v0.12.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 30
+2026-08-14,2026-08-14,Phát hành nội bộ,Kết thúc Sprint 13 → staging,Staging,v0.13.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 32
+2026-08-21,2026-08-21,Quyết định,Go/No-Go lần 1 = No-Go,—,,Bảo,—,"47 defect, 3 Critical"
+2026-08-28,2026-08-28,Phát hành nội bộ,Kết thúc Sprint 14 → staging,Staging,v0.14.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 34
+2026-09-02,2026-09-02,Nghỉ lễ,Quốc khánh,Tất cả,,—,Không deploy,
+2026-09-04,2026-09-04,Phát hành nội bộ,rc.2 lên UAT,UAT,v1.0.0-rc.2,Dũng,Có,
+2026-09-07,2026-09-16,UAT,UAT vòng 2,UAT,v1.0.0-rc.2,"Châu, Huy, Nam",Có,
+2026-09-11,2026-09-11,Phát hành nội bộ,Kết thúc Sprint 15 → staging,Staging,v0.15.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 36
+2026-09-16,2026-09-16,Quyết định,Go/No-Go lần 2 = Go,—,,Bảo,—,
+2026-09-17,2026-10-02,Chuẩn bị,"Cutover rehearsal, đào tạo, đóng băng thay đổi",Staging/Prod,,"Dũng, Lan, Ánh",Chỉ theo runbook,Cấm deploy chiều thứ Sáu 25/09 và 02/10 (trừ tag v1.0.0)
+2026-09-25,2026-09-25,Phát hành nội bộ,Kết thúc Sprint 16 → staging,Staging,v0.16.0,"Dũng, Ánh","Có (17:30, sau CI xanh)",Tuần 38
+2026-10-03,2026-10-03,Go-live,Cutover 02:00 thứ Bảy,Production,v1.0.0,Cả đội,Có (cửa sổ 02:00–06:00),
+2026-10-03,2026-10-03,Hotfix,Hotfix cache,Production,v1.0.1,Dũng,Có (khẩn),
+2026-10-03,2026-10-30,Hypercare,Hypercare 4 tuần,Production,,"Hà, Dũng, Nam","Chỉ hotfix, có duyệt",
+2026-11-02,2027-01-24,Chuyển đổi,Backend/web chuyển trunk-based + daily deploy (12 tuần),Production,,"Dũng, Ánh",Theo policy daily,Ch33

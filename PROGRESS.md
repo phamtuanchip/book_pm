@@ -33,10 +33,10 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 27 | Lãnh đạo & quản lý con người | ✅ | 2052 |
 | 28 | Họp hiệu quả & nghi thức dự án | ✅ | 1792 |
 | 29 | PM và kỹ thuật: CI/CD, môi trường, nợ kỹ thuật, DevOps | ✅ | 2071 |
-| 30 | Delivery Plan tổng thể: từ Roadmap đến từng bản phát hành | ⬜ |  |
-| 31 | Chiến lược nhánh: GitFlow, GitHub Flow, Trunk-based | ⬜ |  |
-| 32 | Versioning, Tagging & Release Management theo kế hoạch | ⬜ |  |
-| 33 | Deployment Pipeline & Daily Deployment | ⬜ |  |
+| 30 | Delivery Plan tổng thể: từ Roadmap đến từng bản phát hành | ✅ | 1989 |
+| 31 | Chiến lược nhánh: GitFlow, GitHub Flow, Trunk-based | ✅ | 1985 |
+| 32 | Versioning, Tagging & Release Management theo kế hoạch | ✅ | 1799 |
+| 33 | Deployment Pipeline & Daily Deployment | ✅ | 2451 |
 | 34 | Theo dõi tiến độ: burndown, velocity, EVM | ⬜ |  |
 | 35 | Báo cáo trạng thái & dashboard | ⬜ |  |
 | 36 | Quản lý kỳ vọng & khách hàng khó | ⬜ |  |

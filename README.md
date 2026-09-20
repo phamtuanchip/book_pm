@@ -753,7 +753,7 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9). Cộ
 | M4 | Phần 2 (Ch10–17) + templates `wbs/`, `timeline-gantt/`, `roadmap/`, `estimation/`, `budget/`, `quality/`, `pm-plan/` | 🟨 (còn quality: uat-plan, defect-triage, go-no-go, technical-debt, questions-for-tech-lead ở M7; pm-plan: procurement, vendor-scorecard, folder, decision-log ở M5) |
 | M5 | Phần 3 (Ch18–22) + `risk-raid/`, `change-request/` | ✅ |
 | M6 | Phần 4 (Ch23–29) + `sprint-agile/` | ✅ |
-| M6b | Phần 5 Delivery Plan (Ch30–33) + `delivery-plan/` | ⬜ |
+| M6b | Phần 5 Delivery Plan (Ch30–33) + `delivery-plan/` | ✅ |
 | M7 | Phần 6 (Ch34–38) + `status-report/`, phần còn lại `quality/`, `meeting/` | ⬜ |
 | M8 | Phần 7 (Ch39–41) + `go-live/`, `closure/` | ⬜ |
 | M9 | Phần 8 (Ch42–47) bài tập tình huống + capstone | ⬜ |

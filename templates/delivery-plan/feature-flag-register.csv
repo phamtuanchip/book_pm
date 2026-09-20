@@ -1,0 +1,9 @@
+﻿Flag_ID,Flag_Name,Purpose,Type,Owner,Created,Default_State,Prod_State,Planned_Removal,Status,Ghi_chu
+FF-01,promo_engine,Bật khuyến mãi (R1),Release,Châu,2026-11-16,OFF,OFF,2027-02-28,Đang dùng,Sẽ bật ở R1
+FF-02,dish_reviews,Bật đánh giá món (R1),Release,Châu,2026-11-16,OFF,OFF,2027-02-28,Đang dùng,
+FF-03,new_order_pricing,Logic tính giá mới,Ops/Experiment,Dũng,2026-11-23,OFF,ON (10%),2026-12-31,Đang thử,Canary 10% người dùng
+FF-04,killswitch_payment_card,Tắt thanh toán thẻ khi PayEasy lỗi,Kill switch,Dũng,2026-10-03,ON,ON,,Vĩnh viễn,Kiểm thử mỗi tháng
+FF-05,driver_matching_v2,Thuật toán ghép tài xế mới,Experiment,Backend 2,2026-12-01,OFF,ON (25%),2027-01-31,Đang thử,Đo thời gian giao
+FF-06,notif_batching,Gộp thông báo push,Release,Backend 2,2026-11-09,ON,ON,2026-12-15,Cần dọn,Đã 100% — đề xuất xoá flag
+FF-07,maps_provider_fallback,Chuyển nhà cung cấp bản đồ dự phòng,Kill switch,Ánh,2026-10-03,OFF,OFF,,Vĩnh viễn,
+FF-08,cache_ttl_v2,TTL cache chuẩn hoá,Release,Ánh,2026-10-05,ON,ON,2026-11-30,Đã dọn (30/11),Sau sự cố cache

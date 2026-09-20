@@ -1,0 +1,15 @@
+﻿Week,Start_Date,Deployments,Failed_Deployments,Change_Failure_Rate,Median_Lead_Time_hours,Median_Time_to_Restore_min,Deployment_Frequency_per_day,Ghi_chu
+W1,2026-11-02,3,1,"=ROUND(D2/C2,3)",96,180,"=ROUND(C2/5,2)",Bắt đầu chuyển đổi; deploy còn thủ công có duyệt
+W2,2026-11-09,4,1,"=ROUND(D3/C3,3)",84,165,"=ROUND(C3/5,2)",
+W3,2026-11-16,5,1,"=ROUND(D4/C4,3)",72,150,"=ROUND(C4/5,2)",Tự động deploy staging
+W4,2026-11-23,6,1,"=ROUND(D5/C5,3)",60,140,"=ROUND(C5/5,2)",
+W5,2026-11-30,7,1,"=ROUND(D6/C6,3)",48,120,"=ROUND(C6/5,2)",PR nhỏ ≤ 400 dòng; feature flag đầu tiên
+W6,2026-12-07,8,1,"=ROUND(D7/C7,3)",36,95,"=ROUND(C7/5,2)",
+W7,2026-12-14,9,1,"=ROUND(D8/C8,3)",28,70,"=ROUND(C8/5,2)",Canary prod 10%
+W8,2026-12-21,11,1,"=ROUND(D9/C9,3)",22,6,"=ROUND(C9/5,2)",Một deploy lỗi rollback 6 phút nhờ flag
+W9,2026-12-28,13,1,"=ROUND(D10/C10,3)",14,55,"=ROUND(C10/5,2)",Hằng ngày prod
+W10,2027-01-04,14,1,"=ROUND(D11/C11,3)",10,45,"=ROUND(C11/5,2)",
+W11,2027-01-11,13,1,"=ROUND(D12/C12,3)",8,40,"=ROUND(C12/5,2)",
+W12,2027-01-18,15,2,"=ROUND(D13/C13,3)",6,35,"=ROUND(C13/5,2)",Ổn định
+W1-W4,2026-11-02,=SUM(C2:C5),=SUM(D2:D5),"=ROUND(D14/C14,3)",=MEDIAN(F2:F5),=MEDIAN(G2:G5),"=ROUND(C14/20,2)",Trước chuyển đổi (22%)
+W9-W12,2026-12-28,=SUM(C10:C13),=SUM(D10:D13),"=ROUND(D15/C15,3)",=MEDIAN(F10:F13),=MEDIAN(G10:G13),"=ROUND(C15/20,2)",Sau chuyển đổi (9%)

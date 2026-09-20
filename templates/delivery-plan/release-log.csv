@@ -1,0 +1,21 @@
+﻿Tag,Date,Time,Sprint,Environment,Approved_By,Jira_Fix_Version,Notes,Branch
+v0.1.0,2026-02-27,17:30,Sprint 1,Staging,Dũng + Nam,FN-MVP-0.1,"Đăng nhập, khung app (40% cam kết)",develop
+v0.2.0,2026-03-13,17:30,Sprint 2,Staging,Dũng + Nam,FN-MVP-0.2,"OTP, danh sách nhà hàng",develop
+v0.3.0,2026-03-27,17:30,Sprint 3,Staging,Dũng + Nam,FN-MVP-0.3,"Giỏ hàng, tạo đơn",develop
+v0.4.0,2026-04-10,17:30,Sprint 4,Staging,Dũng + Nam,FN-MVP-0.4,"Nhà hàng nhận đơn, thực đơn",develop
+v0.5.0,2026-04-24,17:30,Sprint 5,Staging,Dũng + Nam,FN-MVP-0.5,"COD, sandbox PayEasy",develop
+v0.6.0,2026-05-08,17:30,Sprint 6,Staging,Dũng + Nam,FN-MVP-0.6,Tài xế nhận chuyến; conflict nhánh được xử lý,develop
+v0.7.0,2026-05-22,17:30,Sprint 7,Staging,Dũng + Nam,FN-MVP-0.7,Điều hướng tài xế,develop
+v0.8.0,2026-06-05,17:30,Sprint 8,Staging,Dũng + Nam,FN-MVP-0.8,"Hủy đơn, thanh toán thẻ (sandbox)",develop
+v0.9.0,2026-06-19,17:30,Sprint 9,Staging,Dũng + Nam,FN-MVP-0.9,"Thông báo, lịch sử đơn",develop
+v0.10.0,2026-07-03,17:30,Sprint 10,Staging,Dũng + Nam,FN-MVP-0.10,Admin người dùng/nhà hàng,develop
+v0.11.0,2026-07-17,17:30,Sprint 11,Staging,Dũng + Nam,FN-MVP-0.11,Feature complete,develop
+v1.0.0-rc.1,2026-07-27,09:00,Sprint 12,UAT,Dũng + Nam + Châu,FN-MVP-1.0,Cắt release/1.0.0 ngày 24/07; feature freeze,release/1.0.0
+v0.12.0,2026-07-31,17:30,Sprint 12,Staging,Dũng + Nam,FN-MVP-0.12,Ổn định sau rc.1,develop
+v0.13.0,2026-08-14,17:30,Sprint 13,Staging,Dũng + Nam,FN-MVP-0.13,Sửa lỗi UAT vòng 1,develop
+v0.14.0,2026-08-28,17:30,Sprint 14,Staging,Dũng + Nam,FN-MVP-0.14,Sửa lỗi Critical/High,develop
+v1.0.0-rc.2,2026-09-04,17:00,Sprint 14/15,UAT,Dũng + Nam + Châu,FN-MVP-1.0,Sau No-Go lần 1: sửa 3 Critical và High,release/1.0.0
+v0.15.0,2026-09-11,17:30,Sprint 15,Staging,Dũng + Nam,FN-MVP-0.15,Ổn định rc.2,develop
+v0.16.0,2026-09-25,17:30,Sprint 16,Staging,Dũng + Nam,FN-MVP-0.16,Bản cuối trước go-live,develop
+v1.0.0,2026-10-02,18:00,Cutover,Production,Bảo (Go/No-Go 16/09) + Hà + Dũng,FN-MVP-1.0,Triển khai 02:00 thứ Bảy 03/10,main
+v1.0.1,2026-10-03,11:30,Hotfix,Production,Hà + Dũng + Bảo (khẩn),FN-MVP-1.0.1,Hotfix cấu hình cache; deploy 12:10,hotfix/1.0.1
