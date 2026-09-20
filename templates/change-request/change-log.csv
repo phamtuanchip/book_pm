@@ -1,0 +1,6 @@
+﻿CR_ID,Date_Requested,Requester,Title,Type,Scope_Impact_pd,Schedule_Impact_weeks,Cost_MVND,Decision,Decision_Date,Approver,Baseline_Changed,Note
+CR-001,2026-03-09,Trần Quốc Bảo,Đưa đặt món theo nhóm vào MVP,Thêm phạm vi,104,4,=F2*1.25,Từ chối — giữ ở R2,2026-03-12,CCB (Bảo chủ trì),Không,Cân nhắc bản tối giản ở R1
+CR-002,2026-04-16,Trần Quốc Bảo,Thêm đăng nhập bằng Apple/Google,Thêm phạm vi,18,1,=F3*1.25,Hoãn — R1,2026-04-23,CCB,Không,Ưu tiên thấp hơn thanh toán
+CR-003,2026-06-22,Phan Quang Huy,Màn hình hướng dẫn cho tài xế mới,Thêm nhỏ,8,0,=F4*1.25,Duyệt — dùng T&M,2026-06-25,CCB,Có (Scope v1.2),Trong ngân sách CR của khách
+CR-004,2026-07-02,Phan Quang Huy,Đổi luồng huỷ đơn theo yêu cầu CS,Đổi trong phạm vi,6,0,=F5*1.25,Duyệt,2026-07-09,CCB,Không,Trong epic E3; PO xếp backlog
+CR-005,2026-08-03,Lê Minh Châu,Sửa quy tắc tính phí giao (lỗi quy tắc),Khẩn cấp,4,0,=F6*1.25,Duyệt khẩn,2026-08-03,Bảo + Hà,Có (Scope v1.3),Duyệt trong 24 giờ

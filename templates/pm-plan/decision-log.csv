@@ -1,0 +1,18 @@
+﻿Decision_ID,Date,Decision,Context,Options_Considered,Decided_By,Impact,Linked_Docs,Status
+DL-001,2025-12-10,Chọn phương án C: thuê BrightSoft xây riêng,Business Case trình HĐQT,"A không làm gì; B SaaS white-label; C xây riêng",HĐQT FoodNow,Ngân sách 2.4 tỷ,Business Case v1.0,Hiệu lực
+DL-002,2025-12-10,Giữ dự phòng 12% (PM tự dùng tới 5%),Sponsor đề nghị cắt còn 5%,"5%; 12% theo EMV rủi ro",Bảo + Hà,Cost baseline,Charter v1.0,Hiệu lực
+DL-003,2025-12-20,Chọn mô hình Hybrid,Ma trận tiêu chí (4.20 điểm),"Waterfall; Agile; Hybrid",Hà + Dũng + Bảo,Cách làm việc,methodology-decision-matrix,Hiệu lực
+DL-004,2026-01-09,Điều động Backend nội bộ thay vì tuyển mới,Thiếu 1 Backend,"Tuyển mới; freelancer; điều động; cắt phạm vi",Hà + Giám đốc BrightSoft,Đội đủ 26/01,Meeting minutes 05/01,Hiệu lực
+DL-005,2026-01-30,Chính sách nhánh GitFlow-lite + release theo sprint + tag SemVer,Chuẩn bị Delivery Plan,"GitFlow; GitFlow-lite; trunk-based",Dũng + Hà,Delivery Plan,Delivery Plan (Ch30–32),Hiệu lực
+DL-006,2026-02-13,Chuyển ví điện tử sang R2 để giữ mốc 03/10,Sponsor ép 6 tháng; đội ước lượng 9,"6 tháng cắt 38% phạm vi; 9 tháng; 7.5 tháng rủi ro cao",Bảo + Châu + Hà,Scope v1.1,Scope Statement v1.1,Hiệu lực
+DL-007,2026-02-13,Demo chạy thật cho HĐQT ở tuần 22 (03/06),Thoả thuận với Sponsor,"Không demo; demo tuần 22",Bảo + Hà,Mốc S18,Gantt,Hiệu lực
+DL-008,2026-03-02,Giữ khoản pentest bên ngoài 45 triệu,Sponsor đề nghị cắt,"Bỏ; giữ; giảm phạm vi",Bảo + Hà,Cost baseline,Ch14,Hiệu lực
+DL-009,2026-03-09,Ngưỡng go-live: không còn bug Critical/High,Quality Plan,"0 Critical; ≤5 High; 0 Critical/High",Bảo + Nam + Hà,Quality baseline,quality-plan.md,Hiệu lực
+DL-010,2026-03-09,Rút Tuấn 50% trong 4 tuần; thêm Backend bench 50%,BrightSoft cần Tuấn cho dự án khác,"Rút 8 tuần; rút 4 tuần + bench",Hà + Giám đốc BrightSoft,Resource plan v1.1,resource-plan.csv,Hết hiệu lực (03/04)
+DL-011,2026-03-12,Từ chối CR-001 (đặt nhóm) vào MVP; giữ R2,Sponsor đề xuất,"Đưa vào MVP; đổi hạng mục; R2; bản tối giản R1",CCB,Không đổi baseline,change-log.csv,Hiệu lực
+DL-012,2026-03-20,Chọn PayEasy làm cổng thanh toán,Scorecard 3.95,"PayEasy; PayNova; GatePay",Hà + Dũng + Bảo,Vendor,vendor-scorecard.csv,Hiệu lực
+DL-013,2026-04-21,Kích hoạt contingency PayEasy: fast-tracking + crashing (≈110 triệu),PayEasy trễ chứng nhận 3 tuần,"Chờ; fast-tracking; crashing; ra mắt COD trước",Hà (trong ngưỡng 5%),Đường găng giữ nguyên,procurement-plan §7,Hiệu lực
+DL-014,2026-05-08,Luật nhánh ≤ 5 ngày; PR < 400 dòng,Conflict 200 file ở cuối Sprint 6,"Giữ nguyên; luật nhánh ≤5 ngày; chuyển trunk-based",Dũng + Hà,Chính sách nhánh,branching-strategy.md,Hiệu lực
+DL-015,2026-05-22,Cắt báo cáo doanh thu nhà hàng và nút đặt lại khỏi MVP,SPI 0.82,"Cắt phạm vi; crashing thêm; dời mốc",Bảo + Hà,Scope v1.1 → R1,Ch34,Hiệu lực
+DL-016,2026-08-21,Go/No-Go lần 1 = No-Go,UAT 47 defect gồm 3 Critical,"Go có điều kiện; No-Go",Bảo,Dời cắt release sang rc.2,go-no-go-checklist,Hiệu lực
+DL-017,2026-09-16,Go/No-Go lần 2 = Go,Không còn Critical/High,"Go; No-Go",Bảo,Cutover 03/10,go-no-go-checklist,Hiệu lực

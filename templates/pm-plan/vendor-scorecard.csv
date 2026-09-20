@@ -1,0 +1,8 @@
+﻿Tieu_chi,Trong_so,PayEasy,PayNova,GatePay,Ghi_chu
+Chi phí (phí tích hợp + phí giao dịch),0.20,4,3,5,GatePay rẻ nhất
+Năng lực kỹ thuật và API,0.20,4,5,3,PayNova tốt nhất
+Tốc độ onboarding và chứng nhận,0.20,3,4,2,PayEasy trung bình; GatePay chậm
+Bảo mật và tuân thủ (tokenization),0.15,5,4,3,PayEasy mạnh nhất
+Hỗ trợ và SLA,0.15,4,3,3,
+Uy tín và tham chiếu tại Việt Nam,0.10,4,3,2,
+TONG_DIEM,=SUM(B2:B7),"=SUMPRODUCT($B$2:$B$7,C2:C7)","=SUMPRODUCT($B$2:$B$7,D2:D7)","=SUMPRODUCT($B$2:$B$7,E2:E7)",PayEasy 3.95 / PayNova 3.75 / GatePay 3.10 → chọn PayEasy; ghi nhận rủi ro tốc độ chứng nhận

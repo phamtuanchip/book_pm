@@ -22,10 +22,10 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 16 | Kế hoạch nguồn lực & năng lực đội | ✅ | 2121 |
 | 17 | Project Management Plan tổng hợp | ✅ | 1736 |
 | 18 | Quản lý rủi ro | ✅ | 2261 |
-| 19 | RAID Log: Risk, Assumption, Issue, Dependency | ⬜ |  |
-| 20 | Quản lý thay đổi (Change Control) | ⬜ |  |
-| 21 | Quản lý phụ thuộc, vendor & mua sắm | ⬜ |  |
-| 22 | Quản lý cấu hình, tài liệu & tri thức dự án | ⬜ |  |
+| 19 | RAID Log: Risk, Assumption, Issue, Dependency | ✅ | 2096 |
+| 20 | Quản lý thay đổi (Change Control) | ✅ | 2161 |
+| 21 | Quản lý phụ thuộc, vendor & mua sắm | ✅ | 2086 |
+| 22 | Quản lý cấu hình, tài liệu & tri thức dự án | ✅ | 1712 |
 | 23 | Scrum dưới góc nhìn PM | ⬜ |  |
 | 24 | Backlog & ưu tiên ở góc độ PM | ⬜ |  |
 | 25 | Kanban & chỉ số dòng chảy (Flow metrics) | ⬜ |  |
