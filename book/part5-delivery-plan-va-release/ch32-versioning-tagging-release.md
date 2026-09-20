@@ -87,6 +87,43 @@ Khi production có lỗi nghiêm trọng: (1) **ổn định** (tắt flag/rollb
 
 📎 Mẫu đầy đủ: `templates/delivery-plan/release-log.csv` (20 dòng: `v0.1.0` → `v1.0.1`)
 
+## Đi sâu: các tình huống phiên bản khó và cách quyết định
+
+### Quyết định số phiên bản khi có nhiều loại thay đổi
+
+Khi một bản gồm nhiều thay đổi, **lấy mức cao nhất**: một breaking change + hai tính năng + năm sửa lỗi → tăng MAJOR. Bảng nhanh:
+
+| Thay đổi trong bản | Số phiên bản mới (từ 1.2.3) |
+|---|---|
+| Chỉ sửa lỗi | 1.2.4 |
+| Có tính năng mới, tương thích ngược | 1.3.0 |
+| Có bỏ endpoint hoặc đổi định dạng dữ liệu | 2.0.0 |
+| Tính năng mới, đang thử nghiệm | 1.3.0-beta.1 |
+| Ứng viên phát hành | 1.3.0-rc.1 |
+
+Với **API nội bộ** giữa các đội, nên tách phiên bản API (v1, v2) khỏi phiên bản ứng dụng để Mobile chọn được phiên bản API mình dùng.
+
+### Một release đi qua các trạng thái: ví dụ trên Jira
+
+Bản `1.0.0` trải qua các Fix Version trạng thái: *Unreleased* (đang gom story) → *Release candidate* (rc.1, rc.2) → *Released* (v1.0.0) → *Archived*. Quy tắc: story chỉ được gắn Fix Version khi đạt DoD; story không kịp bị chuyển sang version sau **kèm lý do**; khi đóng version, danh sách story tự sinh release notes.
+
+### Backport và hỗ trợ nhiều phiên bản
+
+Khi khách dùng cả `1.0.x` và `1.1.x`, lỗi bảo mật nghiêm trọng cần vá cả hai. Quy trình: (1) sửa ở nhánh mới nhất; (2) **cherry-pick** sang nhánh hỗ trợ; (3) tag PATCH cho mỗi nhánh (`1.0.4`, `1.1.2`); (4) ghi vào release log; (5) thông báo khách theo phiên bản họ dùng. Đặt **chính sách hỗ trợ** rõ (ví dụ chỉ hỗ trợ hai phiên bản MINOR gần nhất) để không phải vá vô hạn.
+
+### Sáu câu PM nên hỏi trước mỗi release
+
+1. Bản chạy production có đúng là bản đã qua UAT (cùng tag/artifact) không?
+2. Tag đã bất biến và được bảo vệ chưa?
+3. Migration dữ liệu có đường lùi không?
+4. Release notes hai bản đã duyệt chưa?
+5. Rollback đã diễn tập (thời gian thật) chưa?
+6. Ai có quyền quyết định lùi và tiêu chí là gì?
+
+### Lỗi phổ biến khi đặt tag
+
+Tag nhầm commit (do tag trước khi merge hết); tag di chuyển (cố sửa tag cũ) làm mất truy vết; quên tag cho hotfix; đặt tag nhưng release log không cập nhật. Cách chặn: pipeline tự tạo tag từ commit đã qua kiểm tra, bảo vệ tag không cho ghi đè.
+
 ## Tình huống FoodNow
 
 Thứ Sáu 27/02/2026, cuối Sprint 1, Hà xem lần đầu bản build lên staging và nhận tin từ Ánh: **`v0.1.0`** đã được tag. Chị mở release log ghi dòng đầu tiên (27/02, 17:30, Sprint 1, Staging, duyệt Dũng + Nam, Fix Version `FN-MVP-0.1`). Từ đó, mỗi hai tuần một tag mới: `v0.2.0` (13/03) … đến `v0.11.0` (17/07). Ngày 24/07, sau feature freeze, Dũng cắt **`release/1.0.0`** và ngày 27/07 tag **`v1.0.0-rc.1`** cho UAT (Ánh triển khai, Nam xác nhận). Sau No-Go lần 1 (21/08, 47 defect gồm 3 Critical), đội sửa trên `release/1.0.0` và tag **`v1.0.0-rc.2`** ngày 04/09; UAT vòng 2 và Go lần 2 ngày 16/09.

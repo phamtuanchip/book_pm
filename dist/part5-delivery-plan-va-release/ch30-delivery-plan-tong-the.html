@@ -319,6 +319,19 @@ flowchart LR
 </table>
 <p>FoodNow MVP: điểm <strong>A = 4,05, B = 2,05</strong> → chọn A. Sau go-live cho backend/web: <strong>A = 3,15, B = 4,35</strong> → chuyển B (Ch33); mobile giữ release train.</p>
 <p>📎 Mẫu đầy đủ: <code>templates/delivery-plan/FoodNow-Delivery-Plan.md</code>, <code>templates/delivery-plan/delivery-strategy-decision-matrix.md</code></p>
+<h2>Đi sâu: chọn cadence, xây Release Calendar và tránh bẫy lịch</h2>
+<h3>Sáu bẫy khi lập Release Calendar</h3>
+<ol>
+<li><strong>Quên ngày nghỉ của bên thứ ba</strong> (Apple/Google, ngân hàng, vendor thanh toán) — hỏi và ghi lịch của họ. 2. <strong>Đặt go-live sát lễ</strong> — nếu sự cố, đội và vendor vắng. 3. <strong>Không có ngày dự phòng</strong> giữa UAT và go-live (FoodNow chừa ~10 ngày làm việc). 4. <strong>Freeze đặt theo cảm giác</strong> — gắn freeze với ngày cần để test/UAT. 5. <strong>Lịch không khớp Gantt/Roadmap</strong> — dựng từ Gantt, kiểm chéo mỗi tháng. 6. <strong>Không đánh dấu ngày cấm deploy</strong> — thể hiện cả Tết, lễ, chiều thứ Sáu.</li>
+</ol>
+<h3>Chọn cửa sổ go-live</h3>
+<p>Cân bốn yếu tố: <strong>lưu lượng thấp</strong> (đêm/cuối tuần với giao đồ ăn), <strong>sự có mặt của đội và vendor</strong> (hotline vendor có trực không?), <strong>thời gian xử lý sự cố trước giờ cao điểm</strong> (cửa sổ 02:00–06:00 để còn buffer trước 07:00), và <strong>khả năng nghỉ bù</strong> sau đó. Với dịch vụ 24/7, cân nhắc bảo trì theo giờ thấp điểm theo vùng.</p>
+<h3>Environment Matrix: ba lỗi kinh điển</h3>
+<p>(1) Staging ít dữ liệu hơn production nhiều nên <strong>lỗi hiệu năng không lộ</strong>; (2) tài khoản test dùng chung nên <strong>dữ liệu bị ghi đè</strong>; (3) khác biệt cấu hình (cache, khoá, endpoint) không được ghi. Cách chặn: dữ liệu ẩn danh cỡ thật, tài khoản riêng theo môi trường, <strong>config diff</strong> có trong checklist.</p>
+<h3>Release Manager khi đội nhỏ</h3>
+<p>Đội 5–8 người thường không có người chuyên; hãy chia: Tech Lead (kỹ thuật), PM (lịch/truyền thông), QA (cổng chất lượng). Điều quan trọng là <strong>một người có quyền hoãn</strong> — thường là Tech Lead về kỹ thuật và Sponsor về kinh doanh — và mọi người biết điều đó từ trước.</p>
+<h3>Ví dụ ra quyết định A hay B cho một thành phần mới</h3>
+<p>Một dịch vụ báo cáo nội bộ mới (web, không mobile, đội 4 người, test tự động 40%, không yêu cầu kiểm toán). Điểm: test tự động thấp kéo B xuống; không yêu cầu kiểm toán và là web kéo B lên → kết quả sát nhau (chênh &lt; 0,5) → <strong>chọn cái đội quen (A nhẹ)</strong> và đặt mục tiêu nâng test tự động lên 70% rồi đánh giá lại sau hai quý.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Tuần 4 (26–30/01/2026). Dũng đến với đề xuất &quot;cho nhanh&quot; — dùng trunk-based và deploy staging hằng ngày. Hà hỏi lại theo ma trận: test tự động hiện chưa có regression (điểm 1), Backend mới vừa vào, hợp đồng thanh toán theo bảy mốc, ba app mobile chịu review app store, và UAT chính thức bắt buộc. Cả hai chấm riêng rồi đối chiếu: A = 4,05, B = 2,05. Dũng đồng ý và xin một điều: &quot;Nhưng mình đặt mục tiêu chuyển sang trunk-based cho backend/web sau go-live.&quot;</p>
 <p>Hà chốt <strong>GitFlow-lite + release theo sprint + tag SemVer</strong> (30/01/2026, DL-005) và viết Delivery Plan v1.0: mỗi cuối sprint tag <code>v0.N.0</code> lên staging; UAT bằng <code>v1.0.0-rc.N</code>; production chỉ một lần lớn (go-live 03/10) rồi hotfix. Chị lập Release Calendar từ Gantt với freeze và ngày cấm deploy (Tết, lễ, chiều thứ Sáu), Environment Matrix và RACI. Kế hoạch có một điều khoản chuyển đổi: <strong>đánh giá lại chiến lược sau hypercare (tuần 44)</strong> — và đúng lúc đó điểm B lên 4,35 (Ch33). Anh Bảo, khi xem Delivery Plan lần đầu, hỏi: &quot;Khi nào tôi thấy bản mới?&quot; — Hà chỉ vào cột &quot;Cuối sprint lên staging&quot; và mời anh dự Review hai tuần một lần.</p>

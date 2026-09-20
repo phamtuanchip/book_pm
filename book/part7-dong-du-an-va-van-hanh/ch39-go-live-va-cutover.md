@@ -71,6 +71,39 @@ Kết quả hypercare FoodNow: đơn ngày đầu 61, tuần 1 trung bình 118, 
 
 📎 Mẫu đầy đủ: `templates/go-live/user-training-plan.md`
 
+## Đi sâu: thiết kế một cutover ít rủi ro
+
+### Ba câu hỏi chọn chiến lược phát hành
+
+1. **Có thể chạy song song hệ thống cũ và mới không?** Nếu có → phased/canary hợp lý; nếu không → cần diễn tập kỹ và điểm không quay lại rõ.
+2. **Dữ liệu có hai chiều không?** Nếu người dùng tạo dữ liệu mới ở hệ thống mới, rollback phải xử lý dữ liệu đó — thường khiến "lùi" không còn miễn phí sau một ngưỡng.
+3. **Ai bị ảnh hưởng nếu lỗi?** Nhóm nhỏ, có thể liên lạc trực tiếp (nhà hàng, tài xế thử nghiệm) → an toàn hơn phát hành đại trà cho khách.
+
+### Ma trận rủi ro cutover
+
+| Rủi ro | Xác suất | Tác động | Giảm thiểu |
+|---|---|---|---|
+| Migration chậm hơn diễn tập | Trung bình | Cao | Đo thời gian ở dữ liệu quy mô thật; cửa sổ dư 50% |
+| Khác biệt cấu hình staging–prod | Trung bình | Cao | Config diff bắt buộc; smoke test nhiều bước |
+| Vendor thanh toán lỗi giờ đầu | Thấp | Rất cao | Kill switch thẻ; COD làm đường dự phòng |
+| Người dùng chưa biết dùng | Cao | Trung bình | Đào tạo thực hành; trực tại chỗ ngày đầu |
+| Đội kiệt sức sau đêm cutover | Cao | Trung bình | Ca luân phiên; nghỉ bù; hypercare theo lịch |
+
+### Sổ tay giao tiếp trong đêm go-live
+
+Ba luồng riêng: **phòng chỉ huy** (kỹ thuật, ghi giờ), **Sponsor** (bản tin ngắn mỗi 60 phút hoặc khi có thay đổi trạng thái), **người dùng/nhà hàng** (một thông báo trước, một sau). Quy tắc: một người phát ngôn; mẫu tin bốn dòng — *Đã xảy ra gì / Ảnh hưởng ai / Đang làm gì / Lần cập nhật kế tiếp*. Chuẩn bị sẵn mẫu cho ba tình huống: thành công, chậm, phải lùi.
+
+### Sau go-live: 72 giờ đầu
+
+- **Giờ 0–4**: tập trung sự cố; giảm nhẹ trước điều tra.
+- **Ngày 1**: rà số liệu đơn, lỗi, ticket CS; họp ngắn hai lần.
+- **Ngày 2–3**: rà đối soát thanh toán; ưu tiên P2; cho đội nghỉ luân phiên.
+- Cuối ngày 3: báo cáo cho Sponsor (mẫu một trang) và quyết định có điều chỉnh hypercare không.
+
+### Chăm sóc đội sau cutover
+
+Phần thường bị bỏ quên: một đêm thức trắng cần **được bù nghỉ ngay**, không "để mai". Lên lịch nghỉ bù trước khi go-live, thông báo trước cho quản lý các thành viên, và ghi nhận công khai. Đội được chăm sóc tốt thì hypercare mới bền.
+
 ## Tình huống FoodNow
 
 Thứ Sáu 02/10/2026, 17:00, họp go-live 15 phút; Hà đọc lại từng dòng checklist: Go/No-Go đã ký (16/09); tag `v1.0.0` được Dũng tạo lúc 18:00; sao lưu DB kiểm tra khôi phục 24 phút; danh sách 40 nhà hàng và 90 tài xế đã đào tạo (94%); CS sẵn sàng; giám sát và cảnh báo bật; anh Bảo xác nhận Go. Chị dặn cả đội ngủ sớm và ngồi phòng chỉ huy từ 01:30.

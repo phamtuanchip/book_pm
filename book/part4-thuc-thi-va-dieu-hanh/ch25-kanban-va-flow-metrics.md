@@ -81,6 +81,36 @@ Dùng CFD trong báo cáo cho Sponsor: một hình cho thấy dòng chảy kho�
 
 Thay vì hỏi "bao lâu?" bằng một con số, dùng **dữ liệu lịch sử** (throughput mỗi tuần) và **mô phỏng ngẫu nhiên**: máy tính rút ngẫu nhiên nhiều lần throughput của các tuần đã qua, cộng lại cho đến khi đủ 20 thẻ, lặp 10.000 lần; kết quả là **phân phối**: "85% khả năng xong 20 thẻ trong ≤ 8 tuần". Ưu điểm: dùng dữ liệu thật, không cần ước lượng từng thẻ; nhược: cần vài tuần dữ liệu và thẻ có cỡ tương đương. PM không cần tự viết mô phỏng nhưng cần hiểu **kết quả là xác suất** và nói bằng khoảng (Ch11).
 
+## Đi sâu: đọc CFD, đặt WIP và dự báo bằng dữ liệu
+
+### Đọc một CFD qua ba kịch bản
+
+Hình dung biểu đồ tích luỹ có bốn dải: *Sẵn sàng*, *Đang làm*, *Review/Test*, *Xong*.
+
+| Hình dạng bạn thấy | Chẩn đoán | Việc cần làm |
+|---|---|---|
+| Dải *Review/Test* dày lên đều theo thời gian | Nút cổ chai ở kiểm thử; thẻ vào nhanh hơn ra | Giảm WIP cột *Đang làm*; cả đội hỗ trợ review/test; tự động hoá test |
+| Đường *Xong* đi ngang 5 ngày | Dây chuyền dừng (thẻ bị chặn hoặc chờ deploy) | Tìm thẻ bị chặn; kiểm tra cửa sổ deploy |
+| Dải *Sẵn sàng* co lại gần 0 | Thiếu việc sẵn sàng | Tăng refinement; kéo thẻ từ Backlog |
+
+### Cách đặt WIP limit ban đầu và điều chỉnh
+
+Bắt đầu với **số người ÷ 1,5** cho cột *Đang làm* (đội 6 người → 4). Sau 2–4 tuần xem ba tín hiệu: (1) cột luôn đầy và cột phía sau trống → WIP quá thấp ở cột trước hoặc nghẽn ở cột trước nữa; (2) cột luôn trống → WIP quá cao ở cột trước; (3) tuổi thẻ trung vị tăng → giảm WIP. Chỉ đổi một cột mỗi lần và đo lại trong hai tuần.
+
+### Định luật Little: tính thử
+
+Nếu cycle time trung bình 4,27 ngày và throughput 3,75 thẻ/tuần, WIP dự kiến ≈ 3,75 ÷ 5 ngày làm việc × 4,27 ≈ 3,2 thẻ — khớp với WIP đang đặt (3–4). Công thức có hai cách dùng: dự đoán cycle time khi đổi WIP, hoặc kiểm tra số liệu có nhất quán không (nếu không, dữ liệu ngày vào/ra có thể sai).
+
+### Monte Carlo: ví dụ bằng tay
+
+Giả sử throughput 6 tuần gần nhất là 2, 6, 4, 3, 5, 4 thẻ. Cần xong 20 thẻ. Mỗi lần mô phỏng: rút ngẫu nhiên một trong sáu giá trị cho mỗi tuần và cộng cho đến khi ≥ 20. Lặp nhiều lần sẽ cho phân phối; với dữ liệu này, số tuần thường rơi khoảng 4–7 tuần, và phân vị 85% quanh 6–7 tuần. Vì vậy câu trả lời cho Sponsor là: "Xong 20 thẻ trong khoảng 5–7 tuần, độ tin cậy 85% ở 7 tuần". Lưu ý điều kiện: các thẻ cùng cỡ tương đương và quy trình ổn định.
+
+### Kanban trong công ty outsource: ba lưu ý về hợp đồng
+
+1. **Đơn vị thanh toán** cần khớp mô hình: T&M theo tháng hợp Kanban hơn fixed-price theo tính năng.
+2. **SLE thay cho "cam kết ngày"** trong phụ lục hỗ trợ: "85% bug Critical xong trong 2 ngày làm việc".
+3. **Báo cáo** dùng lead time, throughput, tuổi thẻ; tránh cam kết số thẻ mỗi tháng vì khối lượng đến ngẫu nhiên.
+
 ## Tình huống FoodNow
 
 Thứ Hai 02/11/2026 (tuần 44). Hypercare đã xong, đội MVP thu còn 6 người. Việc đến mỗi ngày: một đơn kẹt, một OTP chậm, một yêu cầu nhỏ từ Huy. Hà thử giữ nhịp sprint 2 tuần trong một tuần rồi nhận ra Sprint Planning chẳng còn ý nghĩa: giữa sprint, 3 việc khẩn xen vào, Sprint Goal vỡ.

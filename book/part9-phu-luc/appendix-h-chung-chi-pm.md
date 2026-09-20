@@ -606,7 +606,7 @@ Mức phủ: **Đủ** (sách đủ làm nền, cần luyện thêm), **Một ph
 
 ### H.2.1 PMP
 
-Đề cương chia thành ba mảng lớn (con người, quy trình, môi trường kinh doanh); tỷ trọng thay đổi theo phiên bản — xem đề cương hiện hành.
+Đề cương chia thành ba mảng lớn (con người, quy trình, môi trường kinh doanh). **Cập nhật đối chiếu 09/2026:** theo các nguồn công khai, đề cương mới áp dụng từ 09/07/2026 đổi tỷ trọng khoảng People 33% · Process 41% · Business Environment 26% (bản cũ 42/50/8) và thêm chủ đề như AI, bền vững, giá trị — **cần xác minh trên tài liệu chính thức của PMI** vì trang PMI không truy cập được khi biên soạn.
 
 | Domain / nội dung thi | Chương sách | Mức phủ |
 |---|---|---|
@@ -616,12 +616,12 @@ Mức phủ: **Đủ** (sách đủ làm nền, cần luyện thêm), **Một ph
 | Quy trình: chất lượng, nguồn lực, mua sắm | Ch15, Ch16, Ch21 | Đủ |
 | Quy trình: rủi ro, thay đổi, tích hợp | Ch17–Ch20, Ch22 | Đủ |
 | Quy trình: Agile và Hybrid | Ch03, Ch23–Ch26 | Một phần |
-| Môi trường kinh doanh: tuân thủ, lợi ích, thay đổi tổ chức | Ch05, Ch29, Ch41 | Một phần |
+| Môi trường kinh doanh: tuân thủ, lợi ích, thay đổi tổ chức, bối cảnh thị trường (tỷ trọng tăng mạnh ở đề cương mới) | Ch05, Ch29, Ch41 | Cần học thêm |
 | Thuật ngữ và dạng câu hỏi tình huống theo PMBOK | Phụ lục E; Ch42–Ch46 (luyện) | Cần học thêm (đọc tài liệu chính thức) |
 
 ### H.2.2 CAPM
 
-Đề cương gồm các mảng nền tảng dự án, phương pháp dự đoán, Agile và phân tích nghiệp vụ.
+Đề cương 2023 gồm bốn domain: nền tảng và khái niệm cốt lõi (36%), phương pháp dự đoán (17%), Agile (20%), phân tích nghiệp vụ (27%) — đã đối chiếu nguồn công khai 09/2026; kiểm tra lại bản hiện hành.
 
 | Domain / nội dung thi | Chương sách | Mức phủ |
 |---|---|---|
@@ -632,7 +632,7 @@ Mức phủ: **Đủ** (sách đủ làm nền, cần luyện thêm), **Một ph
 
 ### H.2.3 PMI-ACP
 
-Nhóm chủ đề Agile (mindset, giá trị, stakeholder, đội, lập kế hoạch thích nghi, xử lý vấn đề, cải tiến); tên domain thay đổi theo đề cương.
+Nhóm chủ đề Agile (mindset, giá trị, stakeholder, đội, lập kế hoạch thích nghi, xử lý vấn đề, cải tiến). **Lưu ý:** PMI đã cập nhật đề cương ACP từ 11/2024 (theo nguồn công khai, gồm 7 domain); bảng dưới ánh xạ theo **chủ đề**, không theo tên/tỷ trọng domain — đối chiếu đề cương hiện hành.
 
 | Domain / nội dung thi | Chương sách | Mức phủ |
 |---|---|---|

@@ -10,39 +10,39 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 04 | Bộ khung kiến thức, chứng chỉ & lộ trình nghề PM | ✅ | 2444 |
 | 05 | Business Case & Project Charter | ✅ | 1977 |
 | 06 | Stakeholder & Kế hoạch giao tiếp | ✅ | 2067 |
-| 07 | Xác định phạm vi (Scope) & yêu cầu cấp cao | ✅ | 1844 |
+| 07 | Xác định phạm vi (Scope) & yêu cầu cấp cao | ✅ | 2249 |
 | 08 | Thiết lập đội & cách làm việc | ✅ | 2073 |
-| 09 | Kickoff meeting | ✅ | 1640 |
+| 09 | Kickoff meeting | ✅ | 2177 |
 | 10 | WBS (Work Breakdown Structure) | ✅ | 2000 |
 | 11 | Ước lượng | ✅ | 2236 |
 | 12 | Lập lịch: Timeline, Gantt, Critical Path | ✅ | 2582 |
-| 13 | Roadmap & Release Plan | ✅ | 1930 |
+| 13 | Roadmap & Release Plan | ✅ | 2230 |
 | 14 | Ngân sách & quản lý chi phí | ✅ | 2393 |
 | 15 | Kế hoạch chất lượng | ✅ | 2206 |
 | 16 | Kế hoạch nguồn lực & năng lực đội | ✅ | 2121 |
-| 17 | Project Management Plan tổng hợp | ✅ | 1736 |
+| 17 | Project Management Plan tổng hợp | ✅ | 2193 |
 | 18 | Quản lý rủi ro | ✅ | 2261 |
 | 19 | RAID Log: Risk, Assumption, Issue, Dependency | ✅ | 2096 |
 | 20 | Quản lý thay đổi (Change Control) | ✅ | 2161 |
 | 21 | Quản lý phụ thuộc, vendor & mua sắm | ✅ | 2086 |
-| 22 | Quản lý cấu hình, tài liệu & tri thức dự án | ✅ | 1712 |
-| 23 | Scrum dưới góc nhìn PM | ✅ | 1884 |
-| 24 | Backlog & ưu tiên ở góc độ PM | ✅ | 1692 |
-| 25 | Kanban & chỉ số dòng chảy (Flow metrics) | ✅ | 1703 |
-| 26 | Hybrid & mở rộng quy mô (nhiều đội) | ✅ | 1613 |
+| 22 | Quản lý cấu hình, tài liệu & tri thức dự án | ✅ | 2145 |
+| 23 | Scrum dưới góc nhìn PM | ✅ | 2272 |
+| 24 | Backlog & ưu tiên ở góc độ PM | ✅ | 2155 |
+| 25 | Kanban & chỉ số dòng chảy (Flow metrics) | ✅ | 2180 |
+| 26 | Hybrid & mở rộng quy mô (nhiều đội) | ✅ | 2241 |
 | 27 | Lãnh đạo & quản lý con người | ✅ | 2052 |
-| 28 | Họp hiệu quả & nghi thức dự án | ✅ | 1792 |
-| 29 | PM và kỹ thuật: CI/CD, môi trường, nợ kỹ thuật, DevOps | ✅ | 2071 |
-| 30 | Delivery Plan tổng thể: từ Roadmap đến từng bản phát hành | ✅ | 1989 |
-| 31 | Chiến lược nhánh: GitFlow, GitHub Flow, Trunk-based | ✅ | 1985 |
-| 32 | Versioning, Tagging & Release Management theo kế hoạch | ✅ | 1799 |
-| 33 | Deployment Pipeline & Daily Deployment | ✅ | 2451 |
+| 28 | Họp hiệu quả & nghi thức dự án | ✅ | 2255 |
+| 29 | PM và kỹ thuật: CI/CD, môi trường, nợ kỹ thuật, DevOps | ✅ | 2112 |
+| 30 | Delivery Plan tổng thể: từ Roadmap đến từng bản phát hành | ✅ | 2379 |
+| 31 | Chiến lược nhánh: GitFlow, GitHub Flow, Trunk-based | ✅ | 2350 |
+| 32 | Versioning, Tagging & Release Management theo kế hoạch | ✅ | 2220 |
+| 33 | Deployment Pipeline & Daily Deployment | ✅ | 2575 |
 | 34 | Theo dõi tiến độ: burndown, velocity, EVM | ✅ | 2137 |
-| 35 | Báo cáo trạng thái & dashboard | ✅ | 1789 |
+| 35 | Báo cáo trạng thái & dashboard | ✅ | 2263 |
 | 36 | Quản lý kỳ vọng & khách hàng khó | ✅ | 2067 |
-| 37 | Kiểm thử, UAT & chuẩn bị phát hành | ✅ | 1891 |
+| 37 | Kiểm thử, UAT & chuẩn bị phát hành | ✅ | 2290 |
 | 38 | Xử lý sự cố, leo thang & quản trị khủng hoảng dự án | ✅ | 2166 |
-| 39 | Go-live & Cutover | ✅ | 1800 |
+| 39 | Go-live & Cutover | ✅ | 2253 |
 | 40 | Đóng dự án, bài học kinh nghiệm & bàn giao | ✅ | 2309 |
 | 41 | Sau dự án: đo lợi ích, PMO & danh mục dự án | ✅ | 2023 |
 | 42 | Tình huống về phạm vi & khách hàng | ✅ | 3267 |
@@ -59,4 +59,4 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | Phụ lục E | Bảng thuật ngữ PM (Glossary) | ✅ | 2858 |
 | Phụ lục F | Bộ checklist nhanh | ✅ | 909 |
 | Phụ lục G | Tài liệu tham khảo & học thêm | ✅ | 688 |
-| Phụ lục H | Hồ sơ chứng chỉ PM & ánh xạ đề cương thi | ✅ | 8492 |
+| Phụ lục H | Hồ sơ chứng chỉ PM & ánh xạ đề cương thi | ✅ | 8607 |

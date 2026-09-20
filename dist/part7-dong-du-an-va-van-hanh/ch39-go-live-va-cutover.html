@@ -133,6 +133,67 @@
 <li><strong>Di chuyển dữ liệu</strong>: xác định <strong>cái gì</strong> chuyển (hồ sơ nhà hàng và thực đơn), <strong>cái gì không</strong> (đơn cũ ở app bên thứ ba), cách <strong>đối chiếu</strong> (số lượng, mẫu 10%), và <strong>rollback dữ liệu</strong>. Không dùng dữ liệu cá nhân thật cho diễn tập.</li>
 </ul>
 <p>📎 Mẫu đầy đủ: <code>templates/go-live/user-training-plan.md</code></p>
+<h2>Đi sâu: thiết kế một cutover ít rủi ro</h2>
+<h3>Ba câu hỏi chọn chiến lược phát hành</h3>
+<ol>
+<li><strong>Có thể chạy song song hệ thống cũ và mới không?</strong> Nếu có → phased/canary hợp lý; nếu không → cần diễn tập kỹ và điểm không quay lại rõ.</li>
+<li><strong>Dữ liệu có hai chiều không?</strong> Nếu người dùng tạo dữ liệu mới ở hệ thống mới, rollback phải xử lý dữ liệu đó — thường khiến &quot;lùi&quot; không còn miễn phí sau một ngưỡng.</li>
+<li><strong>Ai bị ảnh hưởng nếu lỗi?</strong> Nhóm nhỏ, có thể liên lạc trực tiếp (nhà hàng, tài xế thử nghiệm) → an toàn hơn phát hành đại trà cho khách.</li>
+</ol>
+<h3>Ma trận rủi ro cutover</h3>
+<table>
+<thead>
+<tr>
+<th>Rủi ro</th>
+<th>Xác suất</th>
+<th>Tác động</th>
+<th>Giảm thiểu</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Migration chậm hơn diễn tập</td>
+<td>Trung bình</td>
+<td>Cao</td>
+<td>Đo thời gian ở dữ liệu quy mô thật; cửa sổ dư 50%</td>
+</tr>
+<tr>
+<td>Khác biệt cấu hình staging–prod</td>
+<td>Trung bình</td>
+<td>Cao</td>
+<td>Config diff bắt buộc; smoke test nhiều bước</td>
+</tr>
+<tr>
+<td>Vendor thanh toán lỗi giờ đầu</td>
+<td>Thấp</td>
+<td>Rất cao</td>
+<td>Kill switch thẻ; COD làm đường dự phòng</td>
+</tr>
+<tr>
+<td>Người dùng chưa biết dùng</td>
+<td>Cao</td>
+<td>Trung bình</td>
+<td>Đào tạo thực hành; trực tại chỗ ngày đầu</td>
+</tr>
+<tr>
+<td>Đội kiệt sức sau đêm cutover</td>
+<td>Cao</td>
+<td>Trung bình</td>
+<td>Ca luân phiên; nghỉ bù; hypercare theo lịch</td>
+</tr>
+</tbody>
+</table>
+<h3>Sổ tay giao tiếp trong đêm go-live</h3>
+<p>Ba luồng riêng: <strong>phòng chỉ huy</strong> (kỹ thuật, ghi giờ), <strong>Sponsor</strong> (bản tin ngắn mỗi 60 phút hoặc khi có thay đổi trạng thái), <strong>người dùng/nhà hàng</strong> (một thông báo trước, một sau). Quy tắc: một người phát ngôn; mẫu tin bốn dòng — <em>Đã xảy ra gì / Ảnh hưởng ai / Đang làm gì / Lần cập nhật kế tiếp</em>. Chuẩn bị sẵn mẫu cho ba tình huống: thành công, chậm, phải lùi.</p>
+<h3>Sau go-live: 72 giờ đầu</h3>
+<ul>
+<li><strong>Giờ 0–4</strong>: tập trung sự cố; giảm nhẹ trước điều tra.</li>
+<li><strong>Ngày 1</strong>: rà số liệu đơn, lỗi, ticket CS; họp ngắn hai lần.</li>
+<li><strong>Ngày 2–3</strong>: rà đối soát thanh toán; ưu tiên P2; cho đội nghỉ luân phiên.</li>
+<li>Cuối ngày 3: báo cáo cho Sponsor (mẫu một trang) và quyết định có điều chỉnh hypercare không.</li>
+</ul>
+<h3>Chăm sóc đội sau cutover</h3>
+<p>Phần thường bị bỏ quên: một đêm thức trắng cần <strong>được bù nghỉ ngay</strong>, không &quot;để mai&quot;. Lên lịch nghỉ bù trước khi go-live, thông báo trước cho quản lý các thành viên, và ghi nhận công khai. Đội được chăm sóc tốt thì hypercare mới bền.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Thứ Sáu 02/10/2026, 17:00, họp go-live 15 phút; Hà đọc lại từng dòng checklist: Go/No-Go đã ký (16/09); tag <code>v1.0.0</code> được Dũng tạo lúc 18:00; sao lưu DB kiểm tra khôi phục 24 phút; danh sách 40 nhà hàng và 90 tài xế đã đào tạo (94%); CS sẵn sàng; giám sát và cảnh báo bật; anh Bảo xác nhận Go. Chị dặn cả đội ngủ sớm và ngồi phòng chỉ huy từ 01:30.</p>
 <p>02:00 sáng thứ Bảy 03/10, Ánh bật trang bảo trì; 02:05 Dũng chạy migration; 02:15 deploy backend từ tag <code>v1.0.0</code>; 02:30 web/Admin; <strong>02:40 điểm không quay lại</strong>: kích hoạt PayEasy live; 02:45 Nam chạy smoke test — đạt 100%; 03:15 Khoa phát hành app store; 03:30 tắt trang bảo trì. Nhưng ngay 02:40 cảnh báo giá không nhất quán đã vang (Ch38); đội xử lý trong war room và ổn định lúc 06:10. Vì đội đã diễn tập, việc chuyển hệ thống chính diễn ra đúng kế hoạch 90 phút; chỉ có sự cố cấu hình cache — điều diễn tập trên staging không thể tái hiện. Hà báo cáo cho anh Bảo ba lần trong đêm, như đã hứa trong kế hoạch truyền thông. Sáng, nhà hàng đầu tiên nhận đơn thật lúc 07:12; tối cùng ngày có <strong>61 đơn</strong>. Chiều 03/10, <code>v1.0.1</code> đã lên và đội chuyển sang chế độ hypercare.</p>

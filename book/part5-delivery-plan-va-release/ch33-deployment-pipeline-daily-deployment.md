@@ -68,14 +68,14 @@ FoodNow backend/web: Delivery đến canary cho mọi thay đổi; Deployment t�
 
 ## 33.4 DORA metrics
 
-**DORA** (DevOps Research and Assessment) nêu bốn chỉ số về hiệu quả giao phần mềm. (Diễn đạt lại; mức tham chiếu thay đổi theo báo cáo từng năm — kiểm tra nguồn ở Phụ lục G.)
+**DORA** (DevOps Research and Assessment) đo hiệu quả giao phần mềm. Bộ bốn chỉ số kinh điển là Deployment Frequency, Lead Time for Changes, Change Failure Rate và Time to Restore. **Cập nhật (đối chiếu dora.dev, 09/2026):** DORA hiện mô tả **năm** chỉ số — nhóm *throughput* gồm Change Lead Time, Deployment Frequency, **Failed Deployment Recovery Time** (thay cho Time to Restore/MTTR cũ) và nhóm *instability* gồm Change Fail Rate cùng **Deployment Rework Rate** (tỷ lệ deploy ngoài kế hoạch phát sinh do sự cố). Sách giữ cách gọi bốn chỉ số vì dễ tính từ log deploy; nếu đội bạn có dữ liệu sự cố, hãy đo thêm rework rate. Cột "mức tham chiếu" dưới đây là **tham chiếu lịch sử** (các báo cáo cũ chia elite/high/medium/low; báo cáo gần đây phân nhóm theo dữ liệu khảo sát từng năm nên ngưỡng thay đổi) — không dùng như chuẩn chấm điểm.
 
 | Chỉ số | Đo gì | Công thức | Mức tốt (tham chiếu) |
 |---|---|---|---|
 | **Deployment Frequency** | Tần suất deploy production | Số deploy ÷ số ngày | Nhiều lần/ngày (elite) → hằng tuần (medium) |
 | **Lead Time for Changes** | Từ commit đến chạy trên production | Trung vị thời gian | < 1 ngày (elite) … > 1 tháng (low) |
 | **Change Failure Rate** | Tỷ lệ deploy gây sự cố cần khắc phục | Deploy lỗi ÷ tổng deploy | ~0–15% (elite/high) |
-| **Time to Restore** | Thời gian khôi phục sau sự cố | Trung vị | < 1 giờ (elite) |
+| **Time to Restore** (nay: Failed Deployment Recovery Time) | Thời gian khôi phục sau deploy lỗi | Trung vị | < 1 giờ (tham chiếu lịch sử) |
 
 FoodNow, so sánh tuần 1–4 và tuần 9–12 sau chuyển đổi:
 

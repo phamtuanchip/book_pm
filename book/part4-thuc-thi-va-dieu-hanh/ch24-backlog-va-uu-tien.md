@@ -85,6 +85,35 @@ Phân loại tính năng: **cơ bản** (phải có, thiếu là tức giận), 
 
 📎 Mẫu đầy đủ: `templates/sprint-agile/product-backlog.csv` (30 story, có MoSCoW, RICE bằng công thức, Sprint đích và trạng thái)
 
+## Đi sâu: ví dụ chấm điểm và các bẫy khi ưu tiên
+
+### Ví dụ RICE và WSJF trên cùng một tập story
+
+Cho bốn story của FoodNow ở Sprint 8 (Reach 1–10; Impact 0,25–3; Confidence 0,5–1; Effort là story point):
+
+| Story | Reach | Impact | Conf. | Effort | RICE |
+|---|---|---|---|---|---|
+| Hủy đơn của khách (FN-129) | 7 | 3 | 0,8 | 5 | 3,36 |
+| Thông báo push trạng thái đơn (FN-120) | 9 | 2 | 0,8 | 5 | 2,88 |
+| Lịch sử đơn hàng (FN-121) | 8 | 1 | 0,9 | 3 | 2,40 |
+| Banner khuyến mãi (đề xuất) | 10 | 1 | 0,5 | 8 | 0,63 |
+
+Cách đọc: RICE ưu tiên **hủy đơn** vì tác động lớn ở chi phí nhỏ; banner đứng cuối vì độ tin cậy thấp — nếu Marketing đo được tác động thật, Confidence tăng và thứ hạng đổi. Đó là ý nghĩa chính: điểm số **buộc người nêu giả định**.
+
+**WSJF** dùng khi phải xếp việc có *chi phí trì hoãn* khác nhau. Ví dụ hai việc cùng cỡ 5: (A) khoản tuân thủ có hạn pháp lý sau 6 tuần — giá trị kinh doanh 3, khẩn cấp theo thời gian 8, giảm rủi ro 8 → Cost of Delay 19, WSJF = 19 ÷ 5 = 3,8; (B) một cải tiến giao diện — 5 + 2 + 1 = 8, WSJF = 1,6. A đi trước dù "giá trị người dùng" của B nghe hấp dẫn.
+
+### Năm bẫy thường gặp
+
+1. **Ưu tiên theo người nói to nhất.** Cách chặn: mọi đề xuất phải kèm giả định về Reach/Impact.
+2. **Điểm số giả chính xác.** RICE 3,36 và 3,20 không khác nhau đáng kể; coi chênh nhỏ hơn 15% là hoà và dùng phán đoán.
+3. **Chỉ chấm giá trị, quên phụ thuộc.** Story có RICE cao nhưng chờ vendor vẫn không làm được; đưa cột "phụ thuộc" vào bảng.
+4. **Chấm một lần rồi quên.** Dữ liệu thay đổi; chấm lại ở đầu mỗi release.
+5. **Backlog đầy "Must".** Nếu 80% là Must, MoSCoW đã mất nghĩa; buộc mỗi Must trả lời "nếu không có, ra mắt được không?".
+
+### Backlog cho đội có hai chân: phát triển và bảo trì
+
+Khi một đội vừa làm tính năng vừa xử lý lỗi, hãy tách **hai làn** trong cùng backlog: làn *giá trị mới* (theo roadmap) và làn *bảo trì/kỹ thuật* (chiếm cố định, ví dụ 20–30% dung lượng). Làm vậy tránh hai thái cực: bảo trì nuốt hết sprint, hoặc nợ tích tụ vì tính năng luôn "gấp hơn". Dung lượng mỗi làn là quyết định của PO với dữ liệu của PM.
+
 ## Tình huống FoodNow
 
 Thứ Hai 25/05/2026, Sprint 8 Planning. Kể từ khi đội cắt bớt hai hạng mục ở tuần 20 (Ch34), backlog vẫn còn dày và hai bên kéo về hai phía. Trưởng nhóm **Marketing** của FoodNow muốn thêm **banner khuyến mãi trang chủ** và **nút chia sẻ đơn lên mạng xã hội** cho chiến dịch ra mắt. Anh **Huy** (CS Manager) muốn **hủy đơn của khách (FN-129)** và **quản lý tranh chấp trong Admin (FN-126)** lên sớm, vì đội CS sẽ ngập ticket nếu khách không tự huỷ được.

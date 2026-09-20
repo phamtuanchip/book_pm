@@ -79,6 +79,39 @@ FoodNow MVP → R1 → R2 với hai đội có thể coi là một chương trì
 
 FoodNow: sau MVP, tách thành **Mobile** và **Backend+Web** vì hai nhóm này phát triển gần độc lập qua API, còn DevOps phục vụ chung.
 
+## Đi sâu: thiết kế nhịp và ranh giới khi có hai đội
+
+Chương này nói về công cụ; phần này nói về **quyết định thiết kế** mà PM thường phải đưa ra khi tách một đội thành hai.
+
+### Chọn ranh giới đội bằng bốn câu hỏi
+
+1. **Hai nhóm có thể giao một tính năng từ đầu đến cuối mà không chờ nhau không?** Nếu để giao "đăng nhập" mà Mobile phải chờ Backend hai tuần, ranh giới hiện tại tạo phụ thuộc thường trực.
+2. **Số phụ thuộc chéo đội mỗi sprint là bao nhiêu?** Quy tắc thực dụng: nếu hơn 30% story của một đội cần đầu ra của đội kia, bạn đang chia sai chỗ. FoodNow đo ở tuần đầu tách đội: 8 phụ thuộc trên khoảng 26 story (31%) — ngưỡng cảnh báo; sau bốn tuần còn 5.
+3. **Ai sở hữu hợp đồng API?** Nếu không có người sở hữu, mọi bên đổi tuỳ ý. FoodNow giao Tech Lead sở hữu, mỗi thay đổi breaking có ADR.
+4. **Người chia sẻ (DevOps, UX) phục vụ đội nào trước?** Đặt lịch khối và một người "đầu mối ưu tiên" (thường là PM/Delivery Manager) để tránh mỗi đội đều nghĩ mình là số một.
+
+### Bảng so sánh nhịp: khi Mobile và Backend đi khác tốc độ
+
+| Yếu tố | Mobile (release train 2 tuần) | Backend (daily deploy) | Cơ chế cân bằng |
+|---|---|---|---|
+| Đơn vị phát hành | Bản app qua store, 1–3 ngày review | Deploy production nhiều lần/ngày | Backend tương thích ngược ≥ 2 phiên bản app |
+| Cách thay đổi hành vi | Bản app mới hoặc remote config | Feature flag phía server | Ưu tiên flag/remote config cho thay đổi cần "tức thì" |
+| Rủi ro chính | App cũ gọi API mới → crash | Đổi API mà không báo | Contract test + thông báo ≥ 1 sprint |
+| Kiểm thử tích hợp | Staging chung mỗi sprint | Pipeline tự động | Môi trường tích hợp cố định để Mobile test hằng ngày |
+| Đo lường | Velocity, crash-free rate | DORA | Báo cáo chung theo outcome, không so sánh hai bộ số |
+
+### Ba mô hình phối hợp và khi nào chọn
+
+- **Scrum of Scrums + bảng phụ thuộc** (FoodNow): hợp 2–3 đội, phụ thuộc vừa phải.
+- **Đội nền tảng (platform team)** phục vụ các đội sản phẩm: hợp khi có dịch vụ dùng chung (thanh toán, xác thực) mà nhiều đội cần; cần Product Owner cho đội nền tảng để tránh biến thành "hàng đợi ticket".
+- **Kế hoạch theo PI (kiểu SAFe)**: hợp khi ≥ 5 đội và phụ thuộc dày; chi phí họp lớn (hai ngày, cả đội), chỉ đáng khi lợi ích phối hợp vượt chi phí đó.
+
+**Cách kiểm tra bạn đang chọn đúng:** đo hai chỉ số 4 tuần một lần — *tỷ lệ story bị chặn bởi đội khác* và *thời gian chờ trung bình cho một phụ thuộc*. Nếu cả hai giảm, cơ chế phối hợp đang hoạt động; nếu không, đổi ranh giới thay vì thêm họp.
+
+### Vai trò PM khi chuyển sang Delivery Manager
+
+Khi có hai đội, PM không thể tham gia mọi Daily. Ba việc nên giữ: (1) **kế hoạch release chung và ngân sách** hai đội; (2) **rủi ro và phụ thuộc chéo đội** (bảng phụ thuộc là tài liệu của bạn); (3) **stakeholder và Sponsor**. Ba việc nên uỷ quyền: điều hành hằng ngày (Tech Lead/Scrum Master mỗi đội), quyết định kỹ thuật, và ước lượng. Dấu hiệu bạn chưa uỷ quyền đủ: bạn vẫn là người duy nhất biết đội nào đang làm gì.
+
 ## Tình huống FoodNow
 
 Thứ Hai 28/12/2026 (tuần 52). Sau 3 tháng go-live, số đơn tăng và anh Bảo muốn R1 (khuyến mãi, đánh giá) ra trong Q1/2027 và R2 trong Q3. Đội 12 người đã thu gọn còn 6 lúc bảo trì và sắp tăng lại; Dũng đề xuất **tách hai đội** để R1 và R2 chạy song song. Hà đồng ý nhưng lo ba điều: phụ thuộc chéo đội, API đổi bất ngờ, và nhịp release khác nhau (Mobile qua app store, Backend đã chuyển daily deploy — Ch33).

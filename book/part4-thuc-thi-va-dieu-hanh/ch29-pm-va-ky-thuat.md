@@ -79,7 +79,7 @@ PM không phải chuyên gia bảo mật nhưng cần biết để đặt câu h
 
 - **OWASP Top 10** (mức nhận biết): danh sách các loại lỗ hổng web phổ biến (kiểm soát truy cập yếu, lỗi mã hoá, injection, cấu hình sai...). Hỏi: "Đội có quét theo OWASP trong CI không? Đã pentest chưa?"
 - **Nguyên tắc cơ bản**: quyền tối thiểu; mã hoá dữ liệu nhạy cảm; không lưu thẻ thô (dùng tokenization của cổng thanh toán); quản lý bí mật trong kho riêng; cập nhật thư viện.
-- **Bảo vệ dữ liệu cá nhân**: Việt Nam có quy định về bảo vệ dữ liệu cá nhân (ví dụ Nghị định 13/2023/NĐ-CP và các văn bản mới hơn — hãy nhờ pháp lý xác nhận văn bản hiện hành). Ở mức PM: biết dự án thu thập dữ liệu gì, cần **sự đồng ý** của người dùng, **mục đích** rõ, **lưu trữ có thời hạn**, và quy trình xử lý khi lộ dữ liệu. Ghi vào RAID và yêu cầu Tech Lead/pháp lý rà.
+- **Bảo vệ dữ liệu cá nhân**: từ 01/01/2026, Việt Nam áp dụng **Luật Bảo vệ dữ liệu cá nhân 2025 (số 91/2025/QH15)** cùng nghị định hướng dẫn (Nghị định 356/2025/NĐ-CP), thay cho Nghị định 13/2023/NĐ-CP trước đây (đã xác minh trên các nguồn pháp lý công khai tháng 9/2026; luôn nhờ pháp lý xác nhận văn bản hiện hành). Ở mức PM: biết dự án thu thập dữ liệu gì, cần **sự đồng ý** của người dùng, **mục đích** rõ, **lưu trữ có thời hạn**, quyền của chủ thể dữ liệu (xoá, chỉnh sửa) và quy trình xử lý khi lộ dữ liệu; mức phạt có thể tính theo doanh thu nên rủi ro không nhỏ. Ghi vào RAID và yêu cầu Tech Lead/pháp lý rà.
 - **Tuân thủ thanh toán**: chứng nhận với vendor; không tự lưu số thẻ.
 
 *Lưu ý: nội dung pháp lý ở đây chỉ mang tính nhận biết, không thay thế tư vấn pháp lý.*

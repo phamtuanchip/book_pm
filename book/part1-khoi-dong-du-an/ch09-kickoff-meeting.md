@@ -79,6 +79,34 @@ Biên bản 1 trang gồm: thông tin họp, tóm tắt 3 dòng, quyết định
 
 📎 Mẫu đầy đủ: `templates/meeting/meeting-minutes.md`
 
+## Đi sâu: các biến thể kickoff và cách xử lý tình huống khó
+
+### Kickoff cho dự án đã chạy dở, đội phân tán và kickoff giai đoạn mới
+
+Không phải kickoff nào cũng bắt đầu từ số 0:
+
+| Bối cảnh | Điều chỉnh |
+|---|---|
+| **Dự án nhận lại giữa chừng** (PM mới) | Đổi tên thành "re-kickoff"; mục tiêu là *xác nhận lại* mục tiêu, baseline và RACI; thêm phần "hiện trạng thật" (số liệu, rủi ro, lịch sử quyết định) do PM cũ hoặc BA trình bày |
+| **Đội phân tán/remote** | Chia thành hai buổi 60 phút để tránh mệt; gửi tài liệu dạng bình luận được (comment) và yêu cầu phản hồi bằng văn bản trước; ghi hình nếu được phép |
+| **Kickoff giai đoạn mới** (R1 sau MVP) | Không lặp lại lịch sử; dành 30 phút cho bài học giai đoạn trước và thay đổi cách làm |
+| **Khách hàng đông người** | Chỉ mời người ra quyết định + đại diện người dùng; các nhóm khác nhận biên bản |
+
+### Bốn kịch bản khó và câu trả lời mẫu
+
+1. **Sponsor nói "xong sớm hơn nữa được không?" ngay giữa buổi.** Không cam kết; ghi vào parking lot; hứa phản hồi kèm số liệu trong 48 giờ. Câu mẫu: "Em hiểu ngày rất quan trọng với anh. Em xin ghi lại và mang số liệu năng lực đội đến cho anh chọn."
+2. **Người của khách chỉ trích đội trước mặt cả phòng** ("mấy dự án trước bên chị trễ suốt"). Đừng biện hộ; nhận điều có thật, chuyển sang cách làm khác lần này. Câu mẫu: "Anh nói đúng là dự án trước có trễ. Lần này mình đặt sẵn mốc theo tuần và báo cáo mỗi thứ Sáu để anh thấy sớm."
+3. **Hai người khách mâu thuẫn ý kiến về phạm vi.** Không phân xử trong phòng; nêu "hai quan điểm này chưa thống nhất", ghi vào câu hỏi mở kèm người quyết định (Sponsor/PO) và hạn.
+4. **Không ai chịu nhận RACI.** Mỗi việc chưa có "A" thì hẹn người ra quyết định trong 3 ngày; không kết thúc kickoff với ô "A" trống ở việc quan trọng.
+
+### Chuẩn bị deck 10 slide: kiểm tra chất lượng
+
+Trước khi gửi, tự hỏi năm câu: (1) Người đọc chỉ xem slide 2–4 có hiểu mục tiêu và phạm vi không? (2) Mỗi slide có đúng một thông điệp? (3) Các con số (ngày, tiền) khớp Charter không? (4) Có slide nào chỉ để "cho đủ" không — bỏ đi? (5) Người không tham dự đọc deck + biên bản có làm việc được không? Nếu một câu trả lời là "không", sửa trước khi gửi.
+
+### Đo hiệu quả kickoff
+
+Kickoff tốt cho ra những thứ kiểm chứng được sau **một tuần**: (a) mọi hành động đã có người và hạn; (b) không ai hỏi lại "ai quyết định việc X?" — nếu có, RACI chưa rõ; (c) câu hỏi mở đã đóng ≥ 70%; (d) khách và đội dùng cùng một kênh chính thức. Ghi bốn chỉ báo này vào biên bản buổi rà soát tuần đầu.
+
 ## Tình huống FoodNow
 
 Thứ Hai 05/01/2026, 09:00. Đội và khách ngồi chật phòng họp FoodNow. Hà mở đầu ngắn, mời anh Bảo nói về lý do làm dự án. Anh Bảo nói rất hào hứng, rồi dừng giữa chừng: "Tôi muốn đổi mục tiêu. 500 đơn/ngày phải đạt trong **một tháng** đầu, không phải ba tháng. Chiến dịch marketing sẽ đẩy mạnh."

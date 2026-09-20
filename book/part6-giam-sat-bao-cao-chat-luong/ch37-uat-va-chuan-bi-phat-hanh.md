@@ -69,6 +69,35 @@ Ba kinh nghiệm: (a) **lịch người dùng đặt trước** — nhà hàng, 
 
 Xem thêm sách *IT Business Analyst — Từ Zero Đến Thành Thạo* (chương về UAT và sign-off) để hiểu vai trò BA trong chuẩn bị kịch bản và tiêu chí chấp nhận.
 
+## Đi sâu: thiết kế kịch bản UAT và quản lý vòng lặp sửa lỗi
+
+### Viết kịch bản UAT theo luồng nghiệp vụ
+
+Kịch bản tốt gồm: **mã**, **vai trò**, **điều kiện đầu**, **các bước**, **kết quả mong đợi**, **dữ liệu**, **mức ưu tiên**. Ví dụ một kịch bản của FoodNow:
+
+| Trường | Nội dung |
+|---|---|
+| Mã | UAT-RF-04 |
+| Vai trò | Nhà hàng + CS |
+| Điều kiện đầu | Đơn đã thanh toán thẻ, nhà hàng huỷ vì hết món |
+| Các bước | Nhà hàng chọn "Huỷ — hết món" → hệ thống thông báo khách → CS mở đơn ở Admin → xác nhận hoàn tiền |
+| Kết quả mong đợi | Khách nhận thông báo; hoàn tiền được tạo; số liệu đối soát khớp |
+| Ưu tiên | Cao (luồng tiền) |
+
+Nhóm kịch bản theo **luồng** (đặt đơn → giao → thanh toán → hoàn tiền) hơn là theo màn hình, và dành phần lớn cho luồng có tiền hoặc dữ liệu cá nhân.
+
+### Vòng lặp sửa lỗi: giữ nhịp
+
+Quy tắc vận hành UAT vòng 1 của FoodNow: **triage 10:00 hằng ngày**; Critical sửa trong 1 ngày làm việc; **gom bản sửa** thành build hằng ngày lên UAT lúc 17:00 (không sửa "nóng" từng lỗi để tránh khó kiểm soát); người dùng retest sáng hôm sau. Cách này giữ dòng chảy ổn định và cho người dùng thử nghiệm biết khi nào có bản mới.
+
+### Khi người dùng UAT không đủ hoặc không nhiệt tình
+
+Bốn biện pháp: (1) đặt lịch trước với người phụ trách của họ; (2) chia nhỏ phiên (60–90 phút) thay vì cả ngày; (3) trực tại chỗ hỗ trợ; (4) ghi nhận đóng góp (cảm ơn cá nhân, phản hồi kết quả họ tìm được). Nếu vẫn thiếu, giảm phạm vi UAT theo rủi ro và ghi rõ phần chưa được kiểm chứng vào tiêu chí Go/No-Go.
+
+### Đọc số liệu UAT
+
+Ba số nên xem hằng ngày: *số kịch bản đã chạy/tổng*; *defect mở theo severity*; *tỷ lệ defect mới/ngày* — nếu tỷ lệ này không giảm sau tuần thứ hai, chất lượng nền còn thấp và một vòng UAT nữa là chắc chắn cần. FoodNow: vòng 1 tuần 1 phát hiện 26 defect, tuần 4 chỉ 3 — đường cong đúng kỳ vọng.
+
 ## Tình huống FoodNow
 
 UAT vòng 1 chạy từ 27/07 đến 21/08 trên `v1.0.0-rc.1` với 60 kịch bản, 3 nhà hàng, 10 tài xế, 12 khách thử và đội CS của anh Huy. Sau bốn tuần: **47 defect**, gồm **3 Critical** (một lỗi trừ tiền nhưng không tạo đơn, một lỗi mất kết nối khiến tài xế nhận trùng chuyến, một lỗi đối soát lệch), **9 High**, 22 Medium, 13 Low. Cutover chưa diễn tập; sign-off chưa có; pentest còn một lỗ hổng High.

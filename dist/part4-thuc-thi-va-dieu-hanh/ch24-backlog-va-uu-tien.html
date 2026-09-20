@@ -167,6 +167,67 @@
 </table>
 <p>Ánh xạ mẫu (FoodNow): WBS 3.1.3 &quot;Giỏ hàng và đặt đơn&quot; (65 ngày công) ↔ Epic <strong>E3</strong> ↔ story FN-109, FN-110, FN-128, FN-129… Khi backlog đổi trong epic, baseline WBS không đổi; khi thêm epic mới thì CR.</p>
 <p>📎 Mẫu đầy đủ: <code>templates/sprint-agile/product-backlog.csv</code> (30 story, có MoSCoW, RICE bằng công thức, Sprint đích và trạng thái)</p>
+<h2>Đi sâu: ví dụ chấm điểm và các bẫy khi ưu tiên</h2>
+<h3>Ví dụ RICE và WSJF trên cùng một tập story</h3>
+<p>Cho bốn story của FoodNow ở Sprint 8 (Reach 1–10; Impact 0,25–3; Confidence 0,5–1; Effort là story point):</p>
+<table>
+<thead>
+<tr>
+<th>Story</th>
+<th>Reach</th>
+<th>Impact</th>
+<th>Conf.</th>
+<th>Effort</th>
+<th>RICE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hủy đơn của khách (FN-129)</td>
+<td>7</td>
+<td>3</td>
+<td>0,8</td>
+<td>5</td>
+<td>3,36</td>
+</tr>
+<tr>
+<td>Thông báo push trạng thái đơn (FN-120)</td>
+<td>9</td>
+<td>2</td>
+<td>0,8</td>
+<td>5</td>
+<td>2,88</td>
+</tr>
+<tr>
+<td>Lịch sử đơn hàng (FN-121)</td>
+<td>8</td>
+<td>1</td>
+<td>0,9</td>
+<td>3</td>
+<td>2,40</td>
+</tr>
+<tr>
+<td>Banner khuyến mãi (đề xuất)</td>
+<td>10</td>
+<td>1</td>
+<td>0,5</td>
+<td>8</td>
+<td>0,63</td>
+</tr>
+</tbody>
+</table>
+<p>Cách đọc: RICE ưu tiên <strong>hủy đơn</strong> vì tác động lớn ở chi phí nhỏ; banner đứng cuối vì độ tin cậy thấp — nếu Marketing đo được tác động thật, Confidence tăng và thứ hạng đổi. Đó là ý nghĩa chính: điểm số <strong>buộc người nêu giả định</strong>.</p>
+<p><strong>WSJF</strong> dùng khi phải xếp việc có <em>chi phí trì hoãn</em> khác nhau. Ví dụ hai việc cùng cỡ 5: (A) khoản tuân thủ có hạn pháp lý sau 6 tuần — giá trị kinh doanh 3, khẩn cấp theo thời gian 8, giảm rủi ro 8 → Cost of Delay 19, WSJF = 19 ÷ 5 = 3,8; (B) một cải tiến giao diện — 5 + 2 + 1 = 8, WSJF = 1,6. A đi trước dù &quot;giá trị người dùng&quot; của B nghe hấp dẫn.</p>
+<h3>Năm bẫy thường gặp</h3>
+<ol>
+<li><strong>Ưu tiên theo người nói to nhất.</strong> Cách chặn: mọi đề xuất phải kèm giả định về Reach/Impact.</li>
+<li><strong>Điểm số giả chính xác.</strong> RICE 3,36 và 3,20 không khác nhau đáng kể; coi chênh nhỏ hơn 15% là hoà và dùng phán đoán.</li>
+<li><strong>Chỉ chấm giá trị, quên phụ thuộc.</strong> Story có RICE cao nhưng chờ vendor vẫn không làm được; đưa cột &quot;phụ thuộc&quot; vào bảng.</li>
+<li><strong>Chấm một lần rồi quên.</strong> Dữ liệu thay đổi; chấm lại ở đầu mỗi release.</li>
+<li><strong>Backlog đầy &quot;Must&quot;.</strong> Nếu 80% là Must, MoSCoW đã mất nghĩa; buộc mỗi Must trả lời &quot;nếu không có, ra mắt được không?&quot;.</li>
+</ol>
+<h3>Backlog cho đội có hai chân: phát triển và bảo trì</h3>
+<p>Khi một đội vừa làm tính năng vừa xử lý lỗi, hãy tách <strong>hai làn</strong> trong cùng backlog: làn <em>giá trị mới</em> (theo roadmap) và làn <em>bảo trì/kỹ thuật</em> (chiếm cố định, ví dụ 20–30% dung lượng). Làm vậy tránh hai thái cực: bảo trì nuốt hết sprint, hoặc nợ tích tụ vì tính năng luôn &quot;gấp hơn&quot;. Dung lượng mỗi làn là quyết định của PO với dữ liệu của PM.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Thứ Hai 25/05/2026, Sprint 8 Planning. Kể từ khi đội cắt bớt hai hạng mục ở tuần 20 (Ch34), backlog vẫn còn dày và hai bên kéo về hai phía. Trưởng nhóm <strong>Marketing</strong> của FoodNow muốn thêm <strong>banner khuyến mãi trang chủ</strong> và <strong>nút chia sẻ đơn lên mạng xã hội</strong> cho chiến dịch ra mắt. Anh <strong>Huy</strong> (CS Manager) muốn <strong>hủy đơn của khách (FN-129)</strong> và <strong>quản lý tranh chấp trong Admin (FN-126)</strong> lên sớm, vì đội CS sẽ ngập ticket nếu khách không tự huỷ được.</p>
 <p>Châu đang bị kẹt giữa hai bên. Hà không chọn phe; chị đề nghị họp 45 phút, mỗi bên trình bày <strong>giả định</strong> và dùng RICE. Marketing: banner (R10, I1, C0,5, E8) → 0,625; chia sẻ MXH (R8, I1, C0,5, E5) → 0,8. Huy: hủy đơn (R7, I3, C0,8, E5) → 3,36; tranh chấp Admin (R3, I3, C0,8, E8) → 0,9. Marketing phản bác Reach của họ bị đánh giá thấp vì &quot;thương hiệu&quot;; Hà hỏi: &quot;Anh có dữ liệu về Impact chưa?&quot; Họ chưa có, nên Confidence 0,5.</p>

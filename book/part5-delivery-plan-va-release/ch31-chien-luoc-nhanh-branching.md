@@ -125,6 +125,33 @@ Mỗi repo có thể dùng chiến lược khác: MVP dùng **GitFlow-lite** cho
 
 📎 Mẫu đầy đủ: `templates/delivery-plan/branching-strategy.md`, `gitflow-diagram.md`, `trunk-based-workflow.md`
 
+## Đi sâu: đọc sức khoẻ nhánh bằng số liệu và xử lý tình huống thực tế
+
+### Bốn chỉ số sức khoẻ nhánh PM có thể xin từ Tech Lead
+
+| Chỉ số | Cách đo | Ngưỡng cảnh báo |
+|---|---|---|
+| Tuổi nhánh trung vị | Ngày từ tạo đến merge | > 3 ngày |
+| Kích thước PR trung vị | Dòng thay đổi | > 400 |
+| Thời gian review | Từ mở PR đến approve | > 24 giờ |
+| Số conflict lớn/tháng | Merge cần > 1 giờ xử lý | ≥ 2 |
+
+Đặt bốn số này vào dashboard tuần; chúng dự báo rủi ro tích hợp sớm hơn mọi báo cáo miệng.
+
+### Ba tình huống hay gặp
+
+- **"Nhánh này cần thêm 3 ngày nữa":** tách phần xong thành PR nhỏ ẩn sau flag; hoặc ghép cặp với người khác để rút thời gian. Đừng ép "merge ngay" phần chưa an toàn.
+- **Dev muốn giữ nhánh dài "cho sạch":** hỏi rủi ro conflict và chi phí tích hợp; đề xuất branch by abstraction/flag thay vì nhánh dài.
+- **Hotfix vào thứ Sáu chiều:** theo quy trình hotfix (từ tag production, back-merge); ghi rõ chấp nhận rủi ro thời điểm và có người trực cuối tuần.
+
+### Khi nào nên chuyển từ GitFlow sang trunk-based (checklist)
+
+Chuyển khi *đồng thời* có: test tự động đáng tin (regression, flaky < 2%), CI dưới 10 phút, feature flag đã dùng thật, đội quen PR nhỏ, giám sát/rollback nhanh, và hợp đồng/kiểm toán chấp nhận approval tự động. Thiếu bất kỳ mục nào, chuyển sớm chỉ đưa lỗi vào nhánh chính nhanh hơn. Chuyển **từng repo**, bắt đầu ở repo rủi ro thấp.
+
+### Mẫu chính sách nhánh 8 dòng cho đội nhỏ
+
+1) Nhánh mặc định `main` luôn deploy được; 2) làm việc trên nhánh ngắn hạn; 3) tên có mã Jira; 4) PR < 400 dòng; 5) review ≤ 24 giờ, ≥ 1 approver; 6) CI xanh mới merge; 7) nhánh > 5 ngày phải báo; 8) hotfix từ tag production và back-merge. Bấy nhiêu đủ cho đa số đội dưới 8 người.
+
 ## Tình huống FoodNow
 
 Thứ Sáu 08/05/2026, cuối Sprint 6 (tuần 18). Hai nhánh feature — **tài xế nhận chuyến** (`feature/FN-117-…`, Khoa và Quỳnh) và **kết nối sandbox PayEasy** (`feature/FN-115-…`, Dũng và Backend 2) — sống **3 tuần** (từ 20/04) vì mỗi bên nghĩ "xong hẳn rồi mới merge". Cả hai cùng sửa máy trạng thái đơn hàng, cộng thêm việc định dạng lại code. Khi merge vào `develop`, Git báo **conflict ở khoảng 200 file**. Dũng, Backend 2 và Khoa mất hai ngày (06–08/05) giải quyết, chặn cả đội merge; Nam nhắc rằng bản `v0.6.0` sẽ trễ.

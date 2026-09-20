@@ -94,6 +94,32 @@ Bốn kỹ thuật đơn giản, làm ngay ở giai đoạn khởi động:
 
 > **Cảnh giác với "tiện thể".** "Tiện thể thêm nút chia sẻ đơn nhé" là hình thức phổ biến nhất của scope creep. Không phải mọi thay đổi đều xấu; vấn đề là **thay đổi không được đánh giá**.
 
+## Đi sâu: chuyển ý tưởng mơ hồ thành phạm vi kiểm tra được
+
+### Bốn câu hỏi biến "làm giống app X" thành yêu cầu
+
+Khi khách nói mơ hồ, hỏi theo thứ tự: (1) **Ai dùng và để làm gì?** — chuyển tính năng thành mục tiêu người dùng; (2) **Thế nào là thành công?** — ví dụ "khách đặt xong trong 3 phút"; (3) **Không có tính năng này thì sao?** — tách Must khỏi Could; (4) **Ràng buộc nào cố định?** — ngày, tiền, chuẩn tuân thủ. Ghi câu trả lời thành epic kèm tiêu chí chấp nhận sơ bộ trước khi ước lượng.
+
+### Ví dụ: cùng một dòng, hai mức rõ ràng
+
+| Mơ hồ | Rõ ràng |
+|---|---|
+| "Có thanh toán" | "Khách thanh toán thẻ hoặc COD; thẻ qua PayEasy; thất bại hiển thị lý do và cho thử lại; hoàn tiền tự động khi nhà hàng huỷ" |
+| "Có báo cáo" | "Admin xem đơn theo ngày/nhà hàng, xuất CSV, tối đa 10.000 dòng; không có biểu đồ (R1)" |
+| "Nhanh" | "Đặt đơn p95 ≤ 2 giây ở 500 đơn/ngày × 2" |
+
+### Danh sách out-of-scope "khó nói": năm loại nên viết ra
+
+1. Tính năng khách **từng nhắc** nhưng chưa được duyệt; 2. **Nền tảng/thiết bị** không hỗ trợ (iOS cho Tài xế); 3. **Ngôn ngữ/thị trường** ngoài phạm vi; 4. **Tích hợp** chưa ký với bên thứ ba; 5. **Yêu cầu phi chức năng** vượt mức chuẩn (ví dụ uptime 99,99%). Người dùng thường "đọc thấy" cái không nói; nêu rõ để không ai giả định ngược lại.
+
+### Kiểm tra Scope Statement bằng "bài kiểm tra người lạ"
+
+Đưa Scope Statement cho một người chưa biết dự án và hỏi: (a) sản phẩm có làm X không? (b) khi nào biết "xong"? (c) thay đổi ngoài bản này đi qua đâu? Nếu họ trả lời sai một câu, viết lại đoạn đó.
+
+### Phân biệt thay đổi phạm vi và làm rõ phạm vi
+
+Không phải mọi lời yêu cầu thêm là thay đổi. **Làm rõ** khi điều mới nằm trong epic đã duyệt và không đổi công đáng kể (< 5% epic); **thay đổi** khi thêm epic, đổi mục tiêu hoặc kéo công lớn. Ranh giới mờ thì mặc định ghi CR nhỏ: chi phí ghi chép thấp hơn nhiều so với tranh cãi sau này.
+
 ## Tình huống FoodNow
 
 Cuối tháng 1/2026 (tuần 3–5), Hà, Lan và chị Châu ngồi hai buổi workshop để chốt phạm vi MVP. Ba nhóm người dùng (khách, nhà hàng, tài xế) mỗi nhóm có danh sách mong muốn dài. Hà không tranh luận từng tính năng; chị dùng câu hỏi "nếu thiếu cái này, ra mắt được không?" và chấm MoSCoW. Kết quả: 11 epic (E1–E11) là Must; khuyến mãi và đánh giá món là Should nhưng đẩy sang R1; **ví điện tử** ban đầu được ghi "in-scope có điều kiện" vì anh Bảo yêu cầu.

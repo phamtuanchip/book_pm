@@ -92,6 +92,50 @@
 <p><strong>Sign-off UAT</strong>: xác nhận bằng chữ ký/email của Product, CS, QA và Sponsor. <strong>Sign-off có điều kiện</strong> cho phép defect Medium/Low còn lại với kế hoạch sửa; ghi rõ danh sách và hạn. Tránh sign-off &quot;cho xong&quot; mà không nêu điều kiện.</p>
 <p>📎 Mẫu đầy đủ: <code>templates/quality/go-no-go-checklist.md</code></p>
 <p>Xem thêm sách <em>IT Business Analyst — Từ Zero Đến Thành Thạo</em> (chương về UAT và sign-off) để hiểu vai trò BA trong chuẩn bị kịch bản và tiêu chí chấp nhận.</p>
+<h2>Đi sâu: thiết kế kịch bản UAT và quản lý vòng lặp sửa lỗi</h2>
+<h3>Viết kịch bản UAT theo luồng nghiệp vụ</h3>
+<p>Kịch bản tốt gồm: <strong>mã</strong>, <strong>vai trò</strong>, <strong>điều kiện đầu</strong>, <strong>các bước</strong>, <strong>kết quả mong đợi</strong>, <strong>dữ liệu</strong>, <strong>mức ưu tiên</strong>. Ví dụ một kịch bản của FoodNow:</p>
+<table>
+<thead>
+<tr>
+<th>Trường</th>
+<th>Nội dung</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mã</td>
+<td>UAT-RF-04</td>
+</tr>
+<tr>
+<td>Vai trò</td>
+<td>Nhà hàng + CS</td>
+</tr>
+<tr>
+<td>Điều kiện đầu</td>
+<td>Đơn đã thanh toán thẻ, nhà hàng huỷ vì hết món</td>
+</tr>
+<tr>
+<td>Các bước</td>
+<td>Nhà hàng chọn &quot;Huỷ — hết món&quot; → hệ thống thông báo khách → CS mở đơn ở Admin → xác nhận hoàn tiền</td>
+</tr>
+<tr>
+<td>Kết quả mong đợi</td>
+<td>Khách nhận thông báo; hoàn tiền được tạo; số liệu đối soát khớp</td>
+</tr>
+<tr>
+<td>Ưu tiên</td>
+<td>Cao (luồng tiền)</td>
+</tr>
+</tbody>
+</table>
+<p>Nhóm kịch bản theo <strong>luồng</strong> (đặt đơn → giao → thanh toán → hoàn tiền) hơn là theo màn hình, và dành phần lớn cho luồng có tiền hoặc dữ liệu cá nhân.</p>
+<h3>Vòng lặp sửa lỗi: giữ nhịp</h3>
+<p>Quy tắc vận hành UAT vòng 1 của FoodNow: <strong>triage 10:00 hằng ngày</strong>; Critical sửa trong 1 ngày làm việc; <strong>gom bản sửa</strong> thành build hằng ngày lên UAT lúc 17:00 (không sửa &quot;nóng&quot; từng lỗi để tránh khó kiểm soát); người dùng retest sáng hôm sau. Cách này giữ dòng chảy ổn định và cho người dùng thử nghiệm biết khi nào có bản mới.</p>
+<h3>Khi người dùng UAT không đủ hoặc không nhiệt tình</h3>
+<p>Bốn biện pháp: (1) đặt lịch trước với người phụ trách của họ; (2) chia nhỏ phiên (60–90 phút) thay vì cả ngày; (3) trực tại chỗ hỗ trợ; (4) ghi nhận đóng góp (cảm ơn cá nhân, phản hồi kết quả họ tìm được). Nếu vẫn thiếu, giảm phạm vi UAT theo rủi ro và ghi rõ phần chưa được kiểm chứng vào tiêu chí Go/No-Go.</p>
+<h3>Đọc số liệu UAT</h3>
+<p>Ba số nên xem hằng ngày: <em>số kịch bản đã chạy/tổng</em>; <em>defect mở theo severity</em>; <em>tỷ lệ defect mới/ngày</em> — nếu tỷ lệ này không giảm sau tuần thứ hai, chất lượng nền còn thấp và một vòng UAT nữa là chắc chắn cần. FoodNow: vòng 1 tuần 1 phát hiện 26 defect, tuần 4 chỉ 3 — đường cong đúng kỳ vọng.</p>
 <h2>Tình huống FoodNow</h2>
 <p>UAT vòng 1 chạy từ 27/07 đến 21/08 trên <code>v1.0.0-rc.1</code> với 60 kịch bản, 3 nhà hàng, 10 tài xế, 12 khách thử và đội CS của anh Huy. Sau bốn tuần: <strong>47 defect</strong>, gồm <strong>3 Critical</strong> (một lỗi trừ tiền nhưng không tạo đơn, một lỗi mất kết nối khiến tài xế nhận trùng chuyến, một lỗi đối soát lệch), <strong>9 High</strong>, 22 Medium, 13 Low. Cutover chưa diễn tập; sign-off chưa có; pentest còn một lỗ hổng High.</p>
 <p>Thứ Sáu 21/08, Go/No-Go lần 1. Hà mở checklist đã ký từ 09/03: mục 1 (Critical = 0) và 2 (High = 0) đỏ. Anh Bảo hỏi: &quot;Có thể Go có điều kiện với ba Critical đã có kế hoạch sửa không? Chiến dịch marketing đã lên kế hoạch.&quot; Nam đưa ý kiến phản đối bằng văn bản: &quot;Lỗi trừ tiền không tạo đơn là loại không thể chấp nhận.&quot; Hà trình bày: &quot;Tiêu chí này anh đã ký từ tháng 3. Nếu đổi bây giờ, em chỉ có thể báo rủi ro mất tiền của khách. Em đề xuất <strong>No-Go</strong>, sửa 12 defect, rc.2 ngày 04/09, diễn tập cutover, UAT vòng 2 rồi họp lại 16/09; go-live vẫn giữ 03/10.&quot; Anh Bảo chần chừ, rồi nói: &quot;Được, tôi không muốn mất mặt vì lỗi thanh toán.&quot; Kết quả: <strong>No-Go</strong> lần 1 (DL-016).</p>

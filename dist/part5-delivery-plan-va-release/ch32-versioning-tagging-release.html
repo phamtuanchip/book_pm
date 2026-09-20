@@ -164,6 +164,55 @@
 <li><strong>Cherry-pick/backport</strong>: khi hỗ trợ nhiều phiên bản, chuyển bản sửa lỗi từ <code>main</code> sang nhánh hỗ trợ (chỉ lỗi nghiêm trọng).</li>
 </ul>
 <p>📎 Mẫu đầy đủ: <code>templates/delivery-plan/release-log.csv</code> (20 dòng: <code>v0.1.0</code> → <code>v1.0.1</code>)</p>
+<h2>Đi sâu: các tình huống phiên bản khó và cách quyết định</h2>
+<h3>Quyết định số phiên bản khi có nhiều loại thay đổi</h3>
+<p>Khi một bản gồm nhiều thay đổi, <strong>lấy mức cao nhất</strong>: một breaking change + hai tính năng + năm sửa lỗi → tăng MAJOR. Bảng nhanh:</p>
+<table>
+<thead>
+<tr>
+<th>Thay đổi trong bản</th>
+<th>Số phiên bản mới (từ 1.2.3)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chỉ sửa lỗi</td>
+<td>1.2.4</td>
+</tr>
+<tr>
+<td>Có tính năng mới, tương thích ngược</td>
+<td>1.3.0</td>
+</tr>
+<tr>
+<td>Có bỏ endpoint hoặc đổi định dạng dữ liệu</td>
+<td>2.0.0</td>
+</tr>
+<tr>
+<td>Tính năng mới, đang thử nghiệm</td>
+<td>1.3.0-beta.1</td>
+</tr>
+<tr>
+<td>Ứng viên phát hành</td>
+<td>1.3.0-rc.1</td>
+</tr>
+</tbody>
+</table>
+<p>Với <strong>API nội bộ</strong> giữa các đội, nên tách phiên bản API (v1, v2) khỏi phiên bản ứng dụng để Mobile chọn được phiên bản API mình dùng.</p>
+<h3>Một release đi qua các trạng thái: ví dụ trên Jira</h3>
+<p>Bản <code>1.0.0</code> trải qua các Fix Version trạng thái: <em>Unreleased</em> (đang gom story) → <em>Release candidate</em> (rc.1, rc.2) → <em>Released</em> (v1.0.0) → <em>Archived</em>. Quy tắc: story chỉ được gắn Fix Version khi đạt DoD; story không kịp bị chuyển sang version sau <strong>kèm lý do</strong>; khi đóng version, danh sách story tự sinh release notes.</p>
+<h3>Backport và hỗ trợ nhiều phiên bản</h3>
+<p>Khi khách dùng cả <code>1.0.x</code> và <code>1.1.x</code>, lỗi bảo mật nghiêm trọng cần vá cả hai. Quy trình: (1) sửa ở nhánh mới nhất; (2) <strong>cherry-pick</strong> sang nhánh hỗ trợ; (3) tag PATCH cho mỗi nhánh (<code>1.0.4</code>, <code>1.1.2</code>); (4) ghi vào release log; (5) thông báo khách theo phiên bản họ dùng. Đặt <strong>chính sách hỗ trợ</strong> rõ (ví dụ chỉ hỗ trợ hai phiên bản MINOR gần nhất) để không phải vá vô hạn.</p>
+<h3>Sáu câu PM nên hỏi trước mỗi release</h3>
+<ol>
+<li>Bản chạy production có đúng là bản đã qua UAT (cùng tag/artifact) không?</li>
+<li>Tag đã bất biến và được bảo vệ chưa?</li>
+<li>Migration dữ liệu có đường lùi không?</li>
+<li>Release notes hai bản đã duyệt chưa?</li>
+<li>Rollback đã diễn tập (thời gian thật) chưa?</li>
+<li>Ai có quyền quyết định lùi và tiêu chí là gì?</li>
+</ol>
+<h3>Lỗi phổ biến khi đặt tag</h3>
+<p>Tag nhầm commit (do tag trước khi merge hết); tag di chuyển (cố sửa tag cũ) làm mất truy vết; quên tag cho hotfix; đặt tag nhưng release log không cập nhật. Cách chặn: pipeline tự tạo tag từ commit đã qua kiểm tra, bảo vệ tag không cho ghi đè.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Thứ Sáu 27/02/2026, cuối Sprint 1, Hà xem lần đầu bản build lên staging và nhận tin từ Ánh: <strong><code>v0.1.0</code></strong> đã được tag. Chị mở release log ghi dòng đầu tiên (27/02, 17:30, Sprint 1, Staging, duyệt Dũng + Nam, Fix Version <code>FN-MVP-0.1</code>). Từ đó, mỗi hai tuần một tag mới: <code>v0.2.0</code> (13/03) … đến <code>v0.11.0</code> (17/07). Ngày 24/07, sau feature freeze, Dũng cắt <strong><code>release/1.0.0</code></strong> và ngày 27/07 tag <strong><code>v1.0.0-rc.1</code></strong> cho UAT (Ánh triển khai, Nam xác nhận). Sau No-Go lần 1 (21/08, 47 defect gồm 3 Critical), đội sửa trên <code>release/1.0.0</code> và tag <strong><code>v1.0.0-rc.2</code></strong> ngày 04/09; UAT vòng 2 và Go lần 2 ngày 16/09.</p>
 <p>Ngày 02/10, Dũng tag <strong><code>v1.0.0</code></strong> trên commit đã qua UAT; 02:00 sáng thứ Bảy 03/10 Ánh deploy từ chính tag đó. Khoảng 02:40 hệ thống báo bất thường (Ch38); đội ổn định lúc 06:10, tag <strong><code>v1.0.1</code></strong> hotfix lúc 11:30 và deploy 12:10. Điều quan trọng: <strong>rollback về <code>v0.16.0</code> đã có runbook</strong> (≤ 30 phút) nhưng đội không dùng vì sự cố nằm ở cấu hình, có thể sửa nhanh hơn. Chị Hà mở release log để trả lời anh Bảo: &quot;Bản đang chạy là <code>v1.0.1</code>, gồm hotfix cấu hình cache, duyệt bởi em, Dũng và anh lúc 11:45.&quot; Anh Bảo hỏi &quot;Mai bản nào?&quot; — Hà đáp: &quot;Vẫn <code>v1.0.1</code>; bản tiếp theo là <code>v1.0.2</code> chỉ khi có lỗi, còn tính năng mới sẽ là <code>v1.1.0</code> cho R1.&quot;</p>

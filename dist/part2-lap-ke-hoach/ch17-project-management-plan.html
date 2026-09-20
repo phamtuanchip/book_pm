@@ -182,6 +182,64 @@
 <li><strong>Phần sống</strong> (cập nhật liên tục, không cần duyệt lại): backlog, lịch sprint, RAID, báo cáo, velocity.</li>
 </ul>
 <p>Quy tắc: PM Plan <strong>xem lại có hệ thống ở mỗi mốc lớn</strong> (Scope Freeze, bắt đầu UAT, Go-live) và <strong>sau mỗi thay đổi baseline</strong>. Không sao chép PM Plan vào mọi tài liệu; hãy để các tài liệu sống là nơi cập nhật, còn PM Plan nêu cách chúng được quản lý.</p>
+<h2>Đi sâu: kiểm tra chất lượng PM Plan và xử lý các tình huống thường gặp</h2>
+<h3>Bảy phép kiểm tra trước khi gửi Sponsor</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Câu hỏi</th>
+<th>Nếu không đạt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Người ký có hiểu mục tiêu và ràng buộc ưu tiên trong hai trang đầu?</td>
+<td>Đưa mục 1 và 13 lên đầu</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Mọi con số (ngày công, ngân sách, mốc) khớp tài liệu gốc?</td>
+<td>Chạy đối chiếu chuỗi: WBS ↔ Schedule ↔ Budget ↔ Resource</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Mỗi kế hoạch phụ có liên kết tới tài liệu chi tiết?</td>
+<td>Thêm liên kết hoặc xoá đoạn</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Baseline có phiên bản, ngày, người duyệt?</td>
+<td>Điền Baseline Register</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Quy tắc thay đổi và dự phòng viết bằng số?</td>
+<td>Thêm ngưỡng cụ thể (ví dụ 5% ngân sách)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Có phần &quot;sống&quot; và &quot;ổn định&quot; tách bạch?</td>
+<td>Đánh dấu phần cần duyệt để đổi</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Người ngoài dự án đọc 15 phút có hiểu dự án?</td>
+<td>Cắt chi tiết, thêm sơ đồ tổng quan</td>
+</tr>
+</tbody>
+</table>
+<h3>Chuỗi đối chiếu số liệu: ví dụ FoodNow</h3>
+<p>Baseline chỉ có giá trị khi các tài liệu <strong>nói cùng một sự thật</strong>: WBS 1.927 ngày công → năng lực 12 FTE × 185 ngày = 2.220 (87%) → chi phí nhân sự 1.669 triệu (≈ 0,87 triệu/ngày công) → tổng 2.140 triệu + dự phòng 256,8 triệu = 2.396,8 ≈ trần 2.400 → lịch 39 tuần với đường găng 131 ngày làm việc. Nếu bạn đổi một con số, phải đổi cả chuỗi; đó là lý do PM Plan tham chiếu số từ tài liệu gốc thay vì chép lại.</p>
+<h3>Ba tình huống thường gặp</h3>
+<ul>
+<li><strong>Sponsor muốn thêm mục vào PM Plan sau khi đã ký.</strong> Ghi vào phiên bản mới (v1.1) với lý do; nếu chạm baseline thì đi qua CR.</li>
+<li><strong>Đội không đọc PM Plan.</strong> Rút một trang &quot;tóm tắt cho đội&quot;: ràng buộc ưu tiên, mốc, quy tắc thay đổi, cách báo tin xấu; đặt lên wiki chính.</li>
+<li><strong>Khách yêu cầu PM Plan theo mẫu riêng của họ (ví dụ PRINCE2).</strong> Ánh xạ: giữ nội dung của bạn, thêm bảng đối chiếu (Project Initiation Documentation ↔ mục tương ứng) thay vì viết lại.</li>
+</ul>
+<h3>PM Plan cho dự án nhỏ</h3>
+<p>Đội 3–5 người và 2–3 tháng: gói PM Plan vào <strong>3–4 trang</strong>: mục tiêu và ràng buộc; phạm vi và mốc; rủi ro top 5; nguồn lực và giao tiếp; quy tắc thay đổi. Không cần 15 mục; điều quan trọng là vẫn có baseline, người duyệt và cách thay đổi.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Thứ Sáu 20/03/2026, tuần 11. Hà gửi PM Plan v1.0 cho anh Bảo, chị Châu và Dũng hai ngày trước. Buổi review 60 phút bắt đầu bằng câu hỏi của anh Bảo: &quot;Sao chị Hà đưa cho tôi tài liệu dài thế này?&quot; Hà đáp: &quot;Thực ra chỉ 10 trang; phần chi tiết em dẫn sang tài liệu riêng. Anh chỉ cần đọc hai trang đầu và mục 13, phần baseline.&quot;</p>
 <p>Chị dẫn anh Bảo qua mục 3 và 13: scope baseline v1.1, lịch baseline 27/02, cost baseline 02/03. Đến mục 5, anh Bảo hỏi về quy tắc dự phòng: &quot;Nếu PayEasy trễ, chị cần tôi duyệt gì?&quot; Hà: &quot;Nếu dưới 120 triệu, em tự quyết trong tuần và báo anh. Trên đó em cần anh duyệt bằng văn bản.&quot; Anh gật đầu. Ở mục 11 (thay đổi), anh Bảo nhắc lại CR-001 (&quot;đặt món theo nhóm&quot;) mà tuần trước Hà đã đánh giá; chị chỉ vào bảng lịch sử baseline: đã giữ ở R2, không đổi baseline. Đó là lúc chị nhận ra giá trị của việc ghi lại các quyết định đã có.</p>

@@ -204,6 +204,40 @@
 <blockquote>
 <p><strong>Cảnh giác với &quot;tiện thể&quot;.</strong> &quot;Tiện thể thêm nút chia sẻ đơn nhé&quot; là hình thức phổ biến nhất của scope creep. Không phải mọi thay đổi đều xấu; vấn đề là <strong>thay đổi không được đánh giá</strong>.</p>
 </blockquote>
+<h2>Đi sâu: chuyển ý tưởng mơ hồ thành phạm vi kiểm tra được</h2>
+<h3>Bốn câu hỏi biến &quot;làm giống app X&quot; thành yêu cầu</h3>
+<p>Khi khách nói mơ hồ, hỏi theo thứ tự: (1) <strong>Ai dùng và để làm gì?</strong> — chuyển tính năng thành mục tiêu người dùng; (2) <strong>Thế nào là thành công?</strong> — ví dụ &quot;khách đặt xong trong 3 phút&quot;; (3) <strong>Không có tính năng này thì sao?</strong> — tách Must khỏi Could; (4) <strong>Ràng buộc nào cố định?</strong> — ngày, tiền, chuẩn tuân thủ. Ghi câu trả lời thành epic kèm tiêu chí chấp nhận sơ bộ trước khi ước lượng.</p>
+<h3>Ví dụ: cùng một dòng, hai mức rõ ràng</h3>
+<table>
+<thead>
+<tr>
+<th>Mơ hồ</th>
+<th>Rõ ràng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&quot;Có thanh toán&quot;</td>
+<td>&quot;Khách thanh toán thẻ hoặc COD; thẻ qua PayEasy; thất bại hiển thị lý do và cho thử lại; hoàn tiền tự động khi nhà hàng huỷ&quot;</td>
+</tr>
+<tr>
+<td>&quot;Có báo cáo&quot;</td>
+<td>&quot;Admin xem đơn theo ngày/nhà hàng, xuất CSV, tối đa 10.000 dòng; không có biểu đồ (R1)&quot;</td>
+</tr>
+<tr>
+<td>&quot;Nhanh&quot;</td>
+<td>&quot;Đặt đơn p95 ≤ 2 giây ở 500 đơn/ngày × 2&quot;</td>
+</tr>
+</tbody>
+</table>
+<h3>Danh sách out-of-scope &quot;khó nói&quot;: năm loại nên viết ra</h3>
+<ol>
+<li>Tính năng khách <strong>từng nhắc</strong> nhưng chưa được duyệt; 2. <strong>Nền tảng/thiết bị</strong> không hỗ trợ (iOS cho Tài xế); 3. <strong>Ngôn ngữ/thị trường</strong> ngoài phạm vi; 4. <strong>Tích hợp</strong> chưa ký với bên thứ ba; 5. <strong>Yêu cầu phi chức năng</strong> vượt mức chuẩn (ví dụ uptime 99,99%). Người dùng thường &quot;đọc thấy&quot; cái không nói; nêu rõ để không ai giả định ngược lại.</li>
+</ol>
+<h3>Kiểm tra Scope Statement bằng &quot;bài kiểm tra người lạ&quot;</h3>
+<p>Đưa Scope Statement cho một người chưa biết dự án và hỏi: (a) sản phẩm có làm X không? (b) khi nào biết &quot;xong&quot;? (c) thay đổi ngoài bản này đi qua đâu? Nếu họ trả lời sai một câu, viết lại đoạn đó.</p>
+<h3>Phân biệt thay đổi phạm vi và làm rõ phạm vi</h3>
+<p>Không phải mọi lời yêu cầu thêm là thay đổi. <strong>Làm rõ</strong> khi điều mới nằm trong epic đã duyệt và không đổi công đáng kể (&lt; 5% epic); <strong>thay đổi</strong> khi thêm epic, đổi mục tiêu hoặc kéo công lớn. Ranh giới mờ thì mặc định ghi CR nhỏ: chi phí ghi chép thấp hơn nhiều so với tranh cãi sau này.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Cuối tháng 1/2026 (tuần 3–5), Hà, Lan và chị Châu ngồi hai buổi workshop để chốt phạm vi MVP. Ba nhóm người dùng (khách, nhà hàng, tài xế) mỗi nhóm có danh sách mong muốn dài. Hà không tranh luận từng tính năng; chị dùng câu hỏi &quot;nếu thiếu cái này, ra mắt được không?&quot; và chấm MoSCoW. Kết quả: 11 epic (E1–E11) là Must; khuyến mãi và đánh giá món là Should nhưng đẩy sang R1; <strong>ví điện tử</strong> ban đầu được ghi &quot;in-scope có điều kiện&quot; vì anh Bảo yêu cầu.</p>
 <p>Scope Statement v1.0 ra ngày 06/02/2026. Tuần 6 (09–13/02), anh Bảo yêu cầu rút MVP xuống 6 tháng, đội ước lượng 9 tháng (Ch11). Sau đàm phán, cả hai thống nhất giữ mốc 03/10/2026 bằng cách <strong>chuyển ví điện tử sang R2</strong>. Hà nâng Scope Statement lên <strong>v1.1 (13/02/2026)</strong>, ghi lý do, người duyệt (Bảo, Châu). Nhờ có bảng out-of-scope, khi anh Bảo hỏi lại &quot;ví ở đâu?&quot; ở tuần 12, Hà chỉ cần mở tài liệu: &quot;Đã thoả thuận ngày 13/02, ở R2. Nếu anh muốn đưa lại vào MVP, em sẽ đánh giá bằng change request.&quot;</p>

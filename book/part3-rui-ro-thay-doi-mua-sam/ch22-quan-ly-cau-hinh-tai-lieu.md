@@ -89,6 +89,35 @@ Tri thức nằm ở đầu người sẽ mất khi họ rời. Để giữ lạ
 - **Retro và lessons learned** ghi lại (Ch28, Ch40).
 - **Trang "Bắt đầu tại đây"** cho người mới (onboarding, Ch08).
 
+## Đi sâu: vận hành quản lý tài liệu hằng ngày
+
+### Vòng đời một tài liệu
+
+Nhiều dự án có tài liệu tốt lúc viết nhưng hỏng ở giai đoạn sau. Nhìn tài liệu như có vòng đời:
+
+| Trạng thái | Ý nghĩa | Ai được sửa | Quy tắc |
+|---|---|---|---|
+| **Nháp** (v0.x) | Đang viết | Chủ sở hữu | Không dùng để ra quyết định |
+| **Đang review** | Chờ phản hồi | Chủ sở hữu (sau góp ý) | Hạn review rõ (2–3 ngày làm việc) |
+| **Đã duyệt** (v1.0) | Bản chuẩn/baseline | Không sửa trực tiếp | Đổi qua CR hoặc phiên bản mới |
+| **Lỗi thời** | Bị thay thế | Không ai | Chuyển Archive, ghi bản thay thế |
+
+### Rà soát kho tài liệu mỗi tháng (30 phút)
+
+Đặt lịch cố định và trả lời sáu câu: (1) Có tài liệu nào tồn tại ở hai nơi? (2) Có tài liệu "đã duyệt" mà chưa gắn phiên bản/ngày? (3) Người rời đội có còn quyền không? (4) Tài liệu nào quá 90 ngày chưa được mở? (5) Decision Log đã ghi quyết định tháng này chưa? (6) Bí mật/dữ liệu thật có nằm trong tài liệu không? Ghi kết quả vào Action Item Log.
+
+### Xử lý sự cố "hai bản spec" như một mẫu
+
+Khi hai đội dùng hai bản, đừng dừng ở "ai sai". Áp dụng sáu bước: (1) *Xác định bản đúng* với PO; (2) *đo thiệt hại* (ngày công làm lại); (3) *sửa* (đội sai chuyển theo bản đúng); (4) *chặn tái diễn* — nguồn duy nhất, thông báo tự động khi đổi; (5) *ghi vào Issue/Lessons Learned*; (6) *kiểm tra sau 2 sprint* xem sự cố tương tự có xảy ra không.
+
+### Quản lý bí mật (secrets) mà PM cần hỏi
+
+PM không cần biết công cụ, nhưng cần hỏi: bí mật (khoá API, mật khẩu DB) nằm ở đâu? có ai còn giữ bản sao trong chat/email không? khi người rời đội thì đổi khoá thế nào? có quét bí mật trong kho code không? Nếu không có câu trả lời rõ ràng, đó là rủi ro cần vào RAID.
+
+### Nếu dự án có yêu cầu kiểm toán
+
+Bổ sung ba thứ: **bằng chứng duyệt** (ai duyệt, khi nào — release log, Decision Log), **bất biến của bản ghi** (tag, không sửa lịch sử) và **lưu trữ theo thời hạn** (đặt thời hạn lưu hợp đồng, log). Thiết kế ngay từ đầu rẻ hơn dựng lại khi bị hỏi.
+
 ## Tình huống FoodNow
 
 Thứ Hai 30/03/2026, tuần 13. Trong buổi rà RAID, Khoa (Mobile) hỏi Backend: "Endpoint tạo đơn thiếu trường `delivery_note`?" Sơn ngạc nhiên: "Có từ tuần trước rồi mà?" Hoá ra Lan cập nhật đặc tả API lên Confluence (v4) sau khi thống nhất với Châu, nhưng đội Mobile vẫn dùng **file PDF v3** được gửi qua email ba tuần trước. Hai đội xây hai bản. Kết quả: khoảng **5 ngày công** làm lại ở phía Mobile và một buổi họp căng thẳng.

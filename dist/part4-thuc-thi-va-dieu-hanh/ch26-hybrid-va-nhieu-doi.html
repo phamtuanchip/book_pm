@@ -119,6 +119,67 @@
 <li>Chia sẻ người (DevOps, UX) qua <strong>đội nền tảng</strong> hoặc lịch khối.</li>
 </ul>
 <p>FoodNow: sau MVP, tách thành <strong>Mobile</strong> và <strong>Backend+Web</strong> vì hai nhóm này phát triển gần độc lập qua API, còn DevOps phục vụ chung.</p>
+<h2>Đi sâu: thiết kế nhịp và ranh giới khi có hai đội</h2>
+<p>Chương này nói về công cụ; phần này nói về <strong>quyết định thiết kế</strong> mà PM thường phải đưa ra khi tách một đội thành hai.</p>
+<h3>Chọn ranh giới đội bằng bốn câu hỏi</h3>
+<ol>
+<li><strong>Hai nhóm có thể giao một tính năng từ đầu đến cuối mà không chờ nhau không?</strong> Nếu để giao &quot;đăng nhập&quot; mà Mobile phải chờ Backend hai tuần, ranh giới hiện tại tạo phụ thuộc thường trực.</li>
+<li><strong>Số phụ thuộc chéo đội mỗi sprint là bao nhiêu?</strong> Quy tắc thực dụng: nếu hơn 30% story của một đội cần đầu ra của đội kia, bạn đang chia sai chỗ. FoodNow đo ở tuần đầu tách đội: 8 phụ thuộc trên khoảng 26 story (31%) — ngưỡng cảnh báo; sau bốn tuần còn 5.</li>
+<li><strong>Ai sở hữu hợp đồng API?</strong> Nếu không có người sở hữu, mọi bên đổi tuỳ ý. FoodNow giao Tech Lead sở hữu, mỗi thay đổi breaking có ADR.</li>
+<li><strong>Người chia sẻ (DevOps, UX) phục vụ đội nào trước?</strong> Đặt lịch khối và một người &quot;đầu mối ưu tiên&quot; (thường là PM/Delivery Manager) để tránh mỗi đội đều nghĩ mình là số một.</li>
+</ol>
+<h3>Bảng so sánh nhịp: khi Mobile và Backend đi khác tốc độ</h3>
+<table>
+<thead>
+<tr>
+<th>Yếu tố</th>
+<th>Mobile (release train 2 tuần)</th>
+<th>Backend (daily deploy)</th>
+<th>Cơ chế cân bằng</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Đơn vị phát hành</td>
+<td>Bản app qua store, 1–3 ngày review</td>
+<td>Deploy production nhiều lần/ngày</td>
+<td>Backend tương thích ngược ≥ 2 phiên bản app</td>
+</tr>
+<tr>
+<td>Cách thay đổi hành vi</td>
+<td>Bản app mới hoặc remote config</td>
+<td>Feature flag phía server</td>
+<td>Ưu tiên flag/remote config cho thay đổi cần &quot;tức thì&quot;</td>
+</tr>
+<tr>
+<td>Rủi ro chính</td>
+<td>App cũ gọi API mới → crash</td>
+<td>Đổi API mà không báo</td>
+<td>Contract test + thông báo ≥ 1 sprint</td>
+</tr>
+<tr>
+<td>Kiểm thử tích hợp</td>
+<td>Staging chung mỗi sprint</td>
+<td>Pipeline tự động</td>
+<td>Môi trường tích hợp cố định để Mobile test hằng ngày</td>
+</tr>
+<tr>
+<td>Đo lường</td>
+<td>Velocity, crash-free rate</td>
+<td>DORA</td>
+<td>Báo cáo chung theo outcome, không so sánh hai bộ số</td>
+</tr>
+</tbody>
+</table>
+<h3>Ba mô hình phối hợp và khi nào chọn</h3>
+<ul>
+<li><strong>Scrum of Scrums + bảng phụ thuộc</strong> (FoodNow): hợp 2–3 đội, phụ thuộc vừa phải.</li>
+<li><strong>Đội nền tảng (platform team)</strong> phục vụ các đội sản phẩm: hợp khi có dịch vụ dùng chung (thanh toán, xác thực) mà nhiều đội cần; cần Product Owner cho đội nền tảng để tránh biến thành &quot;hàng đợi ticket&quot;.</li>
+<li><strong>Kế hoạch theo PI (kiểu SAFe)</strong>: hợp khi ≥ 5 đội và phụ thuộc dày; chi phí họp lớn (hai ngày, cả đội), chỉ đáng khi lợi ích phối hợp vượt chi phí đó.</li>
+</ul>
+<p><strong>Cách kiểm tra bạn đang chọn đúng:</strong> đo hai chỉ số 4 tuần một lần — <em>tỷ lệ story bị chặn bởi đội khác</em> và <em>thời gian chờ trung bình cho một phụ thuộc</em>. Nếu cả hai giảm, cơ chế phối hợp đang hoạt động; nếu không, đổi ranh giới thay vì thêm họp.</p>
+<h3>Vai trò PM khi chuyển sang Delivery Manager</h3>
+<p>Khi có hai đội, PM không thể tham gia mọi Daily. Ba việc nên giữ: (1) <strong>kế hoạch release chung và ngân sách</strong> hai đội; (2) <strong>rủi ro và phụ thuộc chéo đội</strong> (bảng phụ thuộc là tài liệu của bạn); (3) <strong>stakeholder và Sponsor</strong>. Ba việc nên uỷ quyền: điều hành hằng ngày (Tech Lead/Scrum Master mỗi đội), quyết định kỹ thuật, và ước lượng. Dấu hiệu bạn chưa uỷ quyền đủ: bạn vẫn là người duy nhất biết đội nào đang làm gì.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Thứ Hai 28/12/2026 (tuần 52). Sau 3 tháng go-live, số đơn tăng và anh Bảo muốn R1 (khuyến mãi, đánh giá) ra trong Q1/2027 và R2 trong Q3. Đội 12 người đã thu gọn còn 6 lúc bảo trì và sắp tăng lại; Dũng đề xuất <strong>tách hai đội</strong> để R1 và R2 chạy song song. Hà đồng ý nhưng lo ba điều: phụ thuộc chéo đội, API đổi bất ngờ, và nhịp release khác nhau (Mobile qua app store, Backend đã chuyển daily deploy — Ch33).</p>
 <p>Chị lập ba thứ: (1) <strong>SoS</strong> hai lần/tuần, 20 phút, có Ánh (DevOps) và chị dự thính; (2) <strong>bảng phụ thuộc chéo đội</strong> với 8 mục đầu tiên — X-02 (API đánh giá món) đã trễ một tuần ngay tuần đầu, Mobile dùng mock trong khi Hà leo thang; (3) luật <strong>thông báo breaking change ≥ 1 sprint</strong> và Backend hỗ trợ ≥ 2 phiên bản app. Trong bốn tuần, phụ thuộc chéo đội giảm từ 8 xuống 5 nhờ Dũng chuyển hợp đồng API sang định dạng có phiên bản. Hà cũng nhận ra vai trò mình đổi: từ &quot;PM một đội&quot; sang <strong>Delivery Manager</strong>, tập trung vào release plan chung, rủi ro tổng và ngân sách hai đội.</p>

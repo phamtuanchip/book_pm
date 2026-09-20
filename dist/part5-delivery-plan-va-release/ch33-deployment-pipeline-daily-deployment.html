@@ -116,7 +116,7 @@ flowchart LR
 <p><strong>Vòng đời feature flag</strong>: tạo → bật dần → 100% → <strong>xoá flag</strong> (dọn code). Flag để mãi là <strong>flag debt</strong> (nợ flag): code rối, dễ nhầm. Có register (flag, mục đích, chủ sở hữu, hạn xoá) và dọn hằng tháng.</p>
 <p>📎 Mẫu đầy đủ: <code>templates/delivery-plan/feature-flag-register.csv</code></p>
 <h2>33.4 DORA metrics</h2>
-<p><strong>DORA</strong> (DevOps Research and Assessment) nêu bốn chỉ số về hiệu quả giao phần mềm. (Diễn đạt lại; mức tham chiếu thay đổi theo báo cáo từng năm — kiểm tra nguồn ở Phụ lục G.)</p>
+<p><strong>DORA</strong> (DevOps Research and Assessment) đo hiệu quả giao phần mềm. Bộ bốn chỉ số kinh điển là Deployment Frequency, Lead Time for Changes, Change Failure Rate và Time to Restore. <strong>Cập nhật (đối chiếu dora.dev, 09/2026):</strong> DORA hiện mô tả <strong>năm</strong> chỉ số — nhóm <em>throughput</em> gồm Change Lead Time, Deployment Frequency, <strong>Failed Deployment Recovery Time</strong> (thay cho Time to Restore/MTTR cũ) và nhóm <em>instability</em> gồm Change Fail Rate cùng <strong>Deployment Rework Rate</strong> (tỷ lệ deploy ngoài kế hoạch phát sinh do sự cố). Sách giữ cách gọi bốn chỉ số vì dễ tính từ log deploy; nếu đội bạn có dữ liệu sự cố, hãy đo thêm rework rate. Cột &quot;mức tham chiếu&quot; dưới đây là <strong>tham chiếu lịch sử</strong> (các báo cáo cũ chia elite/high/medium/low; báo cáo gần đây phân nhóm theo dữ liệu khảo sát từng năm nên ngưỡng thay đổi) — không dùng như chuẩn chấm điểm.</p>
 <table>
 <thead>
 <tr>
@@ -146,10 +146,10 @@ flowchart LR
 <td>~0–15% (elite/high)</td>
 </tr>
 <tr>
-<td><strong>Time to Restore</strong></td>
-<td>Thời gian khôi phục sau sự cố</td>
+<td><strong>Time to Restore</strong> (nay: Failed Deployment Recovery Time)</td>
+<td>Thời gian khôi phục sau deploy lỗi</td>
 <td>Trung vị</td>
-<td>&lt; 1 giờ (elite)</td>
+<td>&lt; 1 giờ (tham chiếu lịch sử)</td>
 </tr>
 </tbody>
 </table>

@@ -75,6 +75,44 @@ Khung 60 phút: mở đầu (luật không đổ lỗi), dữ liệu, thu thập
 
 📎 Mẫu đầy đủ: `templates/meeting/retrospective-formats.md`
 
+## Đi sâu: điều phối họp khó và audit lịch họp
+
+### Điều phối một cuộc họp ra quyết định trong 30 phút
+
+Cuộc họp quyết định (ví dụ CCB) hiệu quả khi tuân thủ khung năm bước:
+
+1. **Nêu quyết định cần** (một câu) và hạn — 2 phút.
+2. **Trình dữ kiện** một trang, đã gửi trước — 5 phút.
+3. **Làm rõ** (chỉ câu hỏi thông tin, chưa tranh luận) — 5 phút.
+4. **Thảo luận phương án** theo thứ tự: người ít quyền lực nói trước để tránh bị neo — 10 phút.
+5. **Quyết định và ghi**: ai quyết, quyết gì, hành động, hạn — 8 phút.
+
+Nếu chưa quyết được, ghi rõ *thiếu thông tin gì*, *ai lấy*, *khi nào họp lại* — thay vì "để suy nghĩ thêm".
+
+### Xử lý sáu kiểu người trong họp
+
+| Kiểu | Dấu hiệu | Cách xử lý |
+|---|---|---|
+| Người nói quá nhiều | Chiếm > 40% thời gian | Đặt timebox từng người; "cảm ơn, mời người khác" |
+| Người im lặng | Không nói cả buổi | Hỏi trực tiếp câu cụ thể; thu ý kiến viết trước |
+| Người lạc đề | Kéo sang chuyện khác | Parking lot; hứa thời điểm quay lại |
+| Người phản đối mọi thứ | "Không được" không kèm phương án | Hỏi "Điều kiện nào thì được?" |
+| Người dùng điện thoại | Không tập trung | Cuộc họp quá dài hoặc không liên quan — hỏi lại "họ có cần ở đây không?" |
+| Người chức vụ cao chiếm hết | Ý kiến của họ thành kết luận | Cho ý kiến sau cùng; hỏi trước từng người |
+
+### Audit họp: công thức làm nhanh
+
+1. Xuất lịch họp định kỳ của cả đội 4 tuần.
+2. Với mỗi cuộc: thời lượng × số người = giờ-người/tuần; ghi đầu ra thực tế của 4 lần gần nhất.
+3. Gán nhãn: **Giữ** (đầu ra rõ), **Rút gọn** (đầu ra có nhưng dài/đông), **Thay bằng văn bản** (thông tin một chiều), **Bỏ** (không đầu ra).
+4. Đề xuất với đội, thử hai tuần, đo lại mức hài lòng và có ai bỏ lỡ thông tin không.
+
+Kết quả FoodNow (90,5 → 63,0 giờ-người/tuần) đến từ chính bốn bước này; chỉ số kiểm soát là *số lần đội phải hỏi lại thông tin đã từng có trong họp* — không tăng.
+
+### Họp với khách nước ngoài hoặc đa ngôn ngữ
+
+Gửi agenda và tài liệu trước 48 giờ; dùng câu ngắn, tránh thành ngữ; tóm tắt bằng văn bản sau họp và yêu cầu xác nhận; luân phiên giờ họp bất tiện; đặt người nói ngôn ngữ chung làm cầu nối (bridge).
+
 ## Tình huống FoodNow
 
 Thứ Hai 22/06/2026 (tuần 25). Dũng phàn nàn: "Tôi chỉ còn đúng hai buổi chiều để code." Hà thử đếm: mỗi người trong đội dành trung bình khoảng **7,5 giờ/tuần** cho họp (tổng khoảng **90,5 giờ-người/tuần** cho đội 12 người). Chị lập bảng audit 11 cuộc họp định kỳ, ghi giờ-người và đầu ra.

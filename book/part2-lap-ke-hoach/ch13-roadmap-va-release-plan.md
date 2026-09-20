@@ -93,6 +93,32 @@ Roadmap phải thay đổi khi thực tế thay đổi. Nhưng cách thay đổi
 4. **Dùng vùng Later như đệm**: đó là chỗ hấp thụ thay đổi mà không phá cam kết.
 5. **Nói về outcome trước khi nói về tính năng**: "Mục tiêu R2 không đổi; chỉ đổi thứ tự bên trong".
 
+## Đi sâu: viết theme, outcome và OKR cho roadmap
+
+### Công thức viết một dòng roadmap
+
+**[Theme] → [Outcome đo được] → [Cách đạt (giả thuyết)]**. Ví dụ: *Giữ chân khách* → *tăng tỷ lệ khách đặt lại trong 30 ngày từ 25% lên 35%* → *khuyến mãi và đánh giá món*. Nếu bạn không viết được phần outcome, đó vẫn là danh sách tính năng.
+
+### Ba lỗi khi viết OKR
+
+1. **KR là hoạt động** ("ra mắt khuyến mãi") thay vì kết quả ("35% khách đặt lại"). 2. **Quá nhiều KR** — giữ 2–3 mỗi release. 3. **KR không có baseline** nên không biết tiến bộ; luôn ghi giá trị hiện tại.
+
+### Roadmap với hợp đồng fixed-price
+
+Khách trả tiền theo phạm vi cố định thường muốn roadmap "chắc chắn". Cách hoà giải: **vùng Now** = phạm vi hợp đồng (có ngày, gắn baseline); **Next/Later** = định hướng, ghi rõ *không thuộc hợp đồng* và cần CR/hợp đồng mới. Nhờ vậy khách thấy tầm nhìn dài mà bạn không cam kết ngoài phạm vi.
+
+### Trình bày roadmap cho HĐQT: checklist một slide
+
+Đủ bốn thứ: (a) mục tiêu kinh doanh từng release; (b) KR đo được; (c) mốc lớn và độ chắc chắn; (d) điều cần HĐQT quyết (ngân sách release kế tiếp). Bỏ tên tính năng chi tiết, trừ khi liên quan trực tiếp đến mục tiêu.
+
+### Cập nhật roadmap: bảng quyết định
+
+| Loại thay đổi | Ai duyệt | Thông báo |
+|---|---|---|
+| Đổi thứ tự trong cùng release | PO | Đội + SteerCo tháng sau |
+| Chuyển mục lớn sang release khác | Sponsor | Khách, đội, HĐQT trong 24 giờ |
+| Đổi mục tiêu release | HĐQT | Toàn bộ stakeholder, kèm lý do |
+
 ## Tình huống FoodNow
 
 Ngày 13/03/2026, Hà cùng Châu công bố Roadmap v1.0 sau khi Scope Statement v1.1 được duyệt: MVP (Now, go-live 03/10/2026), R1 (Next, Q1/2027: khuyến mãi, đánh giá món) và R2 (Later, dự kiến Q3/2027: ví điện tử, đặt món theo nhóm). Chị làm ba bản: một slide cho HĐQT với OKR từng release, một trang cho đội với epic và phụ thuộc kỹ thuật, và một tóm tắt cho nhà hàng đối tác chỉ ghi "khoảng Q1/2027 sẽ có khuyến mãi".

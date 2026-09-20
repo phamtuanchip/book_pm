@@ -153,6 +153,53 @@
 <li><strong>Retro và lessons learned</strong> ghi lại (Ch28, Ch40).</li>
 <li><strong>Trang &quot;Bắt đầu tại đây&quot;</strong> cho người mới (onboarding, Ch08).</li>
 </ul>
+<h2>Đi sâu: vận hành quản lý tài liệu hằng ngày</h2>
+<h3>Vòng đời một tài liệu</h3>
+<p>Nhiều dự án có tài liệu tốt lúc viết nhưng hỏng ở giai đoạn sau. Nhìn tài liệu như có vòng đời:</p>
+<table>
+<thead>
+<tr>
+<th>Trạng thái</th>
+<th>Ý nghĩa</th>
+<th>Ai được sửa</th>
+<th>Quy tắc</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nháp</strong> (v0.x)</td>
+<td>Đang viết</td>
+<td>Chủ sở hữu</td>
+<td>Không dùng để ra quyết định</td>
+</tr>
+<tr>
+<td><strong>Đang review</strong></td>
+<td>Chờ phản hồi</td>
+<td>Chủ sở hữu (sau góp ý)</td>
+<td>Hạn review rõ (2–3 ngày làm việc)</td>
+</tr>
+<tr>
+<td><strong>Đã duyệt</strong> (v1.0)</td>
+<td>Bản chuẩn/baseline</td>
+<td>Không sửa trực tiếp</td>
+<td>Đổi qua CR hoặc phiên bản mới</td>
+</tr>
+<tr>
+<td><strong>Lỗi thời</strong></td>
+<td>Bị thay thế</td>
+<td>Không ai</td>
+<td>Chuyển Archive, ghi bản thay thế</td>
+</tr>
+</tbody>
+</table>
+<h3>Rà soát kho tài liệu mỗi tháng (30 phút)</h3>
+<p>Đặt lịch cố định và trả lời sáu câu: (1) Có tài liệu nào tồn tại ở hai nơi? (2) Có tài liệu &quot;đã duyệt&quot; mà chưa gắn phiên bản/ngày? (3) Người rời đội có còn quyền không? (4) Tài liệu nào quá 90 ngày chưa được mở? (5) Decision Log đã ghi quyết định tháng này chưa? (6) Bí mật/dữ liệu thật có nằm trong tài liệu không? Ghi kết quả vào Action Item Log.</p>
+<h3>Xử lý sự cố &quot;hai bản spec&quot; như một mẫu</h3>
+<p>Khi hai đội dùng hai bản, đừng dừng ở &quot;ai sai&quot;. Áp dụng sáu bước: (1) <em>Xác định bản đúng</em> với PO; (2) <em>đo thiệt hại</em> (ngày công làm lại); (3) <em>sửa</em> (đội sai chuyển theo bản đúng); (4) <em>chặn tái diễn</em> — nguồn duy nhất, thông báo tự động khi đổi; (5) <em>ghi vào Issue/Lessons Learned</em>; (6) <em>kiểm tra sau 2 sprint</em> xem sự cố tương tự có xảy ra không.</p>
+<h3>Quản lý bí mật (secrets) mà PM cần hỏi</h3>
+<p>PM không cần biết công cụ, nhưng cần hỏi: bí mật (khoá API, mật khẩu DB) nằm ở đâu? có ai còn giữ bản sao trong chat/email không? khi người rời đội thì đổi khoá thế nào? có quét bí mật trong kho code không? Nếu không có câu trả lời rõ ràng, đó là rủi ro cần vào RAID.</p>
+<h3>Nếu dự án có yêu cầu kiểm toán</h3>
+<p>Bổ sung ba thứ: <strong>bằng chứng duyệt</strong> (ai duyệt, khi nào — release log, Decision Log), <strong>bất biến của bản ghi</strong> (tag, không sửa lịch sử) và <strong>lưu trữ theo thời hạn</strong> (đặt thời hạn lưu hợp đồng, log). Thiết kế ngay từ đầu rẻ hơn dựng lại khi bị hỏi.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Thứ Hai 30/03/2026, tuần 13. Trong buổi rà RAID, Khoa (Mobile) hỏi Backend: &quot;Endpoint tạo đơn thiếu trường <code>delivery_note</code>?&quot; Sơn ngạc nhiên: &quot;Có từ tuần trước rồi mà?&quot; Hoá ra Lan cập nhật đặc tả API lên Confluence (v4) sau khi thống nhất với Châu, nhưng đội Mobile vẫn dùng <strong>file PDF v3</strong> được gửi qua email ba tuần trước. Hai đội xây hai bản. Kết quả: khoảng <strong>5 ngày công</strong> làm lại ở phía Mobile và một buổi họp căng thẳng.</p>
 <p>Hà không tìm &quot;ai lỗi&quot;. Chị hỏi: &quot;Làm sao để lần sau không thể xảy ra?&quot; Cả đội đồng ý ba việc: (1) <strong>Confluence là nguồn duy nhất</strong>; PDF chỉ là bản sao có ghi &quot;ngày X, bản chính ở đâu&quot;; (2) khi đặc tả đổi, đặt <strong>thông báo tự động</strong> vào kênh Slack của Mobile và Backend; (3) đầu mỗi sprint, Lan xuất <strong>danh sách thay đổi đặc tả</strong> trong Sprint Planning. Hà cũng viết <code>project-folder-structure.md</code> (06/04/2026) với quy ước phiên bản và bắt đầu Decision Log từ những quyết định đã có (DL-001…DL-012). Sau này khi anh Bảo hỏi &quot;Tại sao mình chọn PayEasy?&quot;, Hà mở DL-012 và chỉ ra điểm scorecard, thay vì phải nhớ lại.</p>

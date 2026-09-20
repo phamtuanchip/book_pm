@@ -95,6 +95,86 @@
 <p><strong>Sponsor không bao giờ nên nghe tin xấu lần đầu từ người khác hoặc trong cuộc họp công khai.</strong> Mỗi tin xấu đi theo trình tự: <strong>gọi/nhắn trước</strong> → <strong>báo cáo viết</strong> → <strong>họp quyết định</strong>. Đổi lại, Sponsor cho bạn <strong>không gian xử lý</strong>. Tin xấu báo sớm còn phương án; báo muộn chỉ còn hậu quả.</p>
 <h2>35.6 Watermelon status</h2>
 <p><strong>Watermelon status</strong> (xanh ngoài, đỏ trong) là khi báo cáo luôn xanh dù thực tế đang đỏ. Nguyên nhân: sợ phản ứng, &quot;hy vọng sẽ tự tốt lên&quot;, định nghĩa màu mơ hồ, đội báo &quot;đã làm&quot; thay vì &quot;đã xong&quot;. Dấu hiệu nhận biết: báo cáo xanh nhiều tuần rồi đột ngột đỏ; SPI xu hướng giảm nhưng đèn vẫn xanh; đội nói khác báo cáo. Phòng tránh: <strong>ngưỡng bằng số</strong> (Ch34), <strong>dữ liệu hệ thống</strong>, <strong>xu hướng</strong> (không chỉ tuần này), PM <strong>chịu trách nhiệm cá nhân</strong> với đèn tổng, và <strong>văn hoá không phạt tin xấu</strong> (Ch27).</p>
+<h2>Đi sâu: dựng dashboard tối giản và bộ quy tắc RAG</h2>
+<h3>Dashboard tám số cho Sponsor</h3>
+<p>Một dashboard tốt trả lời trong 30 giây: &quot;có cần tôi làm gì không?&quot;. Bộ tám số gợi ý cho dự án Hybrid:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Số</th>
+<th>Ngưỡng</th>
+<th>Vì sao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>SPI</td>
+<td>≥ 0,95 / 0,85–0,95 / &lt; 0,85</td>
+<td>Tiến độ so baseline</td>
+</tr>
+<tr>
+<td>2</td>
+<td>CPI</td>
+<td>như trên</td>
+<td>Hiệu quả chi phí</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Dự phòng đã dùng (% quỹ)</td>
+<td>&gt; 50% trước 60% thời gian = cảnh báo</td>
+<td>Sức chịu đựng còn lại</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Bug Critical/High mở</td>
+<td>&gt; 0 gần release = đỏ</td>
+<td>Rủi ro chất lượng</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Velocity 3 sprint (xu hướng)</td>
+<td>giảm 2 kỳ liền = vàng</td>
+<td>Dự báo delivery</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Ngày dự báo go-live (khoảng)</td>
+<td>lệch mốc &gt; 1 tuần = vàng</td>
+<td>Câu hỏi Sponsor luôn hỏi</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Issue/Dependency quá hạn</td>
+<td>&gt; 2 = vàng</td>
+<td>Kỷ luật quản lý</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Số quyết định đang chờ Sponsor</td>
+<td>&gt; 3 hoặc quá 3 ngày = vàng</td>
+<td>Chính dự án đang chờ họ</td>
+</tr>
+</tbody>
+</table>
+<p>Mỗi số có mũi tên xu hướng so với kỳ trước; số 8 là số hiếm dashboard có nhưng hữu ích: nó cho Sponsor thấy họ cũng là một phần của tiến độ.</p>
+<h3>Bốn quy tắc đèn tổng</h3>
+<ol>
+<li>Đèn tổng = <strong>mức xấu nhất</strong> của các chiều lịch, chi phí, chất lượng, phạm vi, rủi ro.</li>
+<li>Đèn chỉ được <strong>hạ xuống xanh</strong> khi hai kỳ liên tiếp đạt ngưỡng (tránh dao động).</li>
+<li>Đèn đỏ <strong>luôn</strong> kèm đề xuất hành động và người/hạn, hoặc quyết định cần.</li>
+<li>PM <strong>không được</strong> đổi ngưỡng để đổi màu; đổi ngưỡng phải qua Sponsor và ghi vào Decision Log.</li>
+</ol>
+<h3>Báo cáo cho người đọc khác nhau</h3>
+<ul>
+<li><strong>Sponsor</strong>: một trang, quyết định cần ở đầu.</li>
+<li><strong>Đội</strong>: chi tiết sprint, blocker, chỉ số dòng chảy; do Scrum Master/Tech Lead trình bày ở Review.</li>
+<li><strong>HĐQT/SteerCo</strong>: xu hướng 4 kỳ, mốc, ngân sách, top 3 rủi ro.</li>
+<li><strong>Khách/đối tác ngoài</strong>: chỉ những gì họ cần biết (mốc liên quan, phụ thuộc), không đưa rủi ro nội bộ.</li>
+</ul>
+<h3>Mẫu tự kiểm một báo cáo tuần</h3>
+<p>Đọc lại bản nháp và tìm: (a) câu nào không có số? — thêm số hoặc bỏ; (b) tin xấu nào nằm sau mục thứ ba? — kéo lên; (c) có &quot;đang theo dõi&quot; mà không có người/hạn? — bổ sung; (d) có từ tránh né (&quot;có thể&quot;, &quot;hy vọng&quot;) ở chỗ đã có dữ liệu? — thay bằng số. Bốn phép kiểm này thường cắt 30% độ dài và tăng độ tin cậy.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Hà giữ ba báo cáo tuần tiêu biểu cho thấy sự chuyển màu và cách chị xử lý.</p>
 <p><strong>Báo cáo tuần 12 (27/03/2026) — 🟢 Xanh.</strong> SPI 0,95, CPI 1,12; Sprint 3 xong, đội đủ người. Ghi chú: &quot;CPI cao do thiếu 1 Backend đến tuần 4 — đây không phải tiết kiệm.&quot; Một dòng tiêu đề chứa quyết định cần nhỏ: đồng ý ngày sandbox PayEasy 27/03.</p>

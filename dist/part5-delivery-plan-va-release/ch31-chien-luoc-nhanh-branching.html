@@ -250,6 +250,52 @@ gitGraph
 </ul>
 <p><strong>Chính sách</strong>: <strong>nhánh &gt; 5 ngày phải báo trong Daily</strong> và có kế hoạch tách nhỏ; cập nhật từ <code>develop</code> mỗi ngày; chia tính năng thành PR nhỏ ẩn sau feature flag; bảng tuổi nhánh gửi báo cáo tuần. PM đóng vai trò <strong>theo dõi và hỗ trợ</strong>, không tự merge.</p>
 <p>📎 Mẫu đầy đủ: <code>templates/delivery-plan/branching-strategy.md</code>, <code>gitflow-diagram.md</code>, <code>trunk-based-workflow.md</code></p>
+<h2>Đi sâu: đọc sức khoẻ nhánh bằng số liệu và xử lý tình huống thực tế</h2>
+<h3>Bốn chỉ số sức khoẻ nhánh PM có thể xin từ Tech Lead</h3>
+<table>
+<thead>
+<tr>
+<th>Chỉ số</th>
+<th>Cách đo</th>
+<th>Ngưỡng cảnh báo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tuổi nhánh trung vị</td>
+<td>Ngày từ tạo đến merge</td>
+<td>&gt; 3 ngày</td>
+</tr>
+<tr>
+<td>Kích thước PR trung vị</td>
+<td>Dòng thay đổi</td>
+<td>&gt; 400</td>
+</tr>
+<tr>
+<td>Thời gian review</td>
+<td>Từ mở PR đến approve</td>
+<td>&gt; 24 giờ</td>
+</tr>
+<tr>
+<td>Số conflict lớn/tháng</td>
+<td>Merge cần &gt; 1 giờ xử lý</td>
+<td>≥ 2</td>
+</tr>
+</tbody>
+</table>
+<p>Đặt bốn số này vào dashboard tuần; chúng dự báo rủi ro tích hợp sớm hơn mọi báo cáo miệng.</p>
+<h3>Ba tình huống hay gặp</h3>
+<ul>
+<li><strong>&quot;Nhánh này cần thêm 3 ngày nữa&quot;:</strong> tách phần xong thành PR nhỏ ẩn sau flag; hoặc ghép cặp với người khác để rút thời gian. Đừng ép &quot;merge ngay&quot; phần chưa an toàn.</li>
+<li><strong>Dev muốn giữ nhánh dài &quot;cho sạch&quot;:</strong> hỏi rủi ro conflict và chi phí tích hợp; đề xuất branch by abstraction/flag thay vì nhánh dài.</li>
+<li><strong>Hotfix vào thứ Sáu chiều:</strong> theo quy trình hotfix (từ tag production, back-merge); ghi rõ chấp nhận rủi ro thời điểm và có người trực cuối tuần.</li>
+</ul>
+<h3>Khi nào nên chuyển từ GitFlow sang trunk-based (checklist)</h3>
+<p>Chuyển khi <em>đồng thời</em> có: test tự động đáng tin (regression, flaky &lt; 2%), CI dưới 10 phút, feature flag đã dùng thật, đội quen PR nhỏ, giám sát/rollback nhanh, và hợp đồng/kiểm toán chấp nhận approval tự động. Thiếu bất kỳ mục nào, chuyển sớm chỉ đưa lỗi vào nhánh chính nhanh hơn. Chuyển <strong>từng repo</strong>, bắt đầu ở repo rủi ro thấp.</p>
+<h3>Mẫu chính sách nhánh 8 dòng cho đội nhỏ</h3>
+<ol>
+<li>Nhánh mặc định <code>main</code> luôn deploy được; 2) làm việc trên nhánh ngắn hạn; 3) tên có mã Jira; 4) PR &lt; 400 dòng; 5) review ≤ 24 giờ, ≥ 1 approver; 6) CI xanh mới merge; 7) nhánh &gt; 5 ngày phải báo; 8) hotfix từ tag production và back-merge. Bấy nhiêu đủ cho đa số đội dưới 8 người.</li>
+</ol>
 <h2>Tình huống FoodNow</h2>
 <p>Thứ Sáu 08/05/2026, cuối Sprint 6 (tuần 18). Hai nhánh feature — <strong>tài xế nhận chuyến</strong> (<code>feature/FN-117-…</code>, Khoa và Quỳnh) và <strong>kết nối sandbox PayEasy</strong> (<code>feature/FN-115-…</code>, Dũng và Backend 2) — sống <strong>3 tuần</strong> (từ 20/04) vì mỗi bên nghĩ &quot;xong hẳn rồi mới merge&quot;. Cả hai cùng sửa máy trạng thái đơn hàng, cộng thêm việc định dạng lại code. Khi merge vào <code>develop</code>, Git báo <strong>conflict ở khoảng 200 file</strong>. Dũng, Backend 2 và Khoa mất hai ngày (06–08/05) giải quyết, chặn cả đội merge; Nam nhắc rằng bản <code>v0.6.0</code> sẽ trễ.</p>
 <p>Hà không tìm người đổ lỗi. Cuối ngày, chị hỏi Dũng: &quot;Luật gì sẽ khiến điều này không thể lặp lại?&quot; Dũng đề xuất <strong>&quot;nhánh tối đa 5 ngày làm việc&quot;</strong>, kèm PR nhỏ và cập nhật từ <code>develop</code> mỗi ngày. Hà bổ sung: ngày thứ 4 phải báo trong Daily; ngày thứ 5 tách nhỏ hoặc dùng feature flag; bảng <strong>tuổi nhánh</strong> gửi báo cáo tuần. Chính sách nhánh nâng lên <strong>v1.1</strong> (08/05/2026, DL-014) và branch protection được rà lại. Tag <code>v0.6.0</code> vẫn được đặt vào 17:30 nhưng đội mất khoảng 2 ngày công. Rủi ro R16 được đóng lại thành bài học; hai tháng sau không còn nhánh nào quá 5 ngày.</p>

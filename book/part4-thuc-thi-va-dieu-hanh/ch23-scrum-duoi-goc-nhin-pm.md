@@ -97,6 +97,30 @@ Nếu Sponsor coi forecast là hứa hẹn, khi sprint trượt sẽ có căng t
 - **Yêu cầu, giá cố định, phạm vi bất biến, ít phản hồi**: Waterfall có thể hợp hơn.
 - **Tổ chức không cho đội tự tổ chức** hoặc PO không có thời gian: Scrum trở thành "nghi thức" mà không có lợi ích.
 
+## Đi sâu: chạy Scrum trong dự án có hợp đồng và mốc
+
+### Năm chỗ PM và Scrum "va" nhau — và cách hoà giải
+
+| Chỗ va | Biểu hiện | Hoà giải |
+|---|---|---|
+| **Cam kết với khách vs forecast** | Khách coi số story là hợp đồng | Hứa ở mức **Sprint Goal** và mốc; forecast là dự đoán có khoảng |
+| **Mốc thanh toán vs sprint** | Mốc rơi giữa sprint | Căn mốc theo cuối sprint hoặc nói rõ tiêu chí nghiệm thu theo Increment |
+| **Báo cáo % hoàn thành vs velocity** | Sponsor đòi "xong bao nhiêu %" | Dùng burnup theo phạm vi release + EVM cho khung |
+| **Thay đổi phạm vi giữa sprint** | Yêu cầu chen | Đưa backlog; xét ở Planning; chỉ chen khi mất ý nghĩa Sprint Goal |
+| **PM kiêm Scrum Master** | Xung đột vai trò | Tách rõ "mũ": khi điều phối nghi thức không đánh giá người |
+
+### Sprint Review: PM chuẩn bị gì
+
+Review là nơi khách nhìn thấy sản phẩm nên PM nên bảo đảm: **danh sách người tham dự** đúng (người quyết định); **bản demo trên staging** không slide; **Sprint Goal đạt hay không** nói thẳng; **phạm vi còn lại/dự báo release** cập nhật; **phản hồi** ghi vào backlog và được xác nhận trong email tóm tắt. Đừng dùng Review để báo cáo ngân sách; việc đó thuộc họp Sponsor.
+
+### Ba chỉ số sprint đáng dùng, hai chỉ số đừng dùng
+
+Dùng: (1) **Sprint Goal đạt tỷ lệ bao nhiêu** trong 5 sprint gần nhất; (2) **velocity trung bình 3 sprint** (xu hướng); (3) **tỷ lệ story bị đưa sang sprint sau** (chỉ dấu ước lượng/cam kết). Đừng dùng: **velocity để so sánh đội** và **số giờ làm** để đánh giá người — cả hai làm dữ liệu bị bóp méo.
+
+### Sprint 0 nên gồm gì
+
+Không chỉ "dựng môi trường". Một Sprint 0 tốt gồm: Working Agreement và DoD/DoR; môi trường và CI cơ bản; kiến trúc mức khái niệm và spike rủi ro; backlog ban đầu ≥ 2 sprint Ready; kế hoạch release và chiến lược nhánh/tag; danh sách phụ thuộc bên ngoài. Độ dài 2–4 tuần tuỳ mức sẵn sàng của đội (FoodNow cần 4 tuần).
+
 ## Tình huống FoodNow
 
 Thứ Sáu 27/02/2026, cuối Sprint 1 (09–27/02, gồm tuần Tết). Đội đã **cam kết 55 story point** nhưng chỉ hoàn thành **22 (40%)**; Review chỉ demo được đăng nhập chưa hoàn chỉnh. Anh Bảo, tham dự Review, hỏi: "Sao chỉ 40%?" Hà không né tránh. Hôm sau, chị chủ trì retrospective (đội mời) với dữ liệu.

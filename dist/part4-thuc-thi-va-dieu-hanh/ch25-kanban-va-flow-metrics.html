@@ -151,6 +151,47 @@ flowchart LR
 <p><strong>Scrumban</strong> kết hợp: có sprint hoặc nhịp planning ngắn nhưng dùng WIP limit và chỉ số dòng chảy; hợp đội chuyển từ Scrum sang Kanban dần, hoặc đội có cả việc phát triển và bảo trì.</p>
 <h2>25.6 Dự báo bằng Monte Carlo (mức khái niệm)</h2>
 <p>Thay vì hỏi &quot;bao lâu?&quot; bằng một con số, dùng <strong>dữ liệu lịch sử</strong> (throughput mỗi tuần) và <strong>mô phỏng ngẫu nhiên</strong>: máy tính rút ngẫu nhiên nhiều lần throughput của các tuần đã qua, cộng lại cho đến khi đủ 20 thẻ, lặp 10.000 lần; kết quả là <strong>phân phối</strong>: &quot;85% khả năng xong 20 thẻ trong ≤ 8 tuần&quot;. Ưu điểm: dùng dữ liệu thật, không cần ước lượng từng thẻ; nhược: cần vài tuần dữ liệu và thẻ có cỡ tương đương. PM không cần tự viết mô phỏng nhưng cần hiểu <strong>kết quả là xác suất</strong> và nói bằng khoảng (Ch11).</p>
+<h2>Đi sâu: đọc CFD, đặt WIP và dự báo bằng dữ liệu</h2>
+<h3>Đọc một CFD qua ba kịch bản</h3>
+<p>Hình dung biểu đồ tích luỹ có bốn dải: <em>Sẵn sàng</em>, <em>Đang làm</em>, <em>Review/Test</em>, <em>Xong</em>.</p>
+<table>
+<thead>
+<tr>
+<th>Hình dạng bạn thấy</th>
+<th>Chẩn đoán</th>
+<th>Việc cần làm</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dải <em>Review/Test</em> dày lên đều theo thời gian</td>
+<td>Nút cổ chai ở kiểm thử; thẻ vào nhanh hơn ra</td>
+<td>Giảm WIP cột <em>Đang làm</em>; cả đội hỗ trợ review/test; tự động hoá test</td>
+</tr>
+<tr>
+<td>Đường <em>Xong</em> đi ngang 5 ngày</td>
+<td>Dây chuyền dừng (thẻ bị chặn hoặc chờ deploy)</td>
+<td>Tìm thẻ bị chặn; kiểm tra cửa sổ deploy</td>
+</tr>
+<tr>
+<td>Dải <em>Sẵn sàng</em> co lại gần 0</td>
+<td>Thiếu việc sẵn sàng</td>
+<td>Tăng refinement; kéo thẻ từ Backlog</td>
+</tr>
+</tbody>
+</table>
+<h3>Cách đặt WIP limit ban đầu và điều chỉnh</h3>
+<p>Bắt đầu với <strong>số người ÷ 1,5</strong> cho cột <em>Đang làm</em> (đội 6 người → 4). Sau 2–4 tuần xem ba tín hiệu: (1) cột luôn đầy và cột phía sau trống → WIP quá thấp ở cột trước hoặc nghẽn ở cột trước nữa; (2) cột luôn trống → WIP quá cao ở cột trước; (3) tuổi thẻ trung vị tăng → giảm WIP. Chỉ đổi một cột mỗi lần và đo lại trong hai tuần.</p>
+<h3>Định luật Little: tính thử</h3>
+<p>Nếu cycle time trung bình 4,27 ngày và throughput 3,75 thẻ/tuần, WIP dự kiến ≈ 3,75 ÷ 5 ngày làm việc × 4,27 ≈ 3,2 thẻ — khớp với WIP đang đặt (3–4). Công thức có hai cách dùng: dự đoán cycle time khi đổi WIP, hoặc kiểm tra số liệu có nhất quán không (nếu không, dữ liệu ngày vào/ra có thể sai).</p>
+<h3>Monte Carlo: ví dụ bằng tay</h3>
+<p>Giả sử throughput 6 tuần gần nhất là 2, 6, 4, 3, 5, 4 thẻ. Cần xong 20 thẻ. Mỗi lần mô phỏng: rút ngẫu nhiên một trong sáu giá trị cho mỗi tuần và cộng cho đến khi ≥ 20. Lặp nhiều lần sẽ cho phân phối; với dữ liệu này, số tuần thường rơi khoảng 4–7 tuần, và phân vị 85% quanh 6–7 tuần. Vì vậy câu trả lời cho Sponsor là: &quot;Xong 20 thẻ trong khoảng 5–7 tuần, độ tin cậy 85% ở 7 tuần&quot;. Lưu ý điều kiện: các thẻ cùng cỡ tương đương và quy trình ổn định.</p>
+<h3>Kanban trong công ty outsource: ba lưu ý về hợp đồng</h3>
+<ol>
+<li><strong>Đơn vị thanh toán</strong> cần khớp mô hình: T&amp;M theo tháng hợp Kanban hơn fixed-price theo tính năng.</li>
+<li><strong>SLE thay cho &quot;cam kết ngày&quot;</strong> trong phụ lục hỗ trợ: &quot;85% bug Critical xong trong 2 ngày làm việc&quot;.</li>
+<li><strong>Báo cáo</strong> dùng lead time, throughput, tuổi thẻ; tránh cam kết số thẻ mỗi tháng vì khối lượng đến ngẫu nhiên.</li>
+</ol>
 <h2>Tình huống FoodNow</h2>
 <p>Thứ Hai 02/11/2026 (tuần 44). Hypercare đã xong, đội MVP thu còn 6 người. Việc đến mỗi ngày: một đơn kẹt, một OTP chậm, một yêu cầu nhỏ từ Huy. Hà thử giữ nhịp sprint 2 tuần trong một tuần rồi nhận ra Sprint Planning chẳng còn ý nghĩa: giữa sprint, 3 việc khẩn xen vào, Sprint Goal vỡ.</p>
 <p>Chị họp với Dũng, Backend 2, Khoa và Nam, đề xuất chuyển sang <strong>Kanban</strong> với sáu cột và WIP: Sẵn sàng 5, Đang làm 4, Review/Test 3, Chờ triển khai 3, cùng đường expedite cho sự cố. Ba tuần đầu chưa đặt SLE; chỉ ghi ngày. Đến 25/11, dữ liệu 15 thẻ cho: cycle time trung bình <strong>4,27 ngày</strong>, lead time <strong>5,4 ngày</strong>, throughput <strong>3,75 thẻ/tuần</strong>. Ở buổi review hai tuần, đội thấy cột &quot;Review/Test&quot; thường đầy và Nam là điểm nghẽn (một QA); họ cùng chọn giảm WIP &quot;Đang làm&quot; từ 4 xuống 3 và để Dev viết thêm test tự động. Hà đặt SLE: &quot;85% bug thường xong trong 7 ngày&quot;. Với Sponsor, chị chỉ cần một biểu đồ CFD và ba con số mỗi tháng, thay vì báo cáo sprint.</p>

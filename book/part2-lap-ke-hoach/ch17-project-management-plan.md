@@ -85,6 +85,34 @@ Trong môi trường có sprint, PM Plan chia làm hai loại phần:
 
 Quy tắc: PM Plan **xem lại có hệ thống ở mỗi mốc lớn** (Scope Freeze, bắt đầu UAT, Go-live) và **sau mỗi thay đổi baseline**. Không sao chép PM Plan vào mọi tài liệu; hãy để các tài liệu sống là nơi cập nhật, còn PM Plan nêu cách chúng được quản lý.
 
+## Đi sâu: kiểm tra chất lượng PM Plan và xử lý các tình huống thường gặp
+
+### Bảy phép kiểm tra trước khi gửi Sponsor
+
+| # | Câu hỏi | Nếu không đạt |
+|---|---|---|
+| 1 | Người ký có hiểu mục tiêu và ràng buộc ưu tiên trong hai trang đầu? | Đưa mục 1 và 13 lên đầu |
+| 2 | Mọi con số (ngày công, ngân sách, mốc) khớp tài liệu gốc? | Chạy đối chiếu chuỗi: WBS ↔ Schedule ↔ Budget ↔ Resource |
+| 3 | Mỗi kế hoạch phụ có liên kết tới tài liệu chi tiết? | Thêm liên kết hoặc xoá đoạn |
+| 4 | Baseline có phiên bản, ngày, người duyệt? | Điền Baseline Register |
+| 5 | Quy tắc thay đổi và dự phòng viết bằng số? | Thêm ngưỡng cụ thể (ví dụ 5% ngân sách) |
+| 6 | Có phần "sống" và "ổn định" tách bạch? | Đánh dấu phần cần duyệt để đổi |
+| 7 | Người ngoài dự án đọc 15 phút có hiểu dự án? | Cắt chi tiết, thêm sơ đồ tổng quan |
+
+### Chuỗi đối chiếu số liệu: ví dụ FoodNow
+
+Baseline chỉ có giá trị khi các tài liệu **nói cùng một sự thật**: WBS 1.927 ngày công → năng lực 12 FTE × 185 ngày = 2.220 (87%) → chi phí nhân sự 1.669 triệu (≈ 0,87 triệu/ngày công) → tổng 2.140 triệu + dự phòng 256,8 triệu = 2.396,8 ≈ trần 2.400 → lịch 39 tuần với đường găng 131 ngày làm việc. Nếu bạn đổi một con số, phải đổi cả chuỗi; đó là lý do PM Plan tham chiếu số từ tài liệu gốc thay vì chép lại.
+
+### Ba tình huống thường gặp
+
+- **Sponsor muốn thêm mục vào PM Plan sau khi đã ký.** Ghi vào phiên bản mới (v1.1) với lý do; nếu chạm baseline thì đi qua CR.
+- **Đội không đọc PM Plan.** Rút một trang "tóm tắt cho đội": ràng buộc ưu tiên, mốc, quy tắc thay đổi, cách báo tin xấu; đặt lên wiki chính.
+- **Khách yêu cầu PM Plan theo mẫu riêng của họ (ví dụ PRINCE2).** Ánh xạ: giữ nội dung của bạn, thêm bảng đối chiếu (Project Initiation Documentation ↔ mục tương ứng) thay vì viết lại.
+
+### PM Plan cho dự án nhỏ
+
+Đội 3–5 người và 2–3 tháng: gói PM Plan vào **3–4 trang**: mục tiêu và ràng buộc; phạm vi và mốc; rủi ro top 5; nguồn lực và giao tiếp; quy tắc thay đổi. Không cần 15 mục; điều quan trọng là vẫn có baseline, người duyệt và cách thay đổi.
+
 ## Tình huống FoodNow
 
 Thứ Sáu 20/03/2026, tuần 11. Hà gửi PM Plan v1.0 cho anh Bảo, chị Châu và Dũng hai ngày trước. Buổi review 60 phút bắt đầu bằng câu hỏi của anh Bảo: "Sao chị Hà đưa cho tôi tài liệu dài thế này?" Hà đáp: "Thực ra chỉ 10 trang; phần chi tiết em dẫn sang tài liệu riêng. Anh chỉ cần đọc hai trang đầu và mục 13, phần baseline."

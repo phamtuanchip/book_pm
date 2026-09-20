@@ -786,9 +786,13 @@ Bạn đang viết sách "Quản Lý Dự Án Phần Mềm — Từ Zero Đến 
 Không hỏi lại trừ khi README mâu thuẫn hoặc thiếu dữ kiện — khi đó ghi vào mục 10 và chọn phương án hợp lý nhất.
 ```
 
-## 14. Ghi chú bàn giao bản thảo (20/09/2026)
+## 14. Ghi chú bàn giao bản thảo (cập nhật 20/09/2026, vòng rà soát 2)
 
-- **Đã làm:** 47 chương + 9 tệp phụ lục (A, B, C, D, D2, E, F, G, H); 105 tệp trong `templates/`; build HTML + PDF; `tools/check.js`; kiểm Mermaid render bằng trình duyệt (0 lỗi).
-- **Chưa làm/cần làm:** (1) EPUB (M13); (2) đọc lại độc lập và nâng độ dài các chương dưới 2.500 từ; (3) xác minh lại thông tin chứng chỉ (Phụ lục H) và các mức tham chiếu DORA với nguồn chính thức trước khi phát hành; (4) xác nhận nội dung pháp lý với chuyên gia; (5) chương tình huống Phần 8 hiện gọn hơn khung mục 6.9 (đề 150–250 từ, đáp án 200–350 từ).
-- **Quyết định về số liệu:** xem mục 10 ("Quyết định bổ sung") — nguồn duy nhất của lịch sprint, đường găng, WBS, ngân sách, EVM T20.
-- **Số liệu EVM T20 (22/05/2026):** BAC 2.140; PV 962; EV 789; AC 825 (triệu VND) → SPI 0,82; CPI 0,96.
+- **Đã làm:** 47 chương + 9 tệp phụ lục; 105 template; HTML + PDF (`dist/`); `tools/check.js` (0 lỗi); Mermaid render 0 lỗi.
+- **Vòng rà soát 2 (tự động + xác minh nguồn):**
+  - Quét nhất quán bằng script/grep: không còn tham chiếu lỗi thời (`v0.17.0`, "Sprint 7 (T18)"); sửa các mâu thuẫn nhân vật/ngày phát hiện được (Sơn sau tuần 14, ngày đào tạo, Go/No-Go).
+  - **Xác minh với nguồn công khai (WebSearch/WebFetch, 09/2026):** (1) **Luật Bảo vệ dữ liệu cá nhân 2025 (91/2025/QH15)** hiệu lực 01/01/2026 thay Nghị định 13/2023 → đã sửa Ch29; (2) **DORA** hiện có 5 chỉ số (Failed Deployment Recovery Time, Deployment Rework Rate) và không công bố ngưỡng elite/high cố định trên trang hướng dẫn → đã chú thích ở Ch33; (3) **PMP ECO mới từ 09/07/2026** (People 33/Process 41/Business Environment 26 theo nguồn thứ cấp) → đã cập nhật Phụ lục H; (4) CAPM 2023 (36/17/20/27) khớp; (5) PMI-ACP đổi đề cương 11/2024 → đã ghi chú. Trang pmi.org trả 403 nên số liệu PMI dựa trên nguồn thứ cấp — **vẫn cần đối chiếu tay**.
+  - Chưa xác minh: điều kiện đăng ký/hình thức thi các chứng chỉ khác (Phụ lục H không nêu số liệu cụ thể); ngưỡng DORA lịch sử.
+- **Mở rộng độ dài:** thêm mục "Đi sâu" cho 16 chương ngắn nhất (Ch07, 09, 13, 17, 22, 23, 24, 25, 26, 28, 30, 31, 32, 35, 37, 39). **Vẫn còn ~38 chương < 2.500 từ** (đếm âm tiết) — cần mở rộng tiếp.
+- **Chưa làm:** đọc lại độc lập bởi người khác; EPUB (M13); xác nhận pháp lý bởi chuyên gia; chương Phần 8 vẫn gọn hơn khung mục 6.9.
+- **Số liệu EVM T20 (22/05/2026):** BAC 2.140; PV 962; EV 789; AC 825 → SPI 0,82; CPI 0,96.

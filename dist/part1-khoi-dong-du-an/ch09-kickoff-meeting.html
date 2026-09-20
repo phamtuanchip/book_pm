@@ -154,6 +154,46 @@
 </ul>
 <p>Biên bản 1 trang gồm: thông tin họp, tóm tắt 3 dòng, quyết định, hành động (người, hạn), câu hỏi mở, parking lot. Bỏ phần kể lại &quot;ai nói gì&quot;.</p>
 <p>📎 Mẫu đầy đủ: <code>templates/meeting/meeting-minutes.md</code></p>
+<h2>Đi sâu: các biến thể kickoff và cách xử lý tình huống khó</h2>
+<h3>Kickoff cho dự án đã chạy dở, đội phân tán và kickoff giai đoạn mới</h3>
+<p>Không phải kickoff nào cũng bắt đầu từ số 0:</p>
+<table>
+<thead>
+<tr>
+<th>Bối cảnh</th>
+<th>Điều chỉnh</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dự án nhận lại giữa chừng</strong> (PM mới)</td>
+<td>Đổi tên thành &quot;re-kickoff&quot;; mục tiêu là <em>xác nhận lại</em> mục tiêu, baseline và RACI; thêm phần &quot;hiện trạng thật&quot; (số liệu, rủi ro, lịch sử quyết định) do PM cũ hoặc BA trình bày</td>
+</tr>
+<tr>
+<td><strong>Đội phân tán/remote</strong></td>
+<td>Chia thành hai buổi 60 phút để tránh mệt; gửi tài liệu dạng bình luận được (comment) và yêu cầu phản hồi bằng văn bản trước; ghi hình nếu được phép</td>
+</tr>
+<tr>
+<td><strong>Kickoff giai đoạn mới</strong> (R1 sau MVP)</td>
+<td>Không lặp lại lịch sử; dành 30 phút cho bài học giai đoạn trước và thay đổi cách làm</td>
+</tr>
+<tr>
+<td><strong>Khách hàng đông người</strong></td>
+<td>Chỉ mời người ra quyết định + đại diện người dùng; các nhóm khác nhận biên bản</td>
+</tr>
+</tbody>
+</table>
+<h3>Bốn kịch bản khó và câu trả lời mẫu</h3>
+<ol>
+<li><strong>Sponsor nói &quot;xong sớm hơn nữa được không?&quot; ngay giữa buổi.</strong> Không cam kết; ghi vào parking lot; hứa phản hồi kèm số liệu trong 48 giờ. Câu mẫu: &quot;Em hiểu ngày rất quan trọng với anh. Em xin ghi lại và mang số liệu năng lực đội đến cho anh chọn.&quot;</li>
+<li><strong>Người của khách chỉ trích đội trước mặt cả phòng</strong> (&quot;mấy dự án trước bên chị trễ suốt&quot;). Đừng biện hộ; nhận điều có thật, chuyển sang cách làm khác lần này. Câu mẫu: &quot;Anh nói đúng là dự án trước có trễ. Lần này mình đặt sẵn mốc theo tuần và báo cáo mỗi thứ Sáu để anh thấy sớm.&quot;</li>
+<li><strong>Hai người khách mâu thuẫn ý kiến về phạm vi.</strong> Không phân xử trong phòng; nêu &quot;hai quan điểm này chưa thống nhất&quot;, ghi vào câu hỏi mở kèm người quyết định (Sponsor/PO) và hạn.</li>
+<li><strong>Không ai chịu nhận RACI.</strong> Mỗi việc chưa có &quot;A&quot; thì hẹn người ra quyết định trong 3 ngày; không kết thúc kickoff với ô &quot;A&quot; trống ở việc quan trọng.</li>
+</ol>
+<h3>Chuẩn bị deck 10 slide: kiểm tra chất lượng</h3>
+<p>Trước khi gửi, tự hỏi năm câu: (1) Người đọc chỉ xem slide 2–4 có hiểu mục tiêu và phạm vi không? (2) Mỗi slide có đúng một thông điệp? (3) Các con số (ngày, tiền) khớp Charter không? (4) Có slide nào chỉ để &quot;cho đủ&quot; không — bỏ đi? (5) Người không tham dự đọc deck + biên bản có làm việc được không? Nếu một câu trả lời là &quot;không&quot;, sửa trước khi gửi.</p>
+<h3>Đo hiệu quả kickoff</h3>
+<p>Kickoff tốt cho ra những thứ kiểm chứng được sau <strong>một tuần</strong>: (a) mọi hành động đã có người và hạn; (b) không ai hỏi lại &quot;ai quyết định việc X?&quot; — nếu có, RACI chưa rõ; (c) câu hỏi mở đã đóng ≥ 70%; (d) khách và đội dùng cùng một kênh chính thức. Ghi bốn chỉ báo này vào biên bản buổi rà soát tuần đầu.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Thứ Hai 05/01/2026, 09:00. Đội và khách ngồi chật phòng họp FoodNow. Hà mở đầu ngắn, mời anh Bảo nói về lý do làm dự án. Anh Bảo nói rất hào hứng, rồi dừng giữa chừng: &quot;Tôi muốn đổi mục tiêu. 500 đơn/ngày phải đạt trong <strong>một tháng</strong> đầu, không phải ba tháng. Chiến dịch marketing sẽ đẩy mạnh.&quot;</p>
 <p>Cả phòng im lặng. Dũng nhìn Hà. Hà không phản bác và cũng không đồng ý. Chị nói: &quot;Em ghi lại đề xuất của anh: 500 đơn/ngày trong 1 tháng đầu. Mục tiêu này sẽ ảnh hưởng đến cách mình thiết kế hiệu năng và kế hoạch ra mắt. Em xin đưa vào parking lot; chị Châu và em sẽ đánh giá tác động và gửi anh trong 48 giờ để anh chọn.&quot; Chị ghi ngay lên bảng, và tiếp tục agenda.</p>

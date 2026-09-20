@@ -115,6 +115,28 @@ FoodNow MVP: điểm **A = 4,05, B = 2,05** → chọn A. Sau go-live cho backen
 
 📎 Mẫu đầy đủ: `templates/delivery-plan/FoodNow-Delivery-Plan.md`, `templates/delivery-plan/delivery-strategy-decision-matrix.md`
 
+## Đi sâu: chọn cadence, xây Release Calendar và tránh bẫy lịch
+
+### Sáu bẫy khi lập Release Calendar
+
+1. **Quên ngày nghỉ của bên thứ ba** (Apple/Google, ngân hàng, vendor thanh toán) — hỏi và ghi lịch của họ. 2. **Đặt go-live sát lễ** — nếu sự cố, đội và vendor vắng. 3. **Không có ngày dự phòng** giữa UAT và go-live (FoodNow chừa ~10 ngày làm việc). 4. **Freeze đặt theo cảm giác** — gắn freeze với ngày cần để test/UAT. 5. **Lịch không khớp Gantt/Roadmap** — dựng từ Gantt, kiểm chéo mỗi tháng. 6. **Không đánh dấu ngày cấm deploy** — thể hiện cả Tết, lễ, chiều thứ Sáu.
+
+### Chọn cửa sổ go-live
+
+Cân bốn yếu tố: **lưu lượng thấp** (đêm/cuối tuần với giao đồ ăn), **sự có mặt của đội và vendor** (hotline vendor có trực không?), **thời gian xử lý sự cố trước giờ cao điểm** (cửa sổ 02:00–06:00 để còn buffer trước 07:00), và **khả năng nghỉ bù** sau đó. Với dịch vụ 24/7, cân nhắc bảo trì theo giờ thấp điểm theo vùng.
+
+### Environment Matrix: ba lỗi kinh điển
+
+(1) Staging ít dữ liệu hơn production nhiều nên **lỗi hiệu năng không lộ**; (2) tài khoản test dùng chung nên **dữ liệu bị ghi đè**; (3) khác biệt cấu hình (cache, khoá, endpoint) không được ghi. Cách chặn: dữ liệu ẩn danh cỡ thật, tài khoản riêng theo môi trường, **config diff** có trong checklist.
+
+### Release Manager khi đội nhỏ
+
+Đội 5–8 người thường không có người chuyên; hãy chia: Tech Lead (kỹ thuật), PM (lịch/truyền thông), QA (cổng chất lượng). Điều quan trọng là **một người có quyền hoãn** — thường là Tech Lead về kỹ thuật và Sponsor về kinh doanh — và mọi người biết điều đó từ trước.
+
+### Ví dụ ra quyết định A hay B cho một thành phần mới
+
+Một dịch vụ báo cáo nội bộ mới (web, không mobile, đội 4 người, test tự động 40%, không yêu cầu kiểm toán). Điểm: test tự động thấp kéo B xuống; không yêu cầu kiểm toán và là web kéo B lên → kết quả sát nhau (chênh < 0,5) → **chọn cái đội quen (A nhẹ)** và đặt mục tiêu nâng test tự động lên 70% rồi đánh giá lại sau hai quý.
+
 ## Tình huống FoodNow
 
 Tuần 4 (26–30/01/2026). Dũng đến với đề xuất "cho nhanh" — dùng trunk-based và deploy staging hằng ngày. Hà hỏi lại theo ma trận: test tự động hiện chưa có regression (điểm 1), Backend mới vừa vào, hợp đồng thanh toán theo bảy mốc, ba app mobile chịu review app store, và UAT chính thức bắt buộc. Cả hai chấm riêng rồi đối chiếu: A = 4,05, B = 2,05. Dũng đồng ý và xin một điều: "Nhưng mình đặt mục tiêu chuyển sang trunk-based cho backend/web sau go-live."

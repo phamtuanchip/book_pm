@@ -69,6 +69,43 @@ Tránh: chờ có đủ thông tin mới báo; đổ lỗi; email dài; giấu q
 
 **Watermelon status** (xanh ngoài, đỏ trong) là khi báo cáo luôn xanh dù thực tế đang đỏ. Nguyên nhân: sợ phản ứng, "hy vọng sẽ tự tốt lên", định nghĩa màu mơ hồ, đội báo "đã làm" thay vì "đã xong". Dấu hiệu nhận biết: báo cáo xanh nhiều tuần rồi đột ngột đỏ; SPI xu hướng giảm nhưng đèn vẫn xanh; đội nói khác báo cáo. Phòng tránh: **ngưỡng bằng số** (Ch34), **dữ liệu hệ thống**, **xu hướng** (không chỉ tuần này), PM **chịu trách nhiệm cá nhân** với đèn tổng, và **văn hoá không phạt tin xấu** (Ch27).
 
+## Đi sâu: dựng dashboard tối giản và bộ quy tắc RAG
+
+### Dashboard tám số cho Sponsor
+
+Một dashboard tốt trả lời trong 30 giây: "có cần tôi làm gì không?". Bộ tám số gợi ý cho dự án Hybrid:
+
+| # | Số | Ngưỡng | Vì sao |
+|---|---|---|---|
+| 1 | SPI | ≥ 0,95 / 0,85–0,95 / < 0,85 | Tiến độ so baseline |
+| 2 | CPI | như trên | Hiệu quả chi phí |
+| 3 | Dự phòng đã dùng (% quỹ) | > 50% trước 60% thời gian = cảnh báo | Sức chịu đựng còn lại |
+| 4 | Bug Critical/High mở | > 0 gần release = đỏ | Rủi ro chất lượng |
+| 5 | Velocity 3 sprint (xu hướng) | giảm 2 kỳ liền = vàng | Dự báo delivery |
+| 6 | Ngày dự báo go-live (khoảng) | lệch mốc > 1 tuần = vàng | Câu hỏi Sponsor luôn hỏi |
+| 7 | Issue/Dependency quá hạn | > 2 = vàng | Kỷ luật quản lý |
+| 8 | Số quyết định đang chờ Sponsor | > 3 hoặc quá 3 ngày = vàng | Chính dự án đang chờ họ |
+
+Mỗi số có mũi tên xu hướng so với kỳ trước; số 8 là số hiếm dashboard có nhưng hữu ích: nó cho Sponsor thấy họ cũng là một phần của tiến độ.
+
+### Bốn quy tắc đèn tổng
+
+1. Đèn tổng = **mức xấu nhất** của các chiều lịch, chi phí, chất lượng, phạm vi, rủi ro.
+2. Đèn chỉ được **hạ xuống xanh** khi hai kỳ liên tiếp đạt ngưỡng (tránh dao động).
+3. Đèn đỏ **luôn** kèm đề xuất hành động và người/hạn, hoặc quyết định cần.
+4. PM **không được** đổi ngưỡng để đổi màu; đổi ngưỡng phải qua Sponsor và ghi vào Decision Log.
+
+### Báo cáo cho người đọc khác nhau
+
+- **Sponsor**: một trang, quyết định cần ở đầu.
+- **Đội**: chi tiết sprint, blocker, chỉ số dòng chảy; do Scrum Master/Tech Lead trình bày ở Review.
+- **HĐQT/SteerCo**: xu hướng 4 kỳ, mốc, ngân sách, top 3 rủi ro.
+- **Khách/đối tác ngoài**: chỉ những gì họ cần biết (mốc liên quan, phụ thuộc), không đưa rủi ro nội bộ.
+
+### Mẫu tự kiểm một báo cáo tuần
+
+Đọc lại bản nháp và tìm: (a) câu nào không có số? — thêm số hoặc bỏ; (b) tin xấu nào nằm sau mục thứ ba? — kéo lên; (c) có "đang theo dõi" mà không có người/hạn? — bổ sung; (d) có từ tránh né ("có thể", "hy vọng") ở chỗ đã có dữ liệu? — thay bằng số. Bốn phép kiểm này thường cắt 30% độ dài và tăng độ tin cậy.
+
 ## Tình huống FoodNow
 
 Hà giữ ba báo cáo tuần tiêu biểu cho thấy sự chuyển màu và cách chị xử lý.

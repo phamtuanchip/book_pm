@@ -165,6 +165,50 @@ flowchart LR
 <li><strong>Yêu cầu, giá cố định, phạm vi bất biến, ít phản hồi</strong>: Waterfall có thể hợp hơn.</li>
 <li><strong>Tổ chức không cho đội tự tổ chức</strong> hoặc PO không có thời gian: Scrum trở thành &quot;nghi thức&quot; mà không có lợi ích.</li>
 </ul>
+<h2>Đi sâu: chạy Scrum trong dự án có hợp đồng và mốc</h2>
+<h3>Năm chỗ PM và Scrum &quot;va&quot; nhau — và cách hoà giải</h3>
+<table>
+<thead>
+<tr>
+<th>Chỗ va</th>
+<th>Biểu hiện</th>
+<th>Hoà giải</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Cam kết với khách vs forecast</strong></td>
+<td>Khách coi số story là hợp đồng</td>
+<td>Hứa ở mức <strong>Sprint Goal</strong> và mốc; forecast là dự đoán có khoảng</td>
+</tr>
+<tr>
+<td><strong>Mốc thanh toán vs sprint</strong></td>
+<td>Mốc rơi giữa sprint</td>
+<td>Căn mốc theo cuối sprint hoặc nói rõ tiêu chí nghiệm thu theo Increment</td>
+</tr>
+<tr>
+<td><strong>Báo cáo % hoàn thành vs velocity</strong></td>
+<td>Sponsor đòi &quot;xong bao nhiêu %&quot;</td>
+<td>Dùng burnup theo phạm vi release + EVM cho khung</td>
+</tr>
+<tr>
+<td><strong>Thay đổi phạm vi giữa sprint</strong></td>
+<td>Yêu cầu chen</td>
+<td>Đưa backlog; xét ở Planning; chỉ chen khi mất ý nghĩa Sprint Goal</td>
+</tr>
+<tr>
+<td><strong>PM kiêm Scrum Master</strong></td>
+<td>Xung đột vai trò</td>
+<td>Tách rõ &quot;mũ&quot;: khi điều phối nghi thức không đánh giá người</td>
+</tr>
+</tbody>
+</table>
+<h3>Sprint Review: PM chuẩn bị gì</h3>
+<p>Review là nơi khách nhìn thấy sản phẩm nên PM nên bảo đảm: <strong>danh sách người tham dự</strong> đúng (người quyết định); <strong>bản demo trên staging</strong> không slide; <strong>Sprint Goal đạt hay không</strong> nói thẳng; <strong>phạm vi còn lại/dự báo release</strong> cập nhật; <strong>phản hồi</strong> ghi vào backlog và được xác nhận trong email tóm tắt. Đừng dùng Review để báo cáo ngân sách; việc đó thuộc họp Sponsor.</p>
+<h3>Ba chỉ số sprint đáng dùng, hai chỉ số đừng dùng</h3>
+<p>Dùng: (1) <strong>Sprint Goal đạt tỷ lệ bao nhiêu</strong> trong 5 sprint gần nhất; (2) <strong>velocity trung bình 3 sprint</strong> (xu hướng); (3) <strong>tỷ lệ story bị đưa sang sprint sau</strong> (chỉ dấu ước lượng/cam kết). Đừng dùng: <strong>velocity để so sánh đội</strong> và <strong>số giờ làm</strong> để đánh giá người — cả hai làm dữ liệu bị bóp méo.</p>
+<h3>Sprint 0 nên gồm gì</h3>
+<p>Không chỉ &quot;dựng môi trường&quot;. Một Sprint 0 tốt gồm: Working Agreement và DoD/DoR; môi trường và CI cơ bản; kiến trúc mức khái niệm và spike rủi ro; backlog ban đầu ≥ 2 sprint Ready; kế hoạch release và chiến lược nhánh/tag; danh sách phụ thuộc bên ngoài. Độ dài 2–4 tuần tuỳ mức sẵn sàng của đội (FoodNow cần 4 tuần).</p>
 <h2>Tình huống FoodNow</h2>
 <p>Thứ Sáu 27/02/2026, cuối Sprint 1 (09–27/02, gồm tuần Tết). Đội đã <strong>cam kết 55 story point</strong> nhưng chỉ hoàn thành <strong>22 (40%)</strong>; Review chỉ demo được đăng nhập chưa hoàn chỉnh. Anh Bảo, tham dự Review, hỏi: &quot;Sao chỉ 40%?&quot; Hà không né tránh. Hôm sau, chị chủ trì retrospective (đội mời) với dữ liệu.</p>
 <p>Nguyên nhân: (1) <strong>cam kết dựa mong muốn</strong>: 55 SP trên capacity 62 người-ngày là 0,89 SP/ngày, trong khi thực tế đạt 0,355 SP/ngày; (2) <strong>Backend 2 mới vào</strong> (learning curve), capacity thực thấp hơn; (3) hai người nghỉ phép sau Tết chưa được tính (5 ngày công); (4) <strong>story quá lớn</strong> (nhiều story 8–13 SP), không đạt DoD trong sprint; (5) <strong>DoD mới</strong>, QA phát hiện lỗi muộn. Hà đề xuất ba thay đổi: <strong>tính capacity đầy đủ</strong> (phép, chia sẻ, học việc), <strong>dùng năng suất thực</strong> (0,355 SP/ngày) để dự báo, <strong>cắt story dưới 5 SP</strong> và chọn Sprint Goal duy nhất.</p>
