@@ -1,0 +1,355 @@
+{
+  "title": "Quản Lý Dự Án Phần Mềm — Từ Zero Đến Thực Chiến",
+  "subtitle": "Dành cho người chưa từng làm PM — kèm bộ tài liệu mẫu điền sẵn",
+  "parts": [
+    {
+      "id": "part0-nhap-mon",
+      "title": "Phần 0 — Nhập môn",
+      "chapters": [
+        {
+          "num": 1,
+          "slug": "ch01-du-an-va-quan-ly-du-an",
+          "title": "Dự án và quản lý dự án là gì?"
+        },
+        {
+          "num": 2,
+          "slug": "ch02-vai-tro-project-manager",
+          "title": "Vai trò Project Manager trong dự án phần mềm"
+        },
+        {
+          "num": 3,
+          "slug": "ch03-vong-doi-du-an-va-mo-hinh",
+          "title": "Vòng đời dự án phần mềm & các mô hình: Waterfall, Agile, Hybrid"
+        },
+        {
+          "num": 4,
+          "slug": "ch04-khung-kien-thuc-chung-chi-lo-trinh",
+          "title": "Bộ khung kiến thức, chứng chỉ & lộ trình nghề PM"
+        }
+      ]
+    },
+    {
+      "id": "part1-khoi-dong-du-an",
+      "title": "Phần 1 — Khởi động dự án",
+      "chapters": [
+        {
+          "num": 5,
+          "slug": "ch05-business-case-project-charter",
+          "title": "Business Case & Project Charter"
+        },
+        {
+          "num": 6,
+          "slug": "ch06-stakeholder-va-ke-hoach-giao-tiep",
+          "title": "Stakeholder & Kế hoạch giao tiếp"
+        },
+        {
+          "num": 7,
+          "slug": "ch07-xac-dinh-pham-vi",
+          "title": "Xác định phạm vi (Scope) & yêu cầu cấp cao"
+        },
+        {
+          "num": 8,
+          "slug": "ch08-thiet-lap-doi-va-cach-lam-viec",
+          "title": "Thiết lập đội & cách làm việc"
+        },
+        {
+          "num": 9,
+          "slug": "ch09-kickoff-meeting",
+          "title": "Kickoff meeting"
+        }
+      ]
+    },
+    {
+      "id": "part2-lap-ke-hoach",
+      "title": "Phần 2 — Lập kế hoạch",
+      "chapters": [
+        {
+          "num": 10,
+          "slug": "ch10-wbs",
+          "title": "WBS (Work Breakdown Structure)"
+        },
+        {
+          "num": 11,
+          "slug": "ch11-uoc-luong",
+          "title": "Ước lượng"
+        },
+        {
+          "num": 12,
+          "slug": "ch12-lap-lich-gantt-critical-path",
+          "title": "Lập lịch: Timeline, Gantt, Critical Path"
+        },
+        {
+          "num": 13,
+          "slug": "ch13-roadmap-va-release-plan",
+          "title": "Roadmap & Release Plan"
+        },
+        {
+          "num": 14,
+          "slug": "ch14-ngan-sach-va-chi-phi",
+          "title": "Ngân sách & quản lý chi phí"
+        },
+        {
+          "num": 15,
+          "slug": "ch15-ke-hoach-chat-luong",
+          "title": "Kế hoạch chất lượng"
+        },
+        {
+          "num": 16,
+          "slug": "ch16-ke-hoach-nguon-luc",
+          "title": "Kế hoạch nguồn lực & năng lực đội"
+        },
+        {
+          "num": 17,
+          "slug": "ch17-project-management-plan",
+          "title": "Project Management Plan tổng hợp"
+        }
+      ]
+    },
+    {
+      "id": "part3-rui-ro-thay-doi-mua-sam",
+      "title": "Phần 3 — Rủi ro, thay đổi, mua sắm",
+      "chapters": [
+        {
+          "num": 18,
+          "slug": "ch18-quan-ly-rui-ro",
+          "title": "Quản lý rủi ro"
+        },
+        {
+          "num": 19,
+          "slug": "ch19-raid-log",
+          "title": "RAID Log: Risk, Assumption, Issue, Dependency"
+        },
+        {
+          "num": 20,
+          "slug": "ch20-quan-ly-thay-doi",
+          "title": "Quản lý thay đổi (Change Control)"
+        },
+        {
+          "num": 21,
+          "slug": "ch21-vendor-va-mua-sam",
+          "title": "Quản lý phụ thuộc, vendor & mua sắm"
+        },
+        {
+          "num": 22,
+          "slug": "ch22-quan-ly-cau-hinh-tai-lieu",
+          "title": "Quản lý cấu hình, tài liệu & tri thức dự án"
+        }
+      ]
+    },
+    {
+      "id": "part4-thuc-thi-va-dieu-hanh",
+      "title": "Phần 4 — Thực thi & điều hành",
+      "chapters": [
+        {
+          "num": 23,
+          "slug": "ch23-scrum-duoi-goc-nhin-pm",
+          "title": "Scrum dưới góc nhìn PM"
+        },
+        {
+          "num": 24,
+          "slug": "ch24-backlog-va-uu-tien",
+          "title": "Backlog & ưu tiên ở góc độ PM"
+        },
+        {
+          "num": 25,
+          "slug": "ch25-kanban-va-flow-metrics",
+          "title": "Kanban & chỉ số dòng chảy (Flow metrics)"
+        },
+        {
+          "num": 26,
+          "slug": "ch26-hybrid-va-nhieu-doi",
+          "title": "Hybrid & mở rộng quy mô (nhiều đội)"
+        },
+        {
+          "num": 27,
+          "slug": "ch27-lanh-dao-va-quan-ly-con-nguoi",
+          "title": "Lãnh đạo & quản lý con người"
+        },
+        {
+          "num": 28,
+          "slug": "ch28-hop-hieu-qua",
+          "title": "Họp hiệu quả & nghi thức dự án"
+        },
+        {
+          "num": 29,
+          "slug": "ch29-pm-va-ky-thuat",
+          "title": "PM và kỹ thuật: CI/CD, môi trường, nợ kỹ thuật, DevOps"
+        }
+      ]
+    },
+    {
+      "id": "part5-delivery-plan-va-release",
+      "title": "Phần 5 — Delivery Plan & Release Engineering",
+      "chapters": [
+        {
+          "num": 30,
+          "slug": "ch30-delivery-plan-tong-the",
+          "title": "Delivery Plan tổng thể: từ Roadmap đến từng bản phát hành"
+        },
+        {
+          "num": 31,
+          "slug": "ch31-chien-luoc-nhanh-branching",
+          "title": "Chiến lược nhánh: GitFlow, GitHub Flow, Trunk-based"
+        },
+        {
+          "num": 32,
+          "slug": "ch32-versioning-tagging-release",
+          "title": "Versioning, Tagging & Release Management theo kế hoạch"
+        },
+        {
+          "num": 33,
+          "slug": "ch33-deployment-pipeline-daily-deployment",
+          "title": "Deployment Pipeline & Daily Deployment"
+        }
+      ]
+    },
+    {
+      "id": "part6-giam-sat-bao-cao-chat-luong",
+      "title": "Phần 6 — Giám sát, báo cáo, chất lượng",
+      "chapters": [
+        {
+          "num": 34,
+          "slug": "ch34-theo-doi-tien-do-evm",
+          "title": "Theo dõi tiến độ: burndown, velocity, EVM"
+        },
+        {
+          "num": 35,
+          "slug": "ch35-bao-cao-trang-thai",
+          "title": "Báo cáo trạng thái & dashboard"
+        },
+        {
+          "num": 36,
+          "slug": "ch36-quan-ly-ky-vong-khach-hang",
+          "title": "Quản lý kỳ vọng & khách hàng khó"
+        },
+        {
+          "num": 37,
+          "slug": "ch37-uat-va-chuan-bi-phat-hanh",
+          "title": "Kiểm thử, UAT & chuẩn bị phát hành"
+        },
+        {
+          "num": 38,
+          "slug": "ch38-su-co-leo-thang-khung-hoang",
+          "title": "Xử lý sự cố, leo thang & quản trị khủng hoảng dự án"
+        }
+      ]
+    },
+    {
+      "id": "part7-dong-du-an-va-van-hanh",
+      "title": "Phần 7 — Đóng dự án & vận hành",
+      "chapters": [
+        {
+          "num": 39,
+          "slug": "ch39-go-live-va-cutover",
+          "title": "Go-live & Cutover"
+        },
+        {
+          "num": 40,
+          "slug": "ch40-dong-du-an-va-lessons-learned",
+          "title": "Đóng dự án, bài học kinh nghiệm & bàn giao"
+        },
+        {
+          "num": 41,
+          "slug": "ch41-loi-ich-pmo-portfolio",
+          "title": "Sau dự án: đo lợi ích, PMO & danh mục dự án"
+        }
+      ]
+    },
+    {
+      "id": "part8-bai-tap-tinh-huong",
+      "title": "Phần 8 — Bài tập tình huống",
+      "chapters": [
+        {
+          "num": 42,
+          "slug": "ch42-tinh-huong-pham-vi-khach-hang",
+          "title": "Tình huống về phạm vi & khách hàng"
+        },
+        {
+          "num": 43,
+          "slug": "ch43-tinh-huong-tien-do-nguon-luc",
+          "title": "Tình huống về tiến độ & nguồn lực"
+        },
+        {
+          "num": 44,
+          "slug": "ch44-tinh-huong-con-nguoi-xung-dot",
+          "title": "Tình huống về con người & xung đột"
+        },
+        {
+          "num": 45,
+          "slug": "ch45-tinh-huong-ky-thuat-chat-luong",
+          "title": "Tình huống về kỹ thuật & chất lượng"
+        },
+        {
+          "num": 46,
+          "slug": "ch46-tinh-huong-vendor-ngan-sach-phap-ly",
+          "title": "Tình huống về vendor, ngân sách & pháp lý"
+        },
+        {
+          "num": 47,
+          "slug": "ch47-capstone-foodnow",
+          "title": "Capstone: FoodNow từ ý tưởng đến sau go-live"
+        }
+      ]
+    },
+    {
+      "id": "part9-phu-luc",
+      "title": "Phụ lục",
+      "chapters": [
+        {
+          "num": 48,
+          "label": "Phụ lục A",
+          "slug": "appendix-a-chi-muc-template",
+          "title": "Chỉ mục toàn bộ bộ template"
+        },
+        {
+          "num": 49,
+          "label": "Phụ lục B",
+          "slug": "appendix-b-mau-charter-business-case",
+          "title": "Mẫu Project Charter + Business Case đầy đủ (FoodNow)"
+        },
+        {
+          "num": 50,
+          "label": "Phụ lục C",
+          "slug": "appendix-c-mau-wbs-gantt-roadmap",
+          "title": "Mẫu WBS + Timeline/Gantt + Roadmap đầy đủ (FoodNow)"
+        },
+        {
+          "num": 51,
+          "label": "Phụ lục D",
+          "slug": "appendix-d-mau-pm-plan-raid-cr",
+          "title": "Mẫu PM Plan + Risk/RAID + Change Request đầy đủ (FoodNow)"
+        },
+        {
+          "num": 52,
+          "label": "Phụ lục D2",
+          "slug": "appendix-d2-mau-delivery-plan",
+          "title": "Mẫu Delivery Plan đầy đủ (FoodNow)"
+        },
+        {
+          "num": 53,
+          "label": "Phụ lục E",
+          "slug": "appendix-e-thuat-ngu",
+          "title": "Bảng thuật ngữ PM (Glossary)"
+        },
+        {
+          "num": 54,
+          "label": "Phụ lục F",
+          "slug": "appendix-f-checklist-nhanh",
+          "title": "Bộ checklist nhanh"
+        },
+        {
+          "num": 55,
+          "label": "Phụ lục G",
+          "slug": "appendix-g-tai-lieu-tham-khao",
+          "title": "Tài liệu tham khảo & học thêm"
+        },
+        {
+          "num": 56,
+          "label": "Phụ lục H",
+          "slug": "appendix-h-chung-chi-pm",
+          "title": "Hồ sơ chứng chỉ PM & ánh xạ đề cương thi"
+        }
+      ]
+    }
+  ]
+}

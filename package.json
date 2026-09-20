@@ -1,0 +1,13 @@
+{
+  "name": "book_pm",
+  "version": "1.0.0",
+  "description": "Sách dạy nghề Project Manager phần mềm bằng tiếng Việt: Quản Lý Dự Án Phần Mềm — Từ Zero Đến Thực Chiến.",
+  "scripts": {
+    "build": "node tools/build.js",
+    "build:pdf": "node tools/build-pdf.js",
+    "build:all": "node tools/build.js && node tools/build-pdf.js"
+  },
+  "license": "MIT",
+  "dependencies": { "markdown-it": "^15.0.1" },
+  "devDependencies": { "puppeteer": "^25.10.0" }
+}
