@@ -45,12 +45,12 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 39 | Go-live & Cutover | ✅ | 1800 |
 | 40 | Đóng dự án, bài học kinh nghiệm & bàn giao | ✅ | 2309 |
 | 41 | Sau dự án: đo lợi ích, PMO & danh mục dự án | ✅ | 2023 |
-| 42 | Tình huống về phạm vi & khách hàng | ⬜ |  |
-| 43 | Tình huống về tiến độ & nguồn lực | ⬜ |  |
-| 44 | Tình huống về con người & xung đột | ⬜ |  |
-| 45 | Tình huống về kỹ thuật & chất lượng | ⬜ |  |
-| 46 | Tình huống về vendor, ngân sách & pháp lý | ⬜ |  |
-| 47 | Capstone: FoodNow từ ý tưởng đến sau go-live | ⬜ |  |
+| 42 | Tình huống về phạm vi & khách hàng | ✅ | 3267 |
+| 43 | Tình huống về tiến độ & nguồn lực | ✅ | 2743 |
+| 44 | Tình huống về con người & xung đột | ✅ | 2742 |
+| 45 | Tình huống về kỹ thuật & chất lượng | ✅ | 2369 |
+| 46 | Tình huống về vendor, ngân sách & pháp lý | ✅ | 2336 |
+| 47 | Capstone: FoodNow từ ý tưởng đến sau go-live | ✅ | 2576 |
 | Phụ lục A | Chỉ mục toàn bộ bộ template | ⬜ |  |
 | Phụ lục B | Mẫu Project Charter + Business Case đầy đủ (FoodNow) | ⬜ |  |
 | Phụ lục C | Mẫu WBS + Timeline/Gantt + Roadmap đầy đủ (FoodNow) | ⬜ |  |
