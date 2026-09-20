@@ -1,0 +1,38 @@
+﻿Ten,To_chuc_cap,Nhom,Cap,Ai_nen_thi,Dieu_kien_dang_ky,Noi_dung_chinh,Hieu_luc_gia_han,Chi_phi_tuong_doi,Tuan_hoc_uoc_luong,Tien_de_tiep_theo,Gia_tri_thi_truong_VN,Chuong_sach,Nguon_hoc_chinh_thuc,Ngay_bien_soan
+CAPM,PMI,1,L0,Sinh viên/fresher muốn có nền tảng PM,Theo điều kiện chính thức của PMI,Kiến thức nền quản lý dự án,Theo quy định của PMI,$$,6-10,PMP,Trung bình (định tính),Ch01-Ch04; Phần 1-3,PMBOK Guide & tài liệu PMI,2026-09-20
+PMP,PMI,1,L2,PM đã dẫn dự án end-to-end,Theo điều kiện kinh nghiệm chính thức của PMI,Con người / Quy trình / Môi trường kinh doanh,Cần gia hạn theo chu kỳ (PDU),$$$,10-14,PgMP; PMI-RMP,Cao — chuẩn được nhắc nhiều trong tin tuyển dụng,Toàn sách,PMBOK Guide; Agile Practice Guide,2026-09-20
+PgMP,PMI,1,L3,Người quản lý chương trình nhiều dự án,Theo điều kiện chính thức của PMI,Quản lý chương trình,Theo quy định của PMI,$$$,12-16,PfMP,Thấp-trung bình,Ch26; Ch41,Tài liệu PMI,2026-09-20
+PfMP,PMI,1,L3,Người quản lý danh mục dự án,Theo điều kiện chính thức của PMI,Quản lý danh mục,Theo quy định của PMI,$$$,12-16,,Thấp,Ch41,Tài liệu PMI,2026-09-20
+PRINCE2 Foundation/Practitioner,PeopleCert (AXELOS),1,L1-L2,PM làm dự án khu vực công/châu Âu/Anh/Úc,Practitioner cần chứng chỉ tiền đề theo quy định,7 nguyên tắc / chủ đề / quy trình,Theo quy định của tổ chức cấp,$$,4-8,PRINCE2 Practitioner,Trung bình (tuỳ khách hàng),Ch03; Ch17,Manual PRINCE2,2026-09-20
+IPMA Level D/C/B/A,IPMA,1,L1-L3,PM hướng chuẩn châu Âu,Theo quy định IPMA,Năng lực kỹ thuật/hành vi/bối cảnh,Theo quy định IPMA,$$$,8-16,Cấp cao hơn,Thấp,Ch02; Ch27,IPMA ICB,2026-09-20
+CompTIA Project+,CompTIA,1,L0-L1,Người mới vào nghề PM,Không yêu cầu kinh nghiệm cứng,Nền tảng quản lý dự án,Theo quy định CompTIA,$$,6-8,PMP,Thấp,Ch01-Ch04,CompTIA,2026-09-20
+Google Project Management Certificate,Google/Coursera,1,L0,Người mới hoàn toàn,Không,Nhập môn PM và Agile,Không có hạn (chứng nhận khoá học),$,8-16,CAPM/PSM I,Thấp-trung bình,Ch01-Ch04,Coursera,2026-09-20
+PSM I,Scrum.org,2,L1,Dev/QA/BA/PM làm Scrum,Không yêu cầu khoá bắt buộc,Scrum Guide,Không hết hạn,$,4-8,PSM II; PSPO I,Cao trong công ty Agile,Ch23; Ch24,Scrum Guide,2026-09-20
+PSM II/III,Scrum.org,2,L2,Scrum Master kinh nghiệm,PSM I trước,Scrum nâng cao,Không hết hạn,$$,8-12,PSM III,Trung bình,Ch23; Ch26,Scrum Guide,2026-09-20
+PSPO I/II/III,Scrum.org,2,L1-L2,Product Owner/PM ảnh hưởng backlog,Không,Product ownership,Không hết hạn,$,4-8,PSPO II,Trung bình-cao,Ch24,Scrum Guide,2026-09-20
+PAL-E,Scrum.org,2,L1,Người lãnh đạo hỗ trợ đội Agile,Không,Lãnh đạo Agile,Không hết hạn,$,3-5,,Thấp,Ch27,Scrum.org,2026-09-20
+PSK,Scrum.org,2,L1,Người làm Kanban,Không,Kanban,Không hết hạn,$,3-5,,Thấp,Ch25,Kanban Guide,2026-09-20
+CSM,Scrum Alliance,2,L1,Người muốn vào vai Scrum Master,Khoá do đơn vị được công nhận,Scrum,Cần gia hạn theo quy định,$$,2-6,A-CSM,Cao trong công ty Agile,Ch23,Scrum Alliance,2026-09-20
+CSPO,Scrum Alliance,2,L1,Product Owner,Khoá do đơn vị được công nhận,Product ownership,Cần gia hạn theo quy định,$$,2-6,A-CSPO,Trung bình,Ch24,Scrum Alliance,2026-09-20
+PMI-ACP,PMI,2,L1-L2,Người có kinh nghiệm Agile,Theo điều kiện chính thức của PMI,Agile rộng (Scrum/Kanban/Lean/XP),Cần gia hạn theo chu kỳ,$$,8-12,PMP,Trung bình,Ch03; Ch23-Ch26,Agile Practice Guide,2026-09-20
+AgilePM Foundation/Practitioner,APMG,2,L1-L2,PM Agile theo khung DSDM,Practitioner cần Foundation,Agile Project Management,Theo quy định APMG,$$,4-8,,Thấp,Ch03,APMG,2026-09-20
+KMP/KMP II,Kanban University,2,L1-L2,Người triển khai Kanban,Khoá chính thức,Kanban,Theo quy định,$$,3-6,,Thấp,Ch25,Kanban University,2026-09-20
+SAFe Agilist (SA),Scaled Agile,3,L2,Người trong tổ chức dùng SAFe,Khoá chính thức,SAFe,Cần gia hạn hằng năm,$$$,3-6,SAFe RTE,Trung bình (doanh nghiệp lớn),Ch26,Scaled Agile,2026-09-20
+SAFe Scrum Master,Scaled Agile,3,L2,Scrum Master ở môi trường SAFe,Khoá chính thức,Scrum trong SAFe,Cần gia hạn hằng năm,$$$,3-5,SAFe RTE,Trung bình,Ch26,Scaled Agile,2026-09-20
+SAFe POPM,Scaled Agile,3,L2,PO/PM trong SAFe,Khoá chính thức,Product management trong SAFe,Cần gia hạn hằng năm,$$$,3-5,,Trung bình,Ch24; Ch26,Scaled Agile,2026-09-20
+SAFe RTE,Scaled Agile,3,L3,Điều phối release train,Khoá chính thức,Release train,Cần gia hạn hằng năm,$$$,4-8,,Thấp-trung bình,Ch26,Scaled Agile,2026-09-20
+Disciplined Agile (DASM/DASSM),PMI,3,L2,Người cần tuỳ biến quy trình,Khoá chính thức,Disciplined Agile,Theo quy định,$$,4-6,,Thấp,Ch26,PMI,2026-09-20
+Scrum@Scale,Scrum Inc.,3,L2,Đội nhiều nhóm Scrum,Khoá chính thức,Mở rộng Scrum,Theo quy định,$$,3-5,,Thấp,Ch26,Scrum Inc.,2026-09-20
+MSP,PeopleCert (AXELOS),3,L3,Người quản lý chương trình,Theo quy định,Managing Successful Programmes,Theo quy định,$$$,6-10,,Thấp,Ch41,Manual MSP,2026-09-20
+ITIL 4 Foundation,PeopleCert (AXELOS),4,L0-L2,PM nối dự án với vận hành,Không,Quản trị dịch vụ IT,Không hết hạn,$$,3-6,ITIL 4 MP,Trung bình-cao,Ch39; Ch41,ITIL 4,2026-09-20
+DevOps Foundation,DevOps Institute/PeopleCert,4,L1,PM làm việc với DevOps,Không,DevOps,Theo quy định,$$,2-4,,Trung bình,Ch29; Ch33,DevOps Institute,2026-09-20
+AWS Cloud Practitioner / Azure AZ-900 / Google Cloud Digital Leader,AWS/Microsoft/Google,4,L0,Người cần hiểu cloud,Không,Khái niệm cloud,Theo từng hãng,$,3-6,Cấp cao hơn cùng hãng,Trung bình,Ch29,Tài liệu từng hãng,2026-09-20
+ISTQB Foundation,ISTQB,4,L1,PM hiểu kiểm thử,Không,Kiểm thử phần mềm,Không hết hạn,$$,4-6,,Trung bình,Ch15; Ch37,ISTQB,2026-09-20
+PMI-RMP,PMI,5,L3,Người chuyên rủi ro,Theo điều kiện chính thức của PMI,Quản lý rủi ro,Cần gia hạn theo chu kỳ,$$$,8-12,,Thấp-trung bình,Ch18; Ch19,PMI,2026-09-20
+PMI-SP,PMI,5,L3,Người chuyên lập lịch,Theo điều kiện chính thức của PMI,Lập lịch,Cần gia hạn theo chu kỳ,$$$,8-12,,Thấp,Ch12,PMI,2026-09-20
+PMI-PBA,PMI,5,L2,PM/BA nâng chuyên môn phân tích,Theo điều kiện chính thức của PMI,Business analysis,Cần gia hạn theo chu kỳ,$$$,8-12,,Trung bình,Ch07; Ch24,PMI,2026-09-20
+CBAP/CCBA,IIBA,5,L2-L3,BA chuyên nghiệp,Theo điều kiện chính thức của IIBA,BABOK,Cần gia hạn,$$$,8-12,,Trung bình,Ch07; Ch24,IIBA BABOK,2026-09-20
+Lean Six Sigma Yellow/Green Belt,Nhiều tổ chức,5,L1-L2,Người cải tiến quy trình,Theo tổ chức cấp,Cải tiến quy trình,Theo tổ chức,$$,4-10,,Thấp,Ch15,Tổ chức cấp,2026-09-20
+ISO/IEC 27001 Foundation/Lead Implementer,Nhiều tổ chức,5,L2,Dự án liên quan bảo mật,Theo tổ chức cấp,An toàn thông tin,Theo tổ chức,$$,3-8,,Thấp,Ch29,ISO,2026-09-20
+PMI-PMOCP,PMI,5,L3,Người xây/vận hành PMO,Theo điều kiện chính thức của PMI,PMO,Cần gia hạn theo chu kỳ,$$$,8-12,,Thấp,Ch41,PMI,2026-09-20
+CISSP/Security+,ISC2/CompTIA,5,L3,Chỉ khi làm dự án bảo mật,Theo quy định,An toàn thông tin,Theo quy định,$$$,10-20,,Thấp,Ch29,Tổ chức cấp,2026-09-20
