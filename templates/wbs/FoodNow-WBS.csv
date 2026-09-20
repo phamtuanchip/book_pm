@@ -1,0 +1,96 @@
+﻿WBS_ID,Level,Name,Description,Owner,Estimate_Days,Depends_On,Status
+0,1,FoodNow MVP,Toàn bộ dự án MVP,Hà,=F3+F11+F23+F56+F66+F74+F82+F91,,Baseline v1.0
+1,2,Quản lý dự án,,,=F4+F7,,Baseline v1.0
+1.1,3,Khởi động và lập kế hoạch,,,=SUM(F5:F6),,Baseline v1.0
+1.1.1,4,"Charter, scope, PM Plan","Business Case, Charter, Scope Statement, kế hoạch tổng",Hà,15,,Chưa bắt đầu
+1.1.2,4,"Stakeholder, RACI, giao tiếp","Register, RACI, kế hoạch giao tiếp, kickoff",Hà,6,1.1.1,Chưa bắt đầu
+1.2,3,Điều hành và giám sát,,,=SUM(F8:F10),,Baseline v1.0
+1.2.1,4,Điều hành sprint và họp,"Họp Sponsor, sprint ceremony, gỡ blocker suốt dự án",Hà,100,1.1.2,Chưa bắt đầu
+1.2.2,4,"Báo cáo, rủi ro, thay đổi","Báo cáo tuần/tháng, RAID, change control",Hà,45,1.1.2,Chưa bắt đầu
+1.2.3,4,Quản lý vendor và nguồn lực,"Đồng bộ PayEasy, SMS, bản đồ; kế hoạch nguồn lực",Hà,20,1.1.2,Chưa bắt đầu
+2,2,Phân tích và thiết kế,,,=F12+F16+F20,,Baseline v1.0
+2.1,3,Phân tích nghiệp vụ,,,=SUM(F13:F15),,Baseline v1.0
+2.1.1,4,Epic và backlog ban đầu,"Workshop, epic, backlog v1",Lan,20,1.1.1,Chưa bắt đầu
+2.1.2,4,Đặc tả story và tiêu chí chấp nhận,Viết và tinh chỉnh story liên tục theo sprint,Lan,90,2.1.1,Chưa bắt đầu
+2.1.3,4,Quy trình nghiệp vụ và workshop người dùng,"Nhà hàng, tài xế, CS",Lan,15,2.1.1,Chưa bắt đầu
+2.2,3,Thiết kế UX/UI,,,=SUM(F17:F19),,Baseline v1.0
+2.2.1,4,Nghiên cứu và wireframe,"Luồng chính, wireframe 3 app",Mai Anh,20,2.1.1,Chưa bắt đầu
+2.2.2,4,UI 3 app và Admin,"Màn hình chi tiết, prototype",Mai Anh,45,2.2.1,Chưa bắt đầu
+2.2.3,4,Design system và bàn giao,"Component, hướng dẫn cho Dev",Mai Anh,10,2.2.2,Chưa bắt đầu
+2.3,3,Thiết kế kỹ thuật,,,=SUM(F21:F22),,Baseline v1.0
+2.3.1,4,Kiến trúc tổng thể và ADR,"Kiến trúc, quyết định kỹ thuật",Dũng,12,1.1.1,Chưa bắt đầu
+2.3.2,4,Thiết kế CSDL và API contract,"Schema, hợp đồng API",Dũng,15,2.3.1,Chưa bắt đầu
+3,2,Phát triển,,,=F24+F32+F37+F42+F47,,Baseline v1.0
+3.1,3,App Khách hàng (iOS/Android),,,=SUM(F25:F31),,Baseline v1.0
+3.1.1,4,Đăng ký/đăng nhập OTP,,Khoa,30,2.3.2,Chưa bắt đầu
+3.1.2,4,Duyệt và tìm món,,Khoa,55,3.1.1,Chưa bắt đầu
+3.1.3,4,Giỏ hàng và đặt đơn,,Tuấn,65,3.1.2,Chưa bắt đầu
+3.1.4,4,Thanh toán thẻ và COD (client),,Tuấn,50,3.1.3;6.1.1,Chưa bắt đầu
+3.1.5,4,Theo dõi đơn và bản đồ,,Khoa,70,3.1.3,Chưa bắt đầu
+3.1.6,4,Lịch sử đơn và đặt lại,,Quỳnh,30,3.1.3,Chưa bắt đầu
+3.1.7,4,Thông báo push,,Quỳnh,20,3.5.6,Chưa bắt đầu
+3.2,3,App Nhà hàng (web tablet),,,=SUM(F33:F36),,Baseline v1.0
+3.2.1,4,Đăng nhập và phân quyền,,FE Web,12,2.3.2,Chưa bắt đầu
+3.2.2,4,Nhận và xử lý đơn,,FE Web,45,3.2.1,Chưa bắt đầu
+3.2.3,4,Quản lý thực đơn,,FE Web,30,3.2.1,Chưa bắt đầu
+3.2.4,4,Báo cáo doanh thu cơ bản,,FE Web,15,3.2.2,Chưa bắt đầu
+3.3,3,App Tài xế (Android),,,=SUM(F38:F41),,Baseline v1.0
+3.3.1,4,Đăng nhập và hồ sơ,,Quỳnh,15,2.3.2,Chưa bắt đầu
+3.3.2,4,Nhận chuyến và điều hướng,,Quỳnh,60,3.3.1;6.3.1,Chưa bắt đầu
+3.3.3,4,Cập nhật trạng thái giao và thu COD,,Tuấn,40,3.3.2,Chưa bắt đầu
+3.3.4,4,Thu nhập và lịch sử,,Quỳnh,15,3.3.3,Chưa bắt đầu
+3.4,3,Admin web,,,=SUM(F43:F46),,Baseline v1.0
+3.4.1,4,Quản lý người dùng và phân quyền,,FE Web,15,3.5.1,Chưa bắt đầu
+3.4.2,4,Quản lý nhà hàng và thực đơn,,FE Web,15,3.5.2,Chưa bắt đầu
+3.4.3,4,Quản lý đơn và tranh chấp,,FE Web,15,3.5.3,Chưa bắt đầu
+3.4.4,4,Báo cáo cơ bản,,FE Web,10,3.5.8,Chưa bắt đầu
+3.5,3,Backend / API,,,=SUM(F48:F55),,Baseline v1.0
+3.5.1,4,Dịch vụ tài khoản và xác thực,,Sơn,35,2.3.2,Chưa bắt đầu
+3.5.2,4,Dịch vụ thực đơn và nhà hàng,,Backend 2,35,2.3.2,Chưa bắt đầu
+3.5.3,4,Dịch vụ đơn hàng và vòng đời,,Sơn,65,3.5.1,Chưa bắt đầu
+3.5.4,4,Dịch vụ ghép tài xế và định tuyến,,Backend 2,50,3.5.3,Chưa bắt đầu
+3.5.5,4,Dịch vụ thanh toán và đối soát,,Sơn,55,3.5.3;6.1.1,Chưa bắt đầu
+3.5.6,4,Dịch vụ thông báo (push/SMS),,Backend 2,25,3.5.1,Chưa bắt đầu
+3.5.7,4,Theo dõi thời gian thực,,Backend 2,40,3.5.3,Chưa bắt đầu
+3.5.8,4,Dữ liệu và báo cáo,,Sơn,25,3.5.3,Chưa bắt đầu
+4,2,Kiểm thử,,,=F57+F60,,Baseline v1.0
+4.1,3,Kế hoạch kiểm thử,,,=SUM(F58:F59),,Baseline v1.0
+4.1.1,4,Chiến lược và kế hoạch kiểm thử,,Nam,10,1.1.1,Chưa bắt đầu
+4.1.2,4,Viết test case,,QA,45,2.1.2,Chưa bắt đầu
+4.2,3,Thực thi kiểm thử,,,=SUM(F61:F65),,Baseline v1.0
+4.2.1,4,Kiểm thử chức năng theo sprint,,Nam,120,4.1.2,Chưa bắt đầu
+4.2.2,4,Kiểm thử tự động và regression,,QA,45,4.2.1,Chưa bắt đầu
+4.2.3,4,Kiểm thử hiệu năng,,Nam,15,3.5.3,Chưa bắt đầu
+4.2.4,4,Kiểm thử bảo mật cơ bản,,Nam,12,3.5.5,Chưa bắt đầu
+4.2.5,4,Hỗ trợ UAT và regression cuối,,Nam,30,4.2.2,Chưa bắt đầu
+5,2,Hạ tầng và DevOps,,,=F67+F70,,Baseline v1.0
+5.1,3,Môi trường và pipeline,,,=SUM(F68:F69),,Baseline v1.0
+5.1.1,4,Môi trường dev/staging/prod,,Ánh,20,2.3.1,Chưa bắt đầu
+5.1.2,4,CI/CD pipeline,,Ánh,25,5.1.1,Chưa bắt đầu
+5.2,3,Giám sát và an toàn,,,=SUM(F71:F73),,Baseline v1.0
+5.2.1,4,Giám sát và logging,,Ánh,15,5.1.1,Chưa bắt đầu
+5.2.2,4,Sao lưu và bảo mật hạ tầng,,Ánh,12,5.1.1,Chưa bắt đầu
+5.2.3,4,Hỗ trợ release,,Ánh,20,5.1.2,Chưa bắt đầu
+6,2,Tích hợp bên thứ ba,,,=F75+F77,,Baseline v1.0
+6.1,3,Thanh toán,,,=SUM(F76:F76),,Baseline v1.0
+6.1.1,4,Tích hợp PayEasy và chứng nhận,"Sandbox, tích hợp, chứng nhận",Dũng,40,2.3.2,Chưa bắt đầu
+6.2,3,Dịch vụ khác,,,=SUM(F78:F81),,Baseline v1.0
+6.2.1,4,SMS OTP,,Backend 2,10,2.3.2,Chưa bắt đầu
+6.2.2,4,Bản đồ và định tuyến,,Quỳnh,20,2.3.2,Chưa bắt đầu
+6.2.3,4,Push notification service,,Backend 2,8,2.3.2,Chưa bắt đầu
+6.2.4,4,API dữ liệu nhà hàng,,Sơn,12,2.3.2,Chưa bắt đầu
+7,2,Triển khai và đào tạo,,,=F83+F88,,Baseline v1.0
+7.1,3,Chuẩn bị go-live,,,=SUM(F84:F87),,Baseline v1.0
+7.1.1,4,Kế hoạch cutover và rollback,,Dũng,8,5.1.2,Chưa bắt đầu
+7.1.2,4,Di chuyển dữ liệu nhà hàng,,Sơn,12,6.2.4,Chưa bắt đầu
+7.1.3,4,Đào tạo nhà hàng và tài xế,,Lan,15,4.2.5,Chưa bắt đầu
+7.1.4,4,Tài liệu người dùng và runbook,,Lan,15,4.2.5,Chưa bắt đầu
+7.2,3,Go-live và hypercare,,,=SUM(F89:F90),,Baseline v1.0
+7.2.1,4,Go-live và cutover,,Dũng,10,7.1.1,Chưa bắt đầu
+7.2.2,4,Hypercare 4 tuần,,Hà,40,7.2.1,Chưa bắt đầu
+8,2,Đóng dự án,,,=F92,,Baseline v1.0
+8.1,3,Đóng và bàn giao,,,=SUM(F93:F95),,Baseline v1.0
+8.1.1,4,Nghiệm thu và bàn giao vận hành,,Hà,8,7.2.2,Chưa bắt đầu
+8.1.2,4,Lessons learned và báo cáo đóng,,Hà,6,8.1.1,Chưa bắt đầu
+8.1.3,4,"Đóng hợp đồng, giải phóng nguồn lực",,Hà,4,8.1.2,Chưa bắt đầu
+KIEM-TRA,,Tổng kiểm tra (chỉ cộng work package cấp 4),Phải bằng dòng 0; đối chiếu năng lực = 12 FTE × 185 ngày = 2.220,,"=SUMIFS(F2:F95,B2:B95,4)",,OK

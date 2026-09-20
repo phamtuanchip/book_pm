@@ -13,9 +13,9 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 07 | Xác định phạm vi (Scope) & yêu cầu cấp cao | ✅ | 1844 |
 | 08 | Thiết lập đội & cách làm việc | ✅ | 2073 |
 | 09 | Kickoff meeting | ✅ | 1640 |
-| 10 | WBS (Work Breakdown Structure) | ⬜ |  |
-| 11 | Ước lượng | ⬜ |  |
-| 12 | Lập lịch: Timeline, Gantt, Critical Path | ⬜ |  |
+| 10 | WBS (Work Breakdown Structure) | ✅ | 2000 |
+| 11 | Ước lượng | ✅ | 2236 |
+| 12 | Lập lịch: Timeline, Gantt, Critical Path | ✅ | 2582 |
 | 13 | Roadmap & Release Plan | ⬜ |  |
 | 14 | Ngân sách & quản lý chi phí | ⬜ |  |
 | 15 | Kế hoạch chất lượng | ⬜ |  |
