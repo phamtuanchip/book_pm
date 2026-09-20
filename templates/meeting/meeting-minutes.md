@@ -14,7 +14,7 @@
 | Địa điểm | Phòng họp FoodNow + Google Meet |
 | Chủ trì | Nguyễn Thu Hà |
 | Ghi biên bản | Vũ Thị Lan |
-| Tham dự | Bảo, Châu, Hà, Dũng, Lan, Nam, Mai Anh, Ánh, Yến (PayEasy), Huy (vắng — bổ sung sau); đội phát triển |
+| Tham dự | Bảo, Châu, Hà, Dũng, Lan, Nam, Mai Anh, Ánh, Yến (PayEasy); đội phát triển |
 
 ## Tóm tắt (3 dòng)
 
@@ -35,9 +35,8 @@ Kickoff thống nhất mục tiêu, phạm vi sơ bộ, RACI dự thảo và nh�
 |---|---|---|---|
 | A1 | Đánh giá đề xuất "500 đơn/ngày trong 1 tháng" (tác động, khả thi) và gửi Sponsor | Hà, Châu | 07/01/2026 |
 | A2 | Xin điều động 1 Backend từ BrightSoft | Hà | 09/01/2026 |
-| A3 | Gửi API nhà hàng (đầu vào tích hợp) | Châu | 15/01/2026 |
+| A3 | Gửi tài liệu API dữ liệu nhà hàng (đầu vào tích hợp) | Châu | 15/03/2026 |
 | A4 | Lập lịch Sprint 0 và Working Agreement workshop | Hà | 09/01/2026 |
-| A5 | Mời CS Manager vào danh sách stakeholder (rà lại) | Lan | 09/01/2026 |
 
 ## Câu hỏi mở
 

@@ -21,7 +21,7 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 15 | Kế hoạch chất lượng | ✅ | 2206 |
 | 16 | Kế hoạch nguồn lực & năng lực đội | ✅ | 2121 |
 | 17 | Project Management Plan tổng hợp | ✅ | 1736 |
-| 18 | Quản lý rủi ro | ⬜ |  |
+| 18 | Quản lý rủi ro | ✅ | 2261 |
 | 19 | RAID Log: Risk, Assumption, Issue, Dependency | ⬜ |  |
 | 20 | Quản lý thay đổi (Change Control) | ⬜ |  |
 | 21 | Quản lý phụ thuộc, vendor & mua sắm | ⬜ |  |

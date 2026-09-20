@@ -1,0 +1,33 @@
+﻿RAID_ID,Type,Title,Description,Owner,Status,Score_or_Priority,Date_Raised,Need_By,Promised_Date,Response_Action,Linked_IDs,Ghi_chu
+R-01,Risk,PayEasy trễ chứng nhận,Vendor quá tải → chứng nhận trễ → trễ end-to-end/UAT,Hà,Đã xảy ra → I-006,20,2025-12-08,,,Họp vendor 2 lần/tuần; contingency: crashing,RR:R01,
+R-02,Risk,Mất Backend senior (bus factor 1),Sơn giữ dịch vụ đơn hàng/thanh toán,Dũng,Đã xảy ra → I-004,15,2026-03-02,,,Pair; ADR,RR:R02,
+R-03,Risk,Sponsor thêm yêu cầu ngoài phạm vi,Scope creep,Hà,Đang theo dõi,12,2025-12-08,,,Parking lot; CR,RR:R03,
+R-04,Risk,Hiệu năng theo dõi thời gian thực,Tải cao → chậm,Dũng,Đang theo dõi,12,2026-02-09,,,Spike; test tải mỗi sprint,RR:R05,
+R-05,Risk,Nhà hàng/tài xế không chấp nhận quy trình mới,Adoption thấp,Lan,Đang theo dõi,12,2026-01-12,,,Workshop; nhóm thử nghiệm,RR:R10,
+R-06,Risk,Đội CS chưa sẵn sàng go-live,Thiếu quy trình hỗ trợ,Hà,Đang theo dõi,9,2026-01-27,,,Huy vào đội UAT,RR:R11,
+R-07,Risk,Nhánh feature sống lâu gây conflict,Merge khó,Dũng,Đang theo dõi,9,2026-04-13,,,Luật nhánh ≤ 5 ngày,RR:R16,
+R-08,Risk,Vượt ngân sách do crashing,Dùng dự phòng nhiều,Hà,Đang theo dõi,12,2026-04-20,,,Theo dõi tuần,RR:R17,
+A-01,Assumption,Đội đủ 12 FTE từ 26/01/2026,Backend 2 vào từ tuần 4,Hà,Đã kiểm chứng (26/01),,2025-12-15,2026-01-26,,Điều động nội bộ,I-001,Đúng
+A-02,Assumption,Khách cung cấp API dữ liệu nhà hàng trước 15/03/2026,Cần cho tích hợp và migrate dữ liệu,Châu,Sai (nhận 03/04),,2026-01-05,2026-03-15,,Theo dõi; escalate,D-03; I-002,Trễ 19 ngày
+A-03,Assumption,PayEasy cấp sandbox 27/03/2026,Cần cho tích hợp,Hà,Đã kiểm chứng (27/03),,2026-01-05,2026-03-27,2026-03-27,Họp vendor,D-01,Đúng
+A-04,Assumption,Nhà hàng/tài xế sẵn sàng tham gia UAT,Cần cho UAT vòng 1,Châu,Đang theo dõi,,2026-01-12,2026-07-27,,Lịch UAT đặt trước,D-07,
+A-05,Assumption,MVP chỉ cần thanh toán thẻ + COD (không ví),Theo Scope v1.1,Hà,Đã kiểm chứng,,2026-02-13,,,Ghi vào Scope,,
+A-06,Assumption,Không ai nghỉ Tết dài hơn 1 tuần,Kế hoạch năng lực,Hà,Sai một phần (2 người),,2026-01-12,2026-02-23,,Rà phép,,Tác động nhỏ
+A-07,Assumption,Apple review ≤ 3 ngày làm việc,Cho lịch phát hành iOS,Khoa,Đang theo dõi,,2026-03-16,,,Submit beta sớm,R09,
+A-08,Assumption,API bản đồ đủ quota cho MVP,Chi phí và độ ổn định,Ánh,Đang theo dõi,,2026-03-16,,,Giám sát quota,,
+A-09,Assumption,Sponsor/PO phản hồi trong 2 ngày làm việc,Không chặn sprint,Hà,Đang theo dõi (PO chậm 1–2 lần),,2025-12-15,,,Họp cố định,R04,
+A-10,Assumption,Sơn ở lại đến hết dự án,Giả định nhân sự,Hà,Sai (nghỉ việc T14),,2026-01-05,,,Xem I-004,I-004,Đã sai
+I-001,Issue,Thiếu 1 Backend khi kickoff,Vị trí Backend 2 trống,Hà,Đã đóng (26/01),P2,2026-01-05,,,Điều động nội bộ,A-01,
+I-002,Issue,API dữ liệu nhà hàng chưa được gửi,Trễ so với 15/03,Châu,Đã đóng (03/04),P3,2026-03-16,,,Escalate lên Sponsor; nhận API 03/04,A-02; D-03,Trễ 19 ngày
+I-003,Issue,Sprint 1 chỉ đạt 40% cam kết,Đội chưa quen; Tết; thiếu Backend,Hà,Đã đóng (retro),P3,2026-02-27,,,Retro; giảm cam kết Sprint 2,,
+I-004,Issue,Sơn nghỉ việc,Mất Backend senior,Dũng,Đang xử lý,P1,2026-04-06,,,Điều bench; pair Backend 2,R-02,Ch43
+I-005,Issue,Tuấn bị rút 50% sang dự án khác,09/03–03/04,Hà,Đã đóng (03/04),P3,2026-03-09,,,Khoa nhận giỏ hàng; bench Backend,,
+I-006,Issue,PayEasy báo trễ chứng nhận 3 tuần,28/04–29/05 → 19/06,Hà,Đang xử lý,P1,2026-04-20,,,Kích hoạt contingency,R-01,Ch21
+D-01,Dependency,PayEasy cấp sandbox,Cần cho tích hợp,Yến,Đã giao (27/03),,2026-01-05,2026-03-27,2026-03-27,Họp vendor,A-03,
+D-02,Dependency,PayEasy cấp chứng nhận thanh toán,Cần trước end-to-end,Yến,Trễ (mới hứa 19/06),,2026-01-05,2026-05-29,2026-06-19,Escalate,R-01; I-006,Trễ 3 tuần
+D-03,Dependency,Khách gửi API dữ liệu nhà hàng,Cho tích hợp/migrate,Châu,Đã giao (03/04),,2026-01-05,2026-03-15,2026-03-15,Escalate,A-02; I-002,Trễ 19 ngày
+D-04,Dependency,Nhà cung cấp SMS: tài khoản sandbox,Cho OTP,Dũng,Đã giao (13/03),,2026-02-09,2026-03-09,2026-03-09,Theo dõi,,Trễ 4 ngày
+D-05,Dependency,API key bản đồ,Cho định tuyến,Ánh,Đã giao (02/03),,2026-02-09,2026-03-02,2026-03-02,,,
+D-06,Dependency,Apple Developer account được duyệt,Cho beta iOS,Khoa,Đã giao (27/03),,2026-03-16,2026-03-30,2026-03-27,,,Sớm 3 ngày
+D-07,Dependency,Nhà hàng/tài xế thử nghiệm sẵn sàng UAT,Cho UAT vòng 1,Châu,Đang theo dõi,,2026-04-06,2026-07-27,2026-07-27,Lịch UAT,A-04,
+D-08,Dependency,Cố vấn pháp lý rà điều khoản sử dụng,Cho go-live,Hà,Đang theo dõi,,2026-04-06,2026-06-15,2026-06-15,,,
