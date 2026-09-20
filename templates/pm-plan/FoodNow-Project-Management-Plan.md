@@ -24,7 +24,7 @@
 ## 3. Kế hoạch quản lý phạm vi
 
 - Phạm vi: `templates/project-charter/scope-statement.md` (v1.1, 13/02/2026) — 11 epic in-scope, 7 hạng mục out-of-scope.
-- WBS: `templates/wbs/FoodNow-WBS.md/.csv` (66 work package, **1.927 ngày công**).
+- WBS: `templates/wbs/FoodNow-WBS.md` và `FoodNow-WBS.csv` (66 work package, **1.927 ngày công**).
 - Thay đổi trong epic: PO điều chỉnh backlog; ngoài epic: Change Request (mục 11).
 
 ## 4. Kế hoạch quản lý lịch

@@ -5,7 +5,7 @@ quản lý dự án cơ bản, quy trình, quy chuẩn, bộ tài liệu mẫu �
 Roadmap, Risk/RAID, Change Request, báo cáo...), đến cách ứng phó các tình huống cụ thể qua bài tập
 tình huống có đáp án phân tích.
 
-> **Trạng thái: đã dựng khung (M1) — đang viết từ Ch01.** README này được thiết kế để **một AI
+> **Trạng thái: bản thảo đầy đủ 47 chương + phụ lục A–H + 105 template; HTML + PDF đã build (`dist/`); EPUB chưa làm; cần rà soát độc lập (M11).** README này được thiết kế để **một AI
 > (hoặc người) đọc xong là có thể tự viết từng chương mà không cần hỏi lại**. Mọi quyết định về
 > cấu trúc, văn phong, case study, mẫu tài liệu đều nằm trong file này. Khi có mâu thuẫn giữa
 > ý tưởng riêng và README → theo README; nếu thấy README sai/thiếu thì **sửa README trước**, rồi mới viết.
@@ -107,7 +107,7 @@ Mọi chương dùng đúng khung sau (heading tiếng Việt, đánh số mục
    - 3–5 gạch đầu dòng ôn lại; 1–2 câu dẫn sang chương sau (nêu số chương).
 ```
 
-Yêu cầu định lượng: **2.500–4.500 từ/chương** (chương template-nặng và chương tình huống có thể
+Yêu cầu định lượng (mục tiêu ban đầu): **2.500–4.500 từ/chương** — *thực tế bản thảo hiện nay dài khoảng 1.600–3.700 từ (đếm theo âm tiết); nhiều chương dưới mục tiêu và cần mở rộng ở vòng rà soát; chương tình huống Phần 8 viết gọn hơn 6.9* (chương template-nặng và chương tình huống có thể
 tới 5.500). Mỗi chương **≥ 1 sơ đồ Mermaid hoặc bảng so sánh**; chương lập kế hoạch/lịch **bắt buộc**
 có sơ đồ (Gantt/flowchart). Chương Phần 8 (bài tập tình huống) dùng khung riêng ở mục 6.9.
 
@@ -737,8 +737,8 @@ cho bảng có tính toán/lọc; công thức Excel viết sẵn trong ô (bắ
 
 **Vấn đề mở (xử lý khi gặp, ghi kết quả vào đây)**
 - [x] Đối chiếu `book_ba` Ch40 & Phụ lục D: không có số liệu ngân sách/lịch trùng lặp để mâu thuẫn; giữ nguyên mục 7.
-- [ ] Kiểm tra ngày: tuần 39 có đúng 03/10/2026 không (mục 7)? Tính lại lịch với Tết 2026 và lễ.
-- [ ] Ngưỡng RAG (xanh/vàng/đỏ) chốt ở Ch34: đề xuất SPI ≥ 0,95 xanh; 0,85–0,95 vàng; < 0,85 đỏ — xác nhận khi viết Ch34 rồi giữ nhất quán ở Ch35, Ch47.
+- [x] Kiểm tra ngày: T39 bắt đầu 28/09/2026; thứ Bảy 03/10/2026 nằm trong T39 — đúng. Lịch tính với Tết 16–20/02, bù Giỗ Tổ 27/04, 30/04–01/05, 02/09 (≈ 186 ngày làm việc, dùng 185).
+- [x] Ngưỡng RAG chốt ở Ch34: SPI/CPI ≥ 0,95 xanh; 0,85–< 0,95 vàng; < 0,85 đỏ; dùng nhất quán ở Ch35, Ch47.
 
 ## 11. Bảng tiến độ
 
@@ -750,16 +750,16 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9). Cộ
 | M1 | Dựng khung: `package.json`, `tools/` (copy từ book_ba), `book/manifest.json`, thư mục rỗng | ✅ |
 | M2 | Phần 0 (Ch01–04) — chi tiết ở PROGRESS.md | ✅ |
 | M3 | Phần 1 (Ch05–09) + templates `project-charter/`, `stakeholder-comms/`, `meeting/` (kickoff) | ✅ |
-| M4 | Phần 2 (Ch10–17) + templates `wbs/`, `timeline-gantt/`, `roadmap/`, `estimation/`, `budget/`, `quality/`, `pm-plan/` | 🟨 (còn quality: uat-plan, defect-triage, go-no-go, technical-debt, questions-for-tech-lead ở M7; pm-plan: procurement, vendor-scorecard, folder, decision-log ở M5) |
+| M4 | Phần 2 (Ch10–17) + templates `wbs/`, `timeline-gantt/`, `roadmap/`, `estimation/`, `budget/`, `quality/`, `pm-plan/` | ✅ |
 | M5 | Phần 3 (Ch18–22) + `risk-raid/`, `change-request/` | ✅ |
 | M6 | Phần 4 (Ch23–29) + `sprint-agile/` | ✅ |
 | M6b | Phần 5 Delivery Plan (Ch30–33) + `delivery-plan/` | ✅ |
 | M7 | Phần 6 (Ch34–38) + `status-report/`, phần còn lại `quality/`, `meeting/` | ✅ |
 | M8 | Phần 7 (Ch39–41) + `go-live/`, `closure/` | ✅ |
 | M9 | Phần 8 (Ch42–47) bài tập tình huống + capstone | ✅ |
-| M10 | Phụ lục A–H (H = hồ sơ chứng chỉ; kiểm tra lại thông tin chứng chỉ với nguồn chính thức trước khi phát hành) | ⬜ |
-| M11 | Rà soát toàn bộ: script kiểm (mục 12), đọc lại độc lập, sửa mâu thuẫn số liệu FoodNow | ⬜ |
-| M12 | Build HTML + PDF, commit `dist/` | ⬜ |
+| M10 | Phụ lục A–H (H = hồ sơ chứng chỉ; kiểm tra lại thông tin chứng chỉ với nguồn chính thức trước khi phát hành) | ✅ |
+| M11 | Rà soát toàn bộ: script kiểm (mục 12), đọc lại độc lập, sửa mâu thuẫn số liệu FoodNow | 🟨 (script `tools/check.js` chạy 0 lỗi; còn 38 cảnh báo độ dài; chưa có đọc lại độc lập) |
+| M12 | Build HTML + PDF, commit `dist/` | ✅ |
 | M13 | EPUB | ⬜ |
 
 Chi tiết từng chương (điền khi xong): copy bảng này vào cuối README hoặc `PROGRESS.md` dạng `| Ch | Tiêu đề | Trạng thái | Từ |`.
@@ -785,3 +785,10 @@ Bạn đang viết sách "Quản Lý Dự Án Phần Mềm — Từ Zero Đến 
 5) Tự kiểm theo mục 9; cập nhật manifest.json và bảng tiến độ mục 11; commit.
 Không hỏi lại trừ khi README mâu thuẫn hoặc thiếu dữ kiện — khi đó ghi vào mục 10 và chọn phương án hợp lý nhất.
 ```
+
+## 14. Ghi chú bàn giao bản thảo (20/09/2026)
+
+- **Đã làm:** 47 chương + 9 tệp phụ lục (A, B, C, D, D2, E, F, G, H); 105 tệp trong `templates/`; build HTML + PDF; `tools/check.js`; kiểm Mermaid render bằng trình duyệt (0 lỗi).
+- **Chưa làm/cần làm:** (1) EPUB (M13); (2) đọc lại độc lập và nâng độ dài các chương dưới 2.500 từ; (3) xác minh lại thông tin chứng chỉ (Phụ lục H) và các mức tham chiếu DORA với nguồn chính thức trước khi phát hành; (4) xác nhận nội dung pháp lý với chuyên gia; (5) chương tình huống Phần 8 hiện gọn hơn khung mục 6.9 (đề 150–250 từ, đáp án 200–350 từ).
+- **Quyết định về số liệu:** xem mục 10 ("Quyết định bổ sung") — nguồn duy nhất của lịch sprint, đường găng, WBS, ngân sách, EVM T20.
+- **Số liệu EVM T20 (22/05/2026):** BAC 2.140; PV 962; EV 789; AC 825 (triệu VND) → SPI 0,82; CPI 0,96.

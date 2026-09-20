@@ -1,4 +1,4 @@
-// Build script: book/*.md -> dist/it-business-analyst-tu-zero-den-thanh-thao.pdf
+// Build script: book/*.md -> dist/quan-ly-du-an-phan-mem-tu-zero-den-thuc-chien.pdf
 // Gộp toàn bộ chương thành MỘT trang HTML dài (bìa + mục lục + từng chương ngắt
 // trang), dùng Puppeteer (Chromium headless) render Mermaid/highlight.js rồi in
 // ra PDF — không cần Pandoc/LaTeX, tái sử dụng đúng nguồn Markdown như bản HTML.
@@ -13,7 +13,7 @@ const ROOT = path.resolve(__dirname, "..");
 const BOOK_DIR = path.join(ROOT, "book");
 const DIST_DIR = path.join(ROOT, "dist");
 const MANIFEST = JSON.parse(fs.readFileSync(path.join(BOOK_DIR, "manifest.json"), "utf8"));
-const PDF_PATH = path.join(DIST_DIR, "it-business-analyst-tu-zero-den-thanh-thao.pdf");
+const PDF_PATH = path.join(DIST_DIR, "quan-ly-du-an-phan-mem-tu-zero-den-thuc-chien.pdf");
 
 const md = new MarkdownIt({ html: true, linkify: true, typographer: false });
 

@@ -32,20 +32,20 @@ Ma trận **Mendelow** xếp stakeholder theo hai trục: **quyền lực** (kh�
 
 ```mermaid
 quadrantChart
-    title Ma trận Quyền lực – Quan tâm (FoodNow)
-    x-axis Quan tâm thấp --> Quan tâm cao
-    y-axis Quyền lực thấp --> Quyền lực cao
-    quadrant-1 Quản lý chặt
-    quadrant-2 Làm hài lòng
-    quadrant-3 Theo dõi
-    quadrant-4 Giữ thông tin đầy đủ
-    Bảo: [0.95, 0.95]
-    Châu: [0.9, 0.75]
-    HĐQT: [0.3, 0.9]
+    title Ma tran Quyen luc - Quan tam (FoodNow)
+    x-axis Quan tam thap --> Quan tam cao
+    y-axis Quyen luc thap --> Quyen luc cao
+    quadrant-1 Quan ly chat
+    quadrant-2 Lam hai long
+    quadrant-3 Theo doi
+    quadrant-4 Giu thong tin day du
+    Bao: [0.95, 0.95]
+    Chau: [0.9, 0.75]
+    HDQT: [0.3, 0.9]
     Huy: [0.75, 0.55]
-    Yến: [0.7, 0.5]
-    Dũng: [0.9, 0.5]
-    Khách cuối: [0.5, 0.15]
+    Yen: [0.7, 0.5]
+    Dung: [0.9, 0.5]
+    Khach cuoi: [0.5, 0.15]
 ```
 
 | Ô | Quyền lực | Quan tâm | Chiến lược | FoodNow |

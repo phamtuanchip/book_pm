@@ -51,12 +51,12 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 45 | Tình huống về kỹ thuật & chất lượng | ✅ | 2369 |
 | 46 | Tình huống về vendor, ngân sách & pháp lý | ✅ | 2336 |
 | 47 | Capstone: FoodNow từ ý tưởng đến sau go-live | ✅ | 2576 |
-| Phụ lục A | Chỉ mục toàn bộ bộ template | ⬜ |  |
-| Phụ lục B | Mẫu Project Charter + Business Case đầy đủ (FoodNow) | ⬜ |  |
-| Phụ lục C | Mẫu WBS + Timeline/Gantt + Roadmap đầy đủ (FoodNow) | ⬜ |  |
-| Phụ lục D | Mẫu PM Plan + Risk/RAID + Change Request đầy đủ (FoodNow) | ⬜ |  |
-| Phụ lục D2 | Mẫu Delivery Plan đầy đủ (FoodNow) | ⬜ |  |
-| Phụ lục E | Bảng thuật ngữ PM (Glossary) | ⬜ |  |
-| Phụ lục F | Bộ checklist nhanh | ⬜ |  |
-| Phụ lục G | Tài liệu tham khảo & học thêm | ⬜ |  |
-| Phụ lục H | Hồ sơ chứng chỉ PM & ánh xạ đề cương thi | ⬜ |  |
+| Phụ lục A | Chỉ mục toàn bộ bộ template | ✅ | 3577 |
+| Phụ lục B | Mẫu Project Charter + Business Case đầy đủ (FoodNow) | ✅ | 3641 |
+| Phụ lục C | Mẫu WBS + Timeline/Gantt + Roadmap đầy đủ (FoodNow) | ✅ | 8684 |
+| Phụ lục D | Mẫu PM Plan + Risk/RAID + Change Request đầy đủ (FoodNow) | ✅ | 6562 |
+| Phụ lục D2 | Mẫu Delivery Plan đầy đủ (FoodNow) | ✅ | 4407 |
+| Phụ lục E | Bảng thuật ngữ PM (Glossary) | ✅ | 2858 |
+| Phụ lục F | Bộ checklist nhanh | ✅ | 909 |
+| Phụ lục G | Tài liệu tham khảo & học thêm | ✅ | 688 |
+| Phụ lục H | Hồ sơ chứng chỉ PM & ánh xạ đề cương thi | ✅ | 8492 |
