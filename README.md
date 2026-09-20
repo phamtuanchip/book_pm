@@ -739,7 +739,7 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9). Cộ
 | M0 | Chốt kế hoạch (README) | ✅ |
 | M1 | Dựng khung: `package.json`, `tools/` (copy từ book_ba), `book/manifest.json`, thư mục rỗng | ✅ |
 | M2 | Phần 0 (Ch01–04) — chi tiết ở PROGRESS.md | ✅ |
-| M3 | Phần 1 (Ch05–09) + templates `project-charter/`, `stakeholder-comms/`, `meeting/` (kickoff) | ⬜ |
+| M3 | Phần 1 (Ch05–09) + templates `project-charter/`, `stakeholder-comms/`, `meeting/` (kickoff) | ✅ |
 | M4 | Phần 2 (Ch10–17) + templates `wbs/`, `timeline-gantt/`, `roadmap/`, `estimation/`, `budget/`, `quality/`, `pm-plan/` | ⬜ |
 | M5 | Phần 3 (Ch18–22) + `risk-raid/`, `change-request/` | ⬜ |
 | M6 | Phần 4 (Ch23–29) + `sprint-agile/` | ⬜ |

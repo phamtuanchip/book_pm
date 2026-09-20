@@ -8,11 +8,11 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 02 | Vai trò Project Manager trong dự án phần mềm | ✅ | 3467 |
 | 03 | Vòng đời dự án phần mềm & các mô hình: Waterfall, Agile, Hybrid | ✅ | 2385 |
 | 04 | Bộ khung kiến thức, chứng chỉ & lộ trình nghề PM | ✅ | 2444 |
-| 05 | Business Case & Project Charter | ⬜ |  |
-| 06 | Stakeholder & Kế hoạch giao tiếp | ⬜ |  |
-| 07 | Xác định phạm vi (Scope) & yêu cầu cấp cao | ⬜ |  |
-| 08 | Thiết lập đội & cách làm việc | ⬜ |  |
-| 09 | Kickoff meeting | ⬜ |  |
+| 05 | Business Case & Project Charter | ✅ | 1977 |
+| 06 | Stakeholder & Kế hoạch giao tiếp | ✅ | 2067 |
+| 07 | Xác định phạm vi (Scope) & yêu cầu cấp cao | ✅ | 1844 |
+| 08 | Thiết lập đội & cách làm việc | ✅ | 2073 |
+| 09 | Kickoff meeting | ✅ | 1640 |
 | 10 | WBS (Work Breakdown Structure) | ⬜ |  |
 | 11 | Ước lượng | ⬜ |  |
 | 12 | Lập lịch: Timeline, Gantt, Critical Path | ⬜ |  |
