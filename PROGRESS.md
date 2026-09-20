@@ -37,11 +37,11 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 31 | Chiến lược nhánh: GitFlow, GitHub Flow, Trunk-based | ✅ | 1985 |
 | 32 | Versioning, Tagging & Release Management theo kế hoạch | ✅ | 1799 |
 | 33 | Deployment Pipeline & Daily Deployment | ✅ | 2451 |
-| 34 | Theo dõi tiến độ: burndown, velocity, EVM | ⬜ |  |
-| 35 | Báo cáo trạng thái & dashboard | ⬜ |  |
-| 36 | Quản lý kỳ vọng & khách hàng khó | ⬜ |  |
-| 37 | Kiểm thử, UAT & chuẩn bị phát hành | ⬜ |  |
-| 38 | Xử lý sự cố, leo thang & quản trị khủng hoảng dự án | ⬜ |  |
+| 34 | Theo dõi tiến độ: burndown, velocity, EVM | ✅ | 2137 |
+| 35 | Báo cáo trạng thái & dashboard | ✅ | 1789 |
+| 36 | Quản lý kỳ vọng & khách hàng khó | ✅ | 2067 |
+| 37 | Kiểm thử, UAT & chuẩn bị phát hành | ✅ | 1891 |
+| 38 | Xử lý sự cố, leo thang & quản trị khủng hoảng dự án | ✅ | 2166 |
 | 39 | Go-live & Cutover | ⬜ |  |
 | 40 | Đóng dự án, bài học kinh nghiệm & bàn giao | ⬜ |  |
 | 41 | Sau dự án: đo lợi ích, PMO & danh mục dự án | ⬜ |  |
