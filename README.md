@@ -607,7 +607,7 @@ khung fixed-price theo giai đoạn (MVP, R1, R2) + change request tính theo T&
 | Phạm vi MVP | 3 app: Khách hàng (iOS/Android), Nhà hàng (web tablet), Tài xế (Android); Admin web; cổng thanh toán thẻ + COD |
 | Ngân sách MVP | **2,4 tỷ VND** = 2,14 tỷ chi phí kế hoạch + **dự phòng (contingency) 12% ≈ 0,26 tỷ**; ngân sách 3 phần: nhân sự 78%, hạ tầng & license 9%, vendor (cổng thanh toán, SMS, bản đồ) 6%, đào tạo & khác 7% |
 | Đội chuẩn | 12 người (chi tiết dưới) |
-| Sprint | 2 tuần; Sprint 0 = 2 tuần chuẩn bị; ~18 sprint đến go-live |
+| Sprint | 2 tuần; Sprint 0 = 2 tuần chuẩn bị; 16 sprint sau Sprint 0 đến go-live |
 | Mục tiêu kinh doanh | 500 đơn/ngày sau 3 tháng go-live; tỷ lệ huỷ đơn < 5%; thời gian giao TB < 35 phút; Payback < 18 tháng |
 | Release | **MVP** (10/2026) → **R1** (Q1/2027: khuyến mãi, đánh giá) → **R2** (Q3/2027: ví điện tử, đặt theo nhóm) |
 
@@ -645,7 +645,7 @@ số đầu người trong ngân sách cho khớp khi lập `FoodNow-Budget.csv`
 | T10 | CR "đặt món theo nhóm" (Ch20) → đẩy sang R2 |
 | T14 | Sơn nghỉ việc (Ch43) — mất 2 tuần bù |
 | T16 | PayEasy báo trễ chứng nhận 3 tuần (Ch21); kích hoạt contingency |
-| T18 | Sprint 7: nhánh feature sống 3 tuần gây conflict 200 file → luật "nhánh ≤ 5 ngày" (Ch31) |
+| T18 | Sprint 6: nhánh feature sống 3 tuần gây conflict 200 file → luật "nhánh ≤ 5 ngày" (Ch31) |
 | T20 | SPI = 0,82, CPI = 0,96 (Ch34); recovery bằng cắt bớt Feature "đánh giá món" → R1 |
 | T24 | Xung đột Dũng–Nam về refactor vs tính năng (Ch27/Ch44) |
 | T28–T29 | Freeze tính năng; UAT bắt đầu T30 |
@@ -724,6 +724,15 @@ cho bảng có tính toán/lọc; công thức Excel viết sẵn trong ô (bắ
 - Không hướng dẫn cài đặt/quản trị công cụ (Jira/MS Project); chỉ nêu cách dùng cho công việc PM.
 - Template ở dạng Markdown/CSV/Mermaid (mở được mọi nơi, diff được bằng git); **không** làm file `.mpp`/`.xlsx` nhị phân ở giai đoạn đầu.
 - Build: tái sử dụng `tools/` của `book_ba` (markdown-it + Mermaid + highlight.js), phát hành HTML + PDF, EPUB sau.
+
+**Quyết định bổ sung trong quá trình viết (cập nhật khi gặp)**
+- **Đội "12 người"** = 12 FTE (13 đầu người vì UX và DevOps 50%).
+- **Ch11 (T6):** khách ép **6 tháng**, đội ước lượng **9 tháng** (theo bảng mục 7; brief Ch11 ghi "3 tháng/5 tháng" là sơ suất). Kết quả: giữ 9 tháng, ví điện tử → R2, demo HĐQT ở tuần 22 (01–05/06/2026).
+- **Lịch sprint (một nguồn: `templates/timeline-gantt/FoodNow-Gantt.md`):** Sprint 0 = T2–T5 (kéo dài 4 tuần vì chờ Backend + chốt scope); Sprint 1 = T6–T8 (gồm Tết 16–20/02); Sprint k ≥ 2 kết thúc ở tuần 2k+6 (Sprint 6 hết T18, Sprint 7 hết T20, Sprint 9 hết T24, Sprint 12 hết T30, Sprint 16 hết T38). Tag `v0.N.0` = cuối Sprint N; tag cuối trước go-live là **v0.16.0** (không có v0.17.0). Sự kiện "T18 nhánh sống 3 tuần" thuộc **Sprint 6**.
+- **Đường găng FoodNow** đi qua tích hợp thanh toán: PayEasy sandbox 27/03 → tích hợp 30/03–24/04 → chứng nhận (vendor) 28/04–29/05 → end-to-end 01–26/06 → kiểm thử bảo mật 29/06–17/07 → cắt release 20–24/07 → UAT → go-live; tổng 131 ngày làm việc. PayEasy báo trễ chứng nhận 3 tuần ở T16 (20/04) → kích hoạt contingency (crashing/fast-tracking).
+- **WBS baseline:** 66 work package, 1.927 ngày công (≈ 87% năng lực 12 FTE × 185 ngày); chi phí nhân sự 1,67 tỷ ≈ 0,87 triệu/ngày công.
+- **Business Case:** biên đóng góp 25.000 VND/đơn; chi phí vận hành 95 triệu/tháng; payback ≈ 10,6 tháng từ go-live; ROI 24 tháng ≈ 157%.
+- **Ngày các tài liệu:** Business Case 10/12/2025; Charter 15/12/2025; Working Agreement 14/01/2026; Scope Statement v1.0 06/02 và v1.1 13/02/2026; WBS 06/02/2026; Gantt baseline 27/02/2026; CS Manager (Huy) được phát hiện 26/01/2026.
 
 **Vấn đề mở (xử lý khi gặp, ghi kết quả vào đây)**
 - [x] Đối chiếu `book_ba` Ch40 & Phụ lục D: không có số liệu ngân sách/lịch trùng lặp để mâu thuẫn; giữ nguyên mục 7.
