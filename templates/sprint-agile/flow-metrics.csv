@@ -1,0 +1,18 @@
+﻿Card_ID,Title,Type,Created,Started,Done,Lead_Time_days,Cycle_Time_days
+MT-001,Sửa lỗi hiển thị giá khi có ghi chú,Bug,2026-11-03,2026-11-03,2026-11-05,=F2-D2,=F2-E2
+MT-002,Tối ưu truy vấn danh sách nhà hàng,Cải tiến,2026-11-03,2026-11-04,2026-11-09,=F3-D3,=F3-E3
+MT-003,Đơn bị kẹt ở trạng thái 'đang chuẩn bị',Bug,2026-11-04,2026-11-04,2026-11-06,=F4-D4,=F4-E4
+MT-004,Thêm log cho callback PayEasy,Cải tiến,2026-11-04,2026-11-05,2026-11-10,=F5-D5,=F5-E5
+MT-005,OTP đến chậm với một nhà mạng,Bug,2026-11-05,2026-11-06,2026-11-11,=F6-D6,=F6-E6
+MT-006,Cập nhật thư viện bản đồ,Nợ kỹ thuật,2026-11-05,2026-11-09,2026-11-16,=F7-D7,=F7-E7
+MT-007,Crash iOS khi mở lịch sử đơn,Bug,2026-11-09,2026-11-09,2026-11-11,=F8-D8,=F8-E8
+MT-008,Báo cáo doanh thu Admin sai múi giờ,Bug,2026-11-09,2026-11-10,2026-11-13,=F9-D9,=F9-E9
+MT-009,Thêm cảnh báo hết món,Cải tiến,2026-11-10,2026-11-12,2026-11-19,=F10-D10,=F10-E10
+MT-010,Sửa văn bản thông báo huỷ đơn,Bug,2026-11-11,2026-11-11,2026-11-12,=F11-D11,=F11-E11
+MT-011,Tăng timeout tích hợp bản đồ,Bug,2026-11-12,2026-11-13,2026-11-16,=F12-D12,=F12-E12
+MT-012,Dọn feature flag cũ,Nợ kỹ thuật,2026-11-12,2026-11-16,2026-11-24,=F13-D13,=F13-E13
+MT-013,Tối ưu ảnh món (tốc độ tải),Cải tiến,2026-11-16,2026-11-17,2026-11-23,=F14-D14,=F14-E14
+MT-014,Lỗi phân quyền Admin với tài khoản CS,Bug,2026-11-17,2026-11-17,2026-11-19,=F15-D15,=F15-E15
+MT-015,Cập nhật runbook sau sự cố cache,Tài liệu,2026-11-18,2026-11-19,2026-11-25,=F16-D16,=F16-E16
+TRUNG_BINH,,,,,,=AVERAGE(G2:G16),=AVERAGE(H2:H16)
+TRUNG_VI,,,,,,=MEDIAN(G2:G16),=MEDIAN(H2:H16)

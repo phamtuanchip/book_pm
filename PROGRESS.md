@@ -26,13 +26,13 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 20 | Quản lý thay đổi (Change Control) | ✅ | 2161 |
 | 21 | Quản lý phụ thuộc, vendor & mua sắm | ✅ | 2086 |
 | 22 | Quản lý cấu hình, tài liệu & tri thức dự án | ✅ | 1712 |
-| 23 | Scrum dưới góc nhìn PM | ⬜ |  |
-| 24 | Backlog & ưu tiên ở góc độ PM | ⬜ |  |
-| 25 | Kanban & chỉ số dòng chảy (Flow metrics) | ⬜ |  |
-| 26 | Hybrid & mở rộng quy mô (nhiều đội) | ⬜ |  |
-| 27 | Lãnh đạo & quản lý con người | ⬜ |  |
-| 28 | Họp hiệu quả & nghi thức dự án | ⬜ |  |
-| 29 | PM và kỹ thuật: CI/CD, môi trường, nợ kỹ thuật, DevOps | ⬜ |  |
+| 23 | Scrum dưới góc nhìn PM | ✅ | 1884 |
+| 24 | Backlog & ưu tiên ở góc độ PM | ✅ | 1692 |
+| 25 | Kanban & chỉ số dòng chảy (Flow metrics) | ✅ | 1703 |
+| 26 | Hybrid & mở rộng quy mô (nhiều đội) | ✅ | 1613 |
+| 27 | Lãnh đạo & quản lý con người | ✅ | 2052 |
+| 28 | Họp hiệu quả & nghi thức dự án | ✅ | 1792 |
+| 29 | PM và kỹ thuật: CI/CD, môi trường, nợ kỹ thuật, DevOps | ✅ | 2071 |
 | 30 | Delivery Plan tổng thể: từ Roadmap đến từng bản phát hành | ⬜ |  |
 | 31 | Chiến lược nhánh: GitFlow, GitHub Flow, Trunk-based | ⬜ |  |
 | 32 | Versioning, Tagging & Release Management theo kế hoạch | ⬜ |  |

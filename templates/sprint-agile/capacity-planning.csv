@@ -1,0 +1,25 @@
+﻿Person,Role,Sprint,Working_days,Leave_days,Availability_pct,Focus_factor,Capacity_days,Ghi_chu
+Dũng,Tech Lead,Sprint 1,10,0,0.5,0.7,=(D2-E2)*F2*G2,Nửa thời gian lead/review
+Sơn,Backend,Sprint 1,10,0,1,0.7,=(D3-E3)*F3*G3,
+Backend 2,Backend,Sprint 1,10,0,1,0.6,=(D4-E4)*F4*G4,"Mới vào 26/01, còn học việc"
+Khoa,Mobile,Sprint 1,10,2,1,0.7,=(D5-E5)*F5*G5,Nghỉ phép sau Tết 2 ngày
+Tuấn,Mobile,Sprint 1,10,0,1,0.7,=(D6-E6)*F6*G6,
+Quỳnh,Mobile,Sprint 1,10,3,1,0.7,=(D7-E7)*F7*G7,Nghỉ phép sau Tết 3 ngày
+Web/Admin FE,Frontend,Sprint 1,10,0,1,0.7,=(D8-E8)*F8*G8,
+Nam,QA Lead,Sprint 1,10,0,1,0.7,=(D9-E9)*F9*G9,
+QA,QA,Sprint 1,10,0,1,0.7,=(D10-E10)*F10*G10,
+Mai Anh,UX/UI,Sprint 1,10,0,0.5,0.7,=(D11-E11)*F11*G11,Chia sẻ 50%
+Ánh,DevOps,Sprint 1,10,0,0.5,0.7,=(D12-E12)*F12*G12,Chia sẻ 50%
+Dũng,Tech Lead,Sprint 2,10,0,0.5,0.7,=(D13-E13)*F13*G13,
+Sơn,Backend,Sprint 2,10,0,1,0.7,=(D14-E14)*F14*G14,
+Backend 2,Backend,Sprint 2,10,0,1,0.7,=(D15-E15)*F15*G15,Hết học việc
+Khoa,Mobile,Sprint 2,10,0,1,0.7,=(D16-E16)*F16*G16,
+Tuấn,Mobile,Sprint 2,10,0,0.75,0.7,=(D17-E17)*F17*G17,Bị rút 50% từ 09/03 → 75% cả sprint
+Quỳnh,Mobile,Sprint 2,10,0,1,0.7,=(D18-E18)*F18*G18,
+Web/Admin FE,Frontend,Sprint 2,10,0,1,0.7,=(D19-E19)*F19*G19,
+Nam,QA Lead,Sprint 2,10,0,1,0.7,=(D20-E20)*F20*G20,
+QA,QA,Sprint 2,10,0,1,0.7,=(D21-E21)*F21*G21,
+Mai Anh,UX/UI,Sprint 2,10,0,0.5,0.7,=(D22-E22)*F22*G22,
+Ánh,DevOps,Sprint 2,10,0,0.5,0.7,=(D23-E23)*F23*G23,
+TONG Sprint 1,,Sprint 1,,,,,"=SUMIFS(H2:H23,C2:C23,""Sprint 1"")",Capacity người-ngày
+TONG Sprint 2,,Sprint 2,,,,,"=SUMIFS(H2:H23,C2:C23,""Sprint 2"")",Capacity người-ngày

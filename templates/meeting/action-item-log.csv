@@ -1,0 +1,16 @@
+﻿Action_ID,Source,Date_Raised,Action,Owner,Due_Date,Status,Completed_Date,Ghi_chu
+AI-001,Kickoff 05/01,2026-01-05,Đánh giá đề xuất 500 đơn/ngày trong 1 tháng,Hà; Châu,2026-01-07,Hoàn tất,2026-01-07,Sponsor chọn giữ 3 tháng + mốc 200 đơn/ngày tháng đầu
+AI-002,Kickoff 05/01,2026-01-05,Xin điều động 1 Backend,Hà,2026-01-09,Hoàn tất,2026-01-09,Vào 26/01
+AI-003,Kickoff 05/01,2026-01-05,Gửi tài liệu API dữ liệu nhà hàng,Châu,2026-03-15,Trễ,2026-04-03,Nhận 03/04
+AI-004,Retro Sprint 1,2026-02-27,Tính capacity đầy đủ (phép, học việc) trong Planning,Dũng,2026-03-02,Hoàn tất,2026-03-02,Áp dụng Sprint 2
+AI-005,Retro Sprint 1,2026-02-27,Chia story > 8 SP,Lan,2026-03-02,Hoàn tất,2026-03-02,
+AI-006,RAID 16/03,2026-03-16,Escalate API dữ liệu nhà hàng lên Sponsor,Hà,2026-03-17,Hoàn tất,2026-03-17,
+AI-007,Họp 30/03,2026-03-30,Chốt Confluence là nguồn duy nhất cho đặc tả,Lan,2026-04-06,Hoàn tất,2026-04-06,
+AI-008,Họp 30/03,2026-03-30,Thông báo tự động khi đặc tả đổi,Ánh,2026-04-03,Hoàn tất,2026-04-03,
+AI-009,SteerCo 20/04,2026-04-20,Sponsor gọi lãnh đạo PayEasy về chứng nhận,Bảo,2026-04-21,Hoàn tất,2026-04-21,
+AI-010,Họp 3 bên 17/06,2026-06-17,Bảng nợ kỹ thuật có ưu tiên,Dũng,2026-06-19,Hoàn tất,2026-06-19,
+AI-011,Họp 3 bên 17/06,2026-06-17,Dành 10% mỗi sprint cho nợ kỹ thuật,Hà,2026-06-22,Hoàn tất,2026-06-22,Ghi Decision Log
+AI-012,Audit họp 22/06,2026-06-22,Chuyển họp trạng thái tuần sang báo cáo viết,Hà,2026-06-29,Hoàn tất,2026-06-29,
+AI-013,Audit họp 22/06,2026-06-22,Áp dụng "ngày không họp" thứ Tư,Hà,2026-06-24,Hoàn tất,2026-06-24,
+AI-014,Retro Sprint 12,2026-07-31,Kịch bản UAT cho đội CS,Huy,2026-08-05,Hoàn tất,2026-08-05,
+AI-015,Retro Sprint 13,2026-08-14,Dọn feature flag cũ,Dũng,2026-08-28,Đang làm,,

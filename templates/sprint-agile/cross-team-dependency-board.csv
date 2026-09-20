@@ -1,0 +1,9 @@
+﻿Dep_ID,Requesting_Team,Providing_Team,Need,Need_By,Promised_Date,Status,Owner_Providing,Risk_Level,Action,Ghi_chu
+X-01,Mobile,Backend+Web,API khuyến mãi (mã giảm giá) v1,2027-01-25,2027-01-25,Đang làm,Backend thay thế Sơn,Trung bình,Thống nhất contract trước 11/01,R1
+X-02,Mobile,Backend+Web,API đánh giá món,2027-02-08,2027-02-15,Trễ 1 tuần,Backend 2,Cao,Mobile dùng mock; leo thang PM,R1
+X-03,Backend+Web,Mobile,Màn hình khuyến mãi cần dữ liệu banner,2027-02-01,2027-02-01,Chưa bắt đầu,Khoa,Thấp,,R1
+X-04,Mobile,DevOps,Pipeline release iOS tự động,2027-01-18,2027-01-18,Đang làm,Ánh,Trung bình,Ưu tiên tuần này,R1
+X-05,Backend+Web,DevOps,Môi trường staging thứ hai cho R1,2027-01-11,2027-01-11,Hoàn tất,Ánh,Thấp,,R1
+X-06,Mobile,Backend+Web,Sửa breaking change trên API đơn hàng (đã thông báo 1 sprint),2027-02-22,2027-02-22,Theo dõi,Backend thay thế Sơn,Cao,Thông báo tại SoS trước ≥ 1 sprint,R1
+X-07,Backend+Web,Mobile,Phiên bản app tối thiểu hỗ trợ API mới,2027-03-01,2027-03-01,Chưa bắt đầu,Tuấn,Trung bình,Kế hoạch force update,R1
+X-08,Mobile,Backend+Web,Webhook thông báo push,2027-03-08,2027-03-08,Chưa bắt đầu,Backend 2,Thấp,,R1

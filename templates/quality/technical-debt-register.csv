@@ -1,0 +1,11 @@
+﻿TD_ID,Title,Area,Description,Interest_days_per_sprint,Principal_days,Payback_sprints,Risk_if_delayed_1_5,Owner,Decision,Date,Ghi_chu
+TD-01,Module đơn hàng gắn chặt với thanh toán,Backend,"Logic đơn và thanh toán lẫn nhau, khó test riêng",1.5,12,"=ROUND(F2/E2,1)",3,Dũng,Hoãn sau go-live (R1),2026-08-03,
+TD-02,Logic tính giá trùng lặp ở 3 nơi,Backend,"Sửa giá phải sửa 3 chỗ, từng gây bug",1,3,"=ROUND(F3/E3,1)",4,Backend 2,Sửa ngay Sprint 13,2026-08-03,Đã xong 12/08
+TD-03,Chưa có contract test cho API,Backend/Mobile,Đổi API dễ làm vỡ app,1.2,8,"=ROUND(F4/E4,1)",4,Dũng,Lên lịch R1,2026-08-03,
+TD-04,Module thông báo cũ (đề xuất refactor 2 tuần),Backend,"Code khó đọc, ít test",2,10,"=ROUND(F5/E5,1)",3,Backend 2,Hoãn sau go-live,2026-08-03,Đề xuất ban đầu 2 tuần; PM chia nhỏ
+TD-05,Test tự động không ổn định (flaky),QA/CI,"10% test đỏ ngẫu nhiên, mất thời gian chạy lại",3,5,"=ROUND(F6/E6,1)",4,Nam,Sửa ngay Sprint 13,2026-08-03,Đã xong 14/08
+TD-06,Cấu hình cache cứng theo môi trường,Hạ tầng,"TTL cache đặt tay, khác nhau giữa staging và prod",0.3,1.5,"=ROUND(F7/E7,1)",2,Ánh,Hoãn sau go-live,2026-08-03,Đánh giá rủi ro thấp; sau go-live gây sự cố cache 4 giờ (Ch38) → nâng rủi ro lên 5
+TD-07,Thiếu ADR cho quyết định thanh toán,Tài liệu,Người mới khó hiểu lý do,0.5,2,"=ROUND(F8/E8,1)",3,Dũng,Sửa trong Sprint 14,2026-08-03,Xong 21/08
+TD-08,Ảnh món chưa nén đủ,Mobile,Tải chậm ở mạng yếu,0.5,3,"=ROUND(F9/E9,1)",3,Khoa,Lên lịch R1,2026-08-03,
+TD-09,Log không có correlation ID,Hạ tầng,Điều tra sự cố mất thời gian,0.8,2,"=ROUND(F10/E10,1)",4,Ánh,Sửa Sprint 14,2026-08-03,Xong 25/08
+TD-10,Thư viện bản đồ phiên bản cũ,Mobile,Cảnh báo bảo mật nhẹ,0.4,4,"=ROUND(F11/E11,1)",3,Khoa,Lên lịch sau go-live,2026-08-03,Xong (MT-006)
