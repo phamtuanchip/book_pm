@@ -755,7 +755,7 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9). Cộ
 | M6 | Phần 4 (Ch23–29) + `sprint-agile/` | ✅ |
 | M6b | Phần 5 Delivery Plan (Ch30–33) + `delivery-plan/` | ✅ |
 | M7 | Phần 6 (Ch34–38) + `status-report/`, phần còn lại `quality/`, `meeting/` | ✅ |
-| M8 | Phần 7 (Ch39–41) + `go-live/`, `closure/` | ⬜ |
+| M8 | Phần 7 (Ch39–41) + `go-live/`, `closure/` | ✅ |
 | M9 | Phần 8 (Ch42–47) bài tập tình huống + capstone | ⬜ |
 | M10 | Phụ lục A–H (H = hồ sơ chứng chỉ; kiểm tra lại thông tin chứng chỉ với nguồn chính thức trước khi phát hành) | ⬜ |
 | M11 | Rà soát toàn bộ: script kiểm (mục 12), đọc lại độc lập, sửa mâu thuẫn số liệu FoodNow | ⬜ |

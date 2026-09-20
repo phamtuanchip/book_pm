@@ -18,7 +18,7 @@
 | 7 | Thanh toán | Chứng nhận PayEasy còn hiệu lực; đối soát khớp 100% | ✅ | ✅ |
 | 8 | Vận hành | Cutover và rollback đã diễn tập ≤ 30 phút | ❌ chưa diễn tập | ✅ 24 phút |
 | 9 | Vận hành | Runbook và giám sát/cảnh báo sẵn sàng | ⚠️ một phần | ✅ |
-| 10 | Con người | CS và người dùng chính được đào tạo | ⚠️ 60% | ✅ ≥ 90% |
+| 10 | Con người | CS và người dùng chính được đào tạo | ⚠️ chưa bắt đầu (bắt đầu 24/08) | ✅ 94% |
 | 11 | Tuân thủ | Điều khoản/pháp lý đã rà | ✅ | ✅ |
 | 12 | Kinh doanh | Sponsor đồng ý ngày go-live | — | ✅ 03/10 |
 

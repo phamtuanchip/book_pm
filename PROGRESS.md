@@ -42,9 +42,9 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 36 | Quản lý kỳ vọng & khách hàng khó | ✅ | 2067 |
 | 37 | Kiểm thử, UAT & chuẩn bị phát hành | ✅ | 1891 |
 | 38 | Xử lý sự cố, leo thang & quản trị khủng hoảng dự án | ✅ | 2166 |
-| 39 | Go-live & Cutover | ⬜ |  |
-| 40 | Đóng dự án, bài học kinh nghiệm & bàn giao | ⬜ |  |
-| 41 | Sau dự án: đo lợi ích, PMO & danh mục dự án | ⬜ |  |
+| 39 | Go-live & Cutover | ✅ | 1800 |
+| 40 | Đóng dự án, bài học kinh nghiệm & bàn giao | ✅ | 2309 |
+| 41 | Sau dự án: đo lợi ích, PMO & danh mục dự án | ✅ | 2023 |
 | 42 | Tình huống về phạm vi & khách hàng | ⬜ |  |
 | 43 | Tình huống về tiến độ & nguồn lực | ⬜ |  |
 | 44 | Tình huống về con người & xung đột | ⬜ |  |
