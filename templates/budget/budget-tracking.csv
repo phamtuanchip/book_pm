@@ -1,12 +1,12 @@
 ﻿Month,PV_Monthly_MVND,PV_Cumulative_MVND,AC_Monthly_MVND,AC_Cumulative_MVND,Cum_Variance_MVND,Contingency_Used_Cumulative_MVND,Ghi_chu
-2026-01,150,=SUM(B$2:B2),132,=SUM(D$2:D2),=C2-E2,=MAX(0,E2-C2),Backend 2 chưa vào
-2026-02,200,=SUM(B$2:B3),172,=SUM(D$2:D3),=C3-E3,=MAX(0,E3-C3),Tết; đội thiếu 1 Backend
-2026-03,215,=SUM(B$2:B4),182,=SUM(D$2:D4),=C4-E4,=MAX(0,E4-C4),
-2026-04,225,=SUM(B$2:B5),185,=SUM(D$2:D5),=C5-E5,=MAX(0,E5-C5),Sơn nghỉ việc T14; chưa bù đủ
-2026-05,230,=SUM(B$2:B6),205,=SUM(D$2:D6),=C6-E6,=MAX(0,E6-C6),"SPI/CPI tuần 20 = 0,82/0,96"
-2026-06,235,=SUM(B$2:B7),265,=SUM(D$2:D7),=C7-E7,=MAX(0,E7-C7),Crashing sau trễ chứng nhận PayEasy (dùng dự phòng)
-2026-07,235,=SUM(B$2:B8),290,=SUM(D$2:D8),=C8-E8,=MAX(0,E8-C8),Thêm QA và Dev hợp đồng
-2026-08,230,=SUM(B$2:B9),300,=SUM(D$2:D9),=C9-E9,=MAX(0,E9-C9),"UAT vòng 1, No-Go lần 1"
-2026-09,220,=SUM(B$2:B10),310,=SUM(D$2:D10),=C10-E10,=MAX(0,E10-C10),Sửa lỗi Critical; tăng ca có kiểm soát
-2026-10,200,=SUM(B$2:B11),269,=SUM(D$2:D11),=C11-E11,=MAX(0,E11-C11),"Go-live, hypercare"
-TONG,=SUM(B2:B11),,=SUM(D2:D11),,,,Thực chi 2.310 < trần 2.400; dùng dự phòng 170/256,8
+2026-01,150,=SUM(B$2:B2),132,=SUM(D$2:D2),=C2-E2,"=MAX(0,E2-C2)",Backend 2 chưa vào
+2026-02,200,=SUM(B$2:B3),172,=SUM(D$2:D3),=C3-E3,"=MAX(0,E3-C3)",Tết; đội thiếu 1 Backend
+2026-03,215,=SUM(B$2:B4),182,=SUM(D$2:D4),=C4-E4,"=MAX(0,E4-C4)",
+2026-04,225,=SUM(B$2:B5),185,=SUM(D$2:D5),=C5-E5,"=MAX(0,E5-C5)",Sơn nghỉ việc T14; chưa bù đủ
+2026-05,230,=SUM(B$2:B6),205,=SUM(D$2:D6),=C6-E6,"=MAX(0,E6-C6)","SPI/CPI tuần 20 = 0,82/0,96"
+2026-06,235,=SUM(B$2:B7),265,=SUM(D$2:D7),=C7-E7,"=MAX(0,E7-C7)",Crashing sau trễ chứng nhận PayEasy (dùng dự phòng)
+2026-07,235,=SUM(B$2:B8),290,=SUM(D$2:D8),=C8-E8,"=MAX(0,E8-C8)",Thêm QA và Dev hợp đồng
+2026-08,230,=SUM(B$2:B9),300,=SUM(D$2:D9),=C9-E9,"=MAX(0,E9-C9)","UAT vòng 1, No-Go lần 1"
+2026-09,220,=SUM(B$2:B10),310,=SUM(D$2:D10),=C10-E10,"=MAX(0,E10-C10)",Sửa lỗi Critical; tăng ca có kiểm soát
+2026-10,200,=SUM(B$2:B11),269,=SUM(D$2:D11),=C11-E11,"=MAX(0,E11-C11)","Go-live, hypercare"
+TONG,=SUM(B2:B11),,=SUM(D2:D11),,,,"Thực chi 2.310 < trần 2.400; dùng dự phòng 170/256,8"

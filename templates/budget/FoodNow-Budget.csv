@@ -33,6 +33,6 @@ B28,Đào tạo & khác,Chi phí khác,1,1,9.8,=D32*E32*F32,
 SUB,Đào tạo & khác,Tổng Đào tạo & khác,,,,=SUM(G27:G32),
 BASE,,Chi phí kế hoạch (baseline),,,,=G16+G21+G26+G33,≈ 2.140 (làm tròn)
 CONT,,Dự phòng (contingency reserve) 12%,,,0.12,=F35*G34,PM tự dùng tới 5% ngân sách; vượt cần Sponsor
-TOTAL,,Tổng ngân sách MVP,,,,=G34+G35,≈ 2.400 triệu (làm tròn; chênh 3,2 triệu do Sponsor giữ)
+TOTAL,,Tổng ngân sách MVP,,,,=G34+G35,"≈ 2.400 triệu (làm tròn; chênh 3,2 triệu do Sponsor giữ)"
 CEIL,,Trần ngân sách đã duyệt,,,,2400,Charter 15/12/2025
 MR,,Chênh lệch chưa phân bổ (management reserve),,,,=G37-G36,Sponsor giữ

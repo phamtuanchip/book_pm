@@ -18,9 +18,9 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 12 | Lập lịch: Timeline, Gantt, Critical Path | ✅ | 2582 |
 | 13 | Roadmap & Release Plan | ✅ | 1930 |
 | 14 | Ngân sách & quản lý chi phí | ✅ | 2393 |
-| 15 | Kế hoạch chất lượng | ⬜ |  |
-| 16 | Kế hoạch nguồn lực & năng lực đội | ⬜ |  |
-| 17 | Project Management Plan tổng hợp | ⬜ |  |
+| 15 | Kế hoạch chất lượng | ✅ | 2206 |
+| 16 | Kế hoạch nguồn lực & năng lực đội | ✅ | 2121 |
+| 17 | Project Management Plan tổng hợp | ✅ | 1736 |
 | 18 | Quản lý rủi ro | ⬜ |  |
 | 19 | RAID Log: Risk, Assumption, Issue, Dependency | ⬜ |  |
 | 20 | Quản lý thay đổi (Change Control) | ⬜ |  |

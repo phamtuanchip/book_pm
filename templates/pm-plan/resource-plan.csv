@@ -1,0 +1,18 @@
+﻿Person,Role,Allocation_pct,From,To,Months,Rate_MVND,Cost_MVND,Ghi_chu
+Nguyễn Thu Hà,Project Manager,100,2026-01-05,2026-10-30,10,16,=C2/100*F2*G2,
+Vũ Thị Lan,Business Analyst,100,2026-01-05,2026-10-30,10,13,=C3/100*F3*G3,
+Phạm Đức Dũng,Tech Lead,100,2026-01-05,2026-10-30,10,19,=C4/100*F4*G4,Bus factor kiến trúc; tải cao T13–T16 (tích hợp PayEasy)
+Ngô Thanh Sơn,Backend,100,2026-01-05,2026-10-30,10,14.5,=C5/100*F5*G5,Bus factor 1: dịch vụ đơn hàng và thanh toán
+Backend 2 (điều động),Backend,100,2026-01-26,2026-10-30,9.25,13.5,=C6/100*F6*G6,Vào tuần 4
+Backend hỗ trợ (bench),Backend,50,2026-03-30,2026-05-08,1.5,14,=C7/100*F7*G7,Bổ sung v1.1 để san tải T13–T18
+Đặng Văn Khoa,Mobile (iOS+Android),100,2026-01-05,2026-10-30,10,14,=C8/100*F8*G8,
+Bùi Tuấn,Mobile,100,2026-01-05,2026-03-06,2,12.5,=C9/100*F9*G9,Trước khi bị rút
+Bùi Tuấn,Mobile,50,2026-03-09,2026-04-03,0.9,12.5,=C10/100*F10*G10,Bị rút 50% sang dự án khác 4 tuần
+Bùi Tuấn,Mobile,100,2026-04-06,2026-10-30,7.1,12.5,=C11/100*F11*G11,Trở lại 100%
+Lý Quỳnh,Mobile (Android),100,2026-01-05,2026-10-30,10,12,=C12/100*F12*G12,
+Web/Admin FE,Frontend,100,2026-01-05,2026-10-30,10,12,=C13/100*F13*G13,
+Đỗ Hoàng Nam,QA Lead,100,2026-01-05,2026-10-30,10,14,=C14/100*F14*G14,
+QA,QA,100,2026-01-05,2026-10-30,10,9.5,=C15/100*F15*G15,
+Hoàng Mai Anh,UX/UI,50,2026-01-05,2026-10-30,10,15,=C16/100*F16*G16,Chia sẻ 50% với dự án khác
+Trịnh Ngọc Ánh,DevOps,50,2026-01-05,2026-10-30,10,17,=C17/100*F17*G17,Hạ tầng và CI/CD
+TONG,,,,,,,=SUM(H2:H17),Không gồm khoản tuyển dụng gộp 19.3 và các khoản ngoài nhân sự
