@@ -1,0 +1,20 @@
+﻿Item_ID,Release,Horizon,Theme,Outcome,Item,Priority_MoSCoW,Target_Window,Confidence,Depends_On,Status
+R-01,MVP,Now,Đặt hàng cốt lõi,Khách đặt được món và thanh toán,Đăng ký/đăng nhập OTP,Must,2026-Q4,Cao,PayEasy sandbox,Đang làm
+R-02,MVP,Now,Đặt hàng cốt lõi,Khách đặt được món và thanh toán,Duyệt và tìm món,Must,2026-Q4,Cao,,Đang làm
+R-03,MVP,Now,Đặt hàng cốt lõi,Khách đặt được món và thanh toán,Giỏ hàng và đặt đơn,Must,2026-Q4,Cao,,Đang làm
+R-04,MVP,Now,Thanh toán,Thanh toán thẻ và COD an toàn,Thanh toán thẻ (PayEasy) + COD,Must,2026-Q4,Trung bình,Chứng nhận PayEasy,Đang làm
+R-05,MVP,Now,Vận hành nhà hàng,Nhà hàng xử lý đơn nhanh,Nhận và xử lý đơn (web tablet),Must,2026-Q4,Cao,,Đang làm
+R-06,MVP,Now,Vận hành nhà hàng,Nhà hàng tự cập nhật thực đơn,Quản lý thực đơn,Must,2026-Q4,Cao,,Đang làm
+R-07,MVP,Now,Giao hàng,Tài xế nhận và giao đúng hạn,App Tài xế (Android): nhận chuyến và điều hướng,Must,2026-Q4,Cao,Bản đồ,Đang làm
+R-08,MVP,Now,Trải nghiệm,Khách theo dõi đơn chủ động,Theo dõi đơn thời gian thực,Must,2026-Q4,Trung bình,Realtime service,Đang làm
+R-09,MVP,Now,Vận hành,Admin quản lý được hệ thống,"Admin web (người dùng, nhà hàng, đơn, báo cáo cơ bản)",Must,2026-Q4,Cao,,Đang làm
+R-10,MVP,Now,Trải nghiệm,Khách được thông báo đúng lúc,Thông báo push/SMS,Should,2026-Q4,Cao,,Đang làm
+R-11,MVP,Now,Trải nghiệm,Khách đặt lại dễ,Lịch sử đơn và đặt lại,Should,2026-Q4,Cao,,Đang làm
+R-12,R1,Next,Giữ chân khách,Tăng đơn lặp lại,Khuyến mãi và mã giảm giá,Should,2027-Q1,Trung bình,Dữ liệu 3 tháng MVP,Kế hoạch
+R-13,R1,Next,Giữ chân khách,Nâng chất lượng món và tin cậy,Đánh giá và xếp hạng món,Should,2027-Q1,Trung bình,,Kế hoạch
+R-14,R1,Next,Hiệu quả vận hành,Giảm huỷ đơn,Cải thiện luồng huỷ đơn và hiệu năng,Should,2027-Q1,Trung bình,Dữ liệu huỷ đơn,Kế hoạch
+R-15,R1,Next,Nền tảng,Giảm nợ kỹ thuật MVP,Xử lý nợ kỹ thuật ưu tiên cao,Could,2027-Q1,Trung bình,,Kế hoạch
+R-16,R2,Later,Mở rộng thanh toán,Thanh toán linh hoạt hơn,Thanh toán ví điện tử,Should,2027-Q3,Thấp,Vendor ví; yêu cầu tuân thủ,Định hướng
+R-17,R2,Later,Cách đặt mới,Đặt cho nhiều người,Đặt món theo nhóm,Should,2027-Q3,Thấp,R1,Định hướng
+R-18,R2,Later,Mở rộng,Thêm khu vực,Mở rộng khu vực giao,Could,,Rất thấp,Kết quả R1,Ý tưởng
+R-19,R1,Next,Vận hành nhà hàng,Nhà hàng theo dõi doanh thu và khách đặt lại nhanh,Báo cáo doanh thu nhà hàng và nút đặt lại (cắt khỏi MVP ở tuần 20),Should,2027-Q1,Trung bình,,Kế hoạch

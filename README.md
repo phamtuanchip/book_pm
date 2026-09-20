@@ -646,7 +646,7 @@ số đầu người trong ngân sách cho khớp khi lập `FoodNow-Budget.csv`
 | T14 | Sơn nghỉ việc (Ch43) — mất 2 tuần bù |
 | T16 | PayEasy báo trễ chứng nhận 3 tuần (Ch21); kích hoạt contingency |
 | T18 | Sprint 6: nhánh feature sống 3 tuần gây conflict 200 file → luật "nhánh ≤ 5 ngày" (Ch31) |
-| T20 | SPI = 0,82, CPI = 0,96 (Ch34); recovery bằng cắt bớt Feature "đánh giá món" → R1 |
+| T20 | SPI = 0,82, CPI = 0,96 (Ch34); recovery bằng cắt bớt báo cáo doanh thu nhà hàng + "đặt lại" → R1 |
 | T24 | Xung đột Dũng–Nam về refactor vs tính năng (Ch27/Ch44) |
 | T28–T29 | Freeze tính năng; UAT bắt đầu T30 |
 | T30 | Cắt `release/1.0.0`, tag **v1.0.0-rc.1** cho UAT; rc.2 ở T35 (Ch32) |
@@ -733,6 +733,7 @@ cho bảng có tính toán/lọc; công thức Excel viết sẵn trong ô (bắ
 - **WBS baseline:** 66 work package, 1.927 ngày công (≈ 87% năng lực 12 FTE × 185 ngày); chi phí nhân sự 1,67 tỷ ≈ 0,87 triệu/ngày công.
 - **Business Case:** biên đóng góp 25.000 VND/đơn; chi phí vận hành 95 triệu/tháng; payback ≈ 10,6 tháng từ go-live; ROI 24 tháng ≈ 157%.
 - **Ngày các tài liệu:** Business Case 10/12/2025; Charter 15/12/2025; Working Agreement 14/01/2026; Scope Statement v1.0 06/02 và v1.1 13/02/2026; WBS 06/02/2026; Gantt baseline 27/02/2026; CS Manager (Huy) được phát hiện 26/01/2026.
+- **Recovery ở T20 (Ch34):** vì "đánh giá món" đã nằm ngoài MVP từ Charter (R1), phần cắt ở T20 là **báo cáo doanh thu nhà hàng (3.2.4) và chức năng "đặt lại" của 3.1.6** → R1 (Roadmap R-19).
 
 **Vấn đề mở (xử lý khi gặp, ghi kết quả vào đây)**
 - [x] Đối chiếu `book_ba` Ch40 & Phụ lục D: không có số liệu ngân sách/lịch trùng lặp để mâu thuẫn; giữ nguyên mục 7.

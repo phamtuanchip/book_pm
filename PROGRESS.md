@@ -16,8 +16,8 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 10 | WBS (Work Breakdown Structure) | ✅ | 2000 |
 | 11 | Ước lượng | ✅ | 2236 |
 | 12 | Lập lịch: Timeline, Gantt, Critical Path | ✅ | 2582 |
-| 13 | Roadmap & Release Plan | ⬜ |  |
-| 14 | Ngân sách & quản lý chi phí | ⬜ |  |
+| 13 | Roadmap & Release Plan | ✅ | 1930 |
+| 14 | Ngân sách & quản lý chi phí | ✅ | 2393 |
 | 15 | Kế hoạch chất lượng | ⬜ |  |
 | 16 | Kế hoạch nguồn lực & năng lực đội | ⬜ |  |
 | 17 | Project Management Plan tổng hợp | ⬜ |  |
