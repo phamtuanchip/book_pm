@@ -1,0 +1,16 @@
+ID,Ten,To_chuc,Vai_tro,Quyen_luc_1_5,Quan_tam_1_5,O_Mendelow,Thai_do,Chien_luoc,Nguoi_phu_trach,Kenh,Tan_suat,Ngay_them,Ghi_chu
+S01,Trần Quốc Bảo,FoodNow,Sponsor / CEO,5,5,Quản lý chặt,Ủng hộ mạnh; nóng vội,Họp Sponsor hằng tuần; báo cáo tuần; không để bất ngờ,Hà,Họp + báo cáo tuần,Hằng tuần,2025-12-08,Hay thêm ý tưởng ngay trong họp; quan tâm ngày launch
+S02,Lê Minh Châu,FoodNow,Product Owner,4,5,Quản lý chặt,Ủng hộ; thiếu thời gian,Đồng bộ ưu tiên 2 lần/tuần; lịch họp cố định,Hà,Họp + Slack,2 lần/tuần,2025-12-08,Chỉ ~50% thời gian cho dự án
+S03,Phạm Đức Dũng,BrightSoft,Tech Lead,3,5,Giữ thông tin đầy đủ,Ủng hộ; hay đòi refactor,1-1 hằng tuần; thống nhất tiêu chí trả nợ kỹ thuật,Hà,1-1,Hằng tuần,2025-12-08,
+S04,Vũ Thị Lan,BrightSoft,Business Analyst,2,5,Giữ thông tin đầy đủ,Ủng hộ,Rà RAID và backlog hằng tuần,Hà,Họp + Slack,Hằng tuần,2025-12-08,
+S05,Đỗ Hoàng Nam,BrightSoft,QA Lead,3,5,Giữ thông tin đầy đủ,Ủng hộ; cứng về chất lượng,Điểm chất lượng hằng tuần,Hà,Họp,Hằng tuần,2025-12-08,
+S06,Hội đồng quản trị FoodNow,FoodNow,Nhà đầu tư/duyệt ngân sách,5,2,Làm hài lòng,Trung lập,Báo cáo tháng qua Sponsor,Bảo/Hà,SteerCo,Hằng tháng,2025-12-08,
+S07,Yến (Cao Thị Yến),PayEasy,Đại diện vendor thanh toán,3,4,Giữ thông tin đầy đủ,Trung lập,Đồng bộ vendor hằng tuần; chốt ngày hứa bằng văn bản,Hà/Dũng,Họp + email,Hằng tuần,2025-12-08,Rủi ro trễ chứng nhận
+S08,Nhà hàng đối tác (đại diện 3 nhà hàng thử nghiệm),FoodNow,Người dùng app Nhà hàng,2,4,Giữ thông tin đầy đủ,Tò mò; lo thay đổi quy trình,Workshop tuần 12; demo mỗi 2 sprint,Lan,Workshop,Mỗi 2 tuần,2026-01-12,
+S09,Tài xế thử nghiệm (nhóm 10 người),FoodNow,Người dùng app Tài xế,1,4,Giữ thông tin,Lo ngại về thu nhập,Khảo sát + UAT,Lan,Nhóm chat,Mỗi 2 tuần,2026-01-12,
+S10,Khách hàng cuối,FoodNow,Người dùng app Khách hàng,1,3,Theo dõi,Chưa rõ,Phỏng vấn nhóm nhỏ; UAT,Châu,Khảo sát,Theo giai đoạn,2026-01-12,
+S11,Phan Quang Huy,FoodNow,Customer Service Manager,3,4,Giữ thông tin đầy đủ,Ban đầu chưa được mời; lo quá tải hỗ trợ,Mời vào đội UAT; xây quy trình hỗ trợ trước go-live,Hà,Họp + Slack,Hằng tuần,2026-01-27,Phát hiện muộn ở tuần 4 (26/01/2026)
+S12,Mai Anh,BrightSoft,UX/UI Designer (50%),2,4,Giữ thông tin,Ủng hộ; chia sẻ 50% dự án khác,Kế hoạch tải; ưu tiên rõ,Hà,1-1,Hằng tuần,2025-12-08,
+S13,Trịnh Ngọc Ánh,BrightSoft,DevOps (50%),3,4,Giữ thông tin đầy đủ,Ủng hộ,Đồng bộ hạ tầng/CI-CD,Dũng,Slack,Hằng tuần,2025-12-08,
+S14,Giám đốc dự án BrightSoft,BrightSoft,Quản lý cấp trên của PM,4,3,Làm hài lòng,Ủng hộ,Báo cáo tháng; leo thang khi cần,Hà,Họp 1-1,Hằng tháng,2025-12-08,
+S15,Ngân hàng đối tác thanh toán,Bên thứ ba,Quy định tuân thủ giao dịch thẻ,4,2,Làm hài lòng,Trung lập,Qua PayEasy; tuân thủ yêu cầu chứng nhận,Dũng,Qua vendor,Khi cần,2026-01-12,

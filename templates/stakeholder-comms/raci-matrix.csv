@@ -1,0 +1,19 @@
+Hang_muc,Ha_PM,Chau_PO,Bao_Sponsor,Dung_TechLead,Lan_BA,Nam_QALead,Anh_DevOps,MaiAnh_UX,Huy_CS,Yen_PayEasy
+Duyệt mục tiêu và ngân sách,R,C,A,C,I,I,I,I,I,I
+Chốt phạm vi MVP,R,A,C,C,R,I,I,C,C,I
+Ưu tiên backlog,C,A,I,C,R,C,I,C,C,I
+Đặc tả yêu cầu chi tiết,I,A,I,C,R,C,I,C,C,C
+Thiết kế UX/UI,C,A,I,C,C,I,I,R,C,I
+Chọn kiến trúc và công nghệ,C,I,I,A,C,C,R,I,I,C
+Lịch và dự báo ngày xong,A,C,I,R,C,C,C,C,I,I
+Quản lý ngân sách,A/R,I,C,I,I,I,I,I,I,I
+Quản lý rủi ro và RAID,A,C,I,R,R,R,C,I,C,C
+Duyệt change request lớn,R,C,A,C,C,C,I,I,I,I
+Kiểm thử và chất lượng,C,C,I,C,C,A/R,C,I,C,I
+Kế hoạch UAT,R,A,I,C,C,R,I,I,R,I
+Tích hợp thanh toán,C,I,I,A,C,C,C,I,I,R
+Hạ tầng và CI/CD,I,I,I,A,I,C,R,I,I,I
+Quy trình hỗ trợ khách hàng,C,C,I,I,C,I,I,I,A/R,I
+Báo cáo trạng thái,A/R,C,I,C,C,C,I,I,I,I
+Quyết định Go/No-Go,R,C,A,C,C,R,C,I,C,I
+Cutover và go-live,A,C,I,R,I,R,R,I,C,C
