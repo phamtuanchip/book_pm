@@ -1,5 +1,7 @@
 # book_pm — Kế hoạch biên soạn sách "Quản Lý Dự Án Phần Mềm — Từ Zero Đến Thực Chiến"
 
+**Đọc online (GitHub Pages): https://phamtuanchip.github.io/book_pm/** — bản PDF tải ở `dist/`.
+
 Sách dạy nghề Project Manager (PM) cho dự án phát triển phần mềm bằng tiếng Việt: từ khái niệm
 quản lý dự án cơ bản, quy trình, quy chuẩn, bộ tài liệu mẫu điền sẵn (Charter, WBS, Timeline/Gantt,
 Roadmap, Risk/RAID, Change Request, báo cáo...), đến cách ứng phó các tình huống cụ thể qua bài tập
