@@ -109,6 +109,31 @@ flowchart LR
 
 Ba quy tắc: (1) **không xoá dòng** khi chuyển — đổi trạng thái và liên kết để giữ lịch sử; (2) mỗi chuyển đổi phải kèm hành động và người; (3) nếu một chủ đề xuất hiện 3 lần ở các loại khác nhau, gộp thành một nhóm theo dõi.
 
+## Đi sâu: vận hành RAID log hằng tuần
+
+### Nghi thức 15 phút mỗi tuần
+
+1. Đọc lại 5 mục điểm cao nhất; 2. đóng những mục đã xong hoặc hết hiệu lực; 3. thêm mục mới phát sinh từ tuần qua; 4. cập nhật điểm và chủ sở hữu; 5. chọn tối đa ba mục cần leo lên sponsor. Nếu buổi này vượt 20 phút, log đã quá dài hoặc phần lớn mục không có hành động.
+
+### Chuyển hoá giữa các loại
+
+| Từ | Sang | Khi nào |
+|---|---|---|
+| **Rủi ro** | **Vấn đề** | Sự kiện đã xảy ra |
+| **Giả định** | **Rủi ro** | Bằng chứng cho thấy giả định có thể sai |
+| **Vấn đề** | **Thay đổi (CR)** | Cách xử lý cần đổi phạm vi/lịch/ngân sách |
+| **Phụ thuộc** | **Vấn đề** | Bên kia trễ bàn giao |
+
+Ghi lại chuyển hoá đó (cột lịch sử) để lessons learned có dữ liệu thật.
+
+### Chất lượng một mục RAID
+
+Mục tốt trả lời năm câu: **cái gì**, **vì sao quan trọng**, **ai sở hữu**, **hành động tiếp theo**, **hạn**. Mục xấu: "Khách có thể chậm phản hồi" — không có chủ sở hữu và hành động. Viết lại: "Nếu khách không duyệt UI trước 15/03 thì sprint 4 trễ 1 tuần; PM gửi bản duyệt cuối 10/03 và nhắc 13/03."
+
+### Đừng để RAID thành nghĩa địa
+
+Log có 200 dòng nhưng chỉ 10 dòng đang sống thì mất giá trị. Mỗi quý lưu trữ các mục đã đóng sang tab riêng và giữ tab chính dưới khoảng 30 mục.
+
 ## Tình huống FoodNow
 
 Tuần 11, thứ Hai 16/03/2026. Trong buổi rà RAID 15 phút, đến mục Assumption, Hà đọc dòng A-02: *"Khách gửi tài liệu API dữ liệu nhà hàng trước 15/03."* Chị hỏi Châu, người được giao xác nhận. Châu ngập ngừng: "Bên nhà hàng chưa đưa, em đợi thêm." Hôm qua là 15/03.

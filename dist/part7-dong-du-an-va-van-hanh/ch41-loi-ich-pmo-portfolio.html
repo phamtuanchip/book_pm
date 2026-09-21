@@ -159,6 +159,40 @@
 </ul>
 <h2>41.6 Xây phương pháp luận nội bộ</h2>
 <p>Phương pháp luận không phải cuốn sách dày; là <strong>bộ khung tối thiểu</strong> để dự án của tổ chức bạn nhất quán: (1) vòng đời chuẩn (Hybrid) và các cổng; (2) bộ mẫu chuẩn; (3) ngưỡng RAG, DoD, Go/No-Go; (4) nguyên tắc leo thang, thay đổi, báo cáo; (5) cách học (lessons learned được đưa vào mẫu). Xây từ <strong>thực tiễn dự án đã làm</strong> — ví dụ chính bài học 12 điểm của FoodNow — thay vì sao chép khung lý thuyết. Duy trì bằng cách <strong>xem lại mỗi 6–12 tháng</strong>.</p>
+<h2>Đi sâu: đo lợi ích và chọn dự án cho portfolio</h2>
+<h3>Chuỗi từ đầu ra đến lợi ích</h3>
+<p>Đầu ra (output) là thứ đội bàn giao; kết quả (outcome) là hành vi thay đổi; lợi ích (benefit) là giá trị đo được cho tổ chức. Ví dụ FoodNow: đầu ra = ứng dụng đặt món; kết quả = nhà hàng nhận đơn qua app thay vì điện thoại; lợi ích = 430 đơn/ngày sau 3 tháng, huỷ đơn 6%, hoàn vốn ước ~11,9 tháng. PM phải đứng ở cả ba bậc, không dừng ở bậc một.</p>
+<h3>Ba thời điểm đo</h3>
+<table>
+<thead>
+<tr>
+<th>Thời điểm</th>
+<th>Đo gì</th>
+<th>Ai đo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Go-live + 2 tuần</td>
+<td>Ổn định, lỗi, sử dụng ban đầu</td>
+<td>Đội dự án</td>
+</tr>
+<tr>
+<td>+3 tháng</td>
+<td>Số đơn, tỷ lệ huỷ, hài lòng</td>
+<td>Sponsor + vận hành</td>
+</tr>
+<tr>
+<td>+12 tháng</td>
+<td>Hoàn vốn, chi phí vận hành thực</td>
+<td>Tài chính + PMO</td>
+</tr>
+</tbody>
+</table>
+<h3>Chấm điểm để xếp hạng dự án</h3>
+<p>PMO thường dùng thang điểm có trọng số: giá trị chiến lược 30%, lợi ích tài chính 25%, rủi ro 20%, độ sẵn sàng nguồn lực 15%, độ khẩn cấp 10%. Không có công thức hoàn hảo; giá trị của thang là buộc cuộc thảo luận dùng cùng ngôn ngữ và lộ ra giả định.</p>
+<h3>Xung đột nguồn lực giữa các dự án</h3>
+<p>Ba cấp xử lý: (1) hai PM tự thoả thuận lịch mượn người; (2) PMO điều phối theo bảng công suất chung; (3) hội đồng portfolio quyết dự án nào lùi. Một quy tắc hữu ích: <strong>không chia một người ra quá 3 dự án</strong> — chi phí chuyển ngữ cảnh làm hiệu suất thực rơi xuống dưới tổng cộng.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Ngày 05/01/2027, ba tháng sau go-live, Hà cùng Châu trình bày <strong>kết quả đo lợi ích</strong> cho anh Bảo và HĐQT so với Business Case: <strong>430 đơn/ngày</strong> (85% mục tiêu 500; run-rate), <strong>tỷ lệ huỷ 6%</strong> (mục tiêu &lt; 5% — chưa đạt), thời gian giao trung bình 33 phút (đạt), và <strong>payback dự báo ≈ 11,9 tháng</strong> từ go-live (kế hoạch 10,6; vẫn dưới 18 tháng). Trước đó họ đã đo 1 tháng (03/11) đúng như kế hoạch.</p>
 <p>Anh Bảo hỏi: &quot;Huỷ đơn 6% — lỗi ở app hay ở nhà hàng?&quot; Châu mở phân tích: 45% do nhà hàng hết món, 25% tài xế không nhận kịp, 20% khách đổi ý. Hà đề xuất <strong>điều chỉnh R1</strong> thay vì đổ lỗi: ưu tiên tính năng &quot;món tạm hết&quot; và cảnh báo thời gian thực cho nhà hàng, thuật toán ghép tài xế v2 (đã thử ở feature flag), và khuyến mãi để đẩy đơn từ 430 lên 500. Mục tiêu R1 được đổi thành &quot;huỷ &lt; 5% ổn định; 600 đơn/ngày sau 6 tháng&quot;; Roadmap lên v1.2; số liệu thật cũng được đưa vào Business Case cho R1/R2 (giả định biên đóng góp 25.000 vẫn đúng; chi phí vận hành thực 102 triệu/tháng so với 95 dự kiến).</p>

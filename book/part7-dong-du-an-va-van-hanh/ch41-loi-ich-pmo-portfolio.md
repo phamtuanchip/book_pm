@@ -78,6 +78,28 @@ Ba tình huống khi so sánh thực tế với mục tiêu: **đạt** (ghi nh�
 
 Phương pháp luận không phải cuốn sách dày; là **bộ khung tối thiểu** để dự án của tổ chức bạn nhất quán: (1) vòng đời chuẩn (Hybrid) và các cổng; (2) bộ mẫu chuẩn; (3) ngưỡng RAG, DoD, Go/No-Go; (4) nguyên tắc leo thang, thay đổi, báo cáo; (5) cách học (lessons learned được đưa vào mẫu). Xây từ **thực tiễn dự án đã làm** — ví dụ chính bài học 12 điểm của FoodNow — thay vì sao chép khung lý thuyết. Duy trì bằng cách **xem lại mỗi 6–12 tháng**.
 
+## Đi sâu: đo lợi ích và chọn dự án cho portfolio
+
+### Chuỗi từ đầu ra đến lợi ích
+
+Đầu ra (output) là thứ đội bàn giao; kết quả (outcome) là hành vi thay đổi; lợi ích (benefit) là giá trị đo được cho tổ chức. Ví dụ FoodNow: đầu ra = ứng dụng đặt món; kết quả = nhà hàng nhận đơn qua app thay vì điện thoại; lợi ích = 430 đơn/ngày sau 3 tháng, huỷ đơn 6%, hoàn vốn ước ~11,9 tháng. PM phải đứng ở cả ba bậc, không dừng ở bậc một.
+
+### Ba thời điểm đo
+
+| Thời điểm | Đo gì | Ai đo |
+|---|---|---|
+| Go-live + 2 tuần | Ổn định, lỗi, sử dụng ban đầu | Đội dự án |
+| +3 tháng | Số đơn, tỷ lệ huỷ, hài lòng | Sponsor + vận hành |
+| +12 tháng | Hoàn vốn, chi phí vận hành thực | Tài chính + PMO |
+
+### Chấm điểm để xếp hạng dự án
+
+PMO thường dùng thang điểm có trọng số: giá trị chiến lược 30%, lợi ích tài chính 25%, rủi ro 20%, độ sẵn sàng nguồn lực 15%, độ khẩn cấp 10%. Không có công thức hoàn hảo; giá trị của thang là buộc cuộc thảo luận dùng cùng ngôn ngữ và lộ ra giả định.
+
+### Xung đột nguồn lực giữa các dự án
+
+Ba cấp xử lý: (1) hai PM tự thoả thuận lịch mượn người; (2) PMO điều phối theo bảng công suất chung; (3) hội đồng portfolio quyết dự án nào lùi. Một quy tắc hữu ích: **không chia một người ra quá 3 dự án** — chi phí chuyển ngữ cảnh làm hiệu suất thực rơi xuống dưới tổng cộng.
+
 ## Tình huống FoodNow
 
 Ngày 05/01/2027, ba tháng sau go-live, Hà cùng Châu trình bày **kết quả đo lợi ích** cho anh Bảo và HĐQT so với Business Case: **430 đơn/ngày** (85% mục tiêu 500; run-rate), **tỷ lệ huỷ 6%** (mục tiêu < 5% — chưa đạt), thời gian giao trung bình 33 phút (đạt), và **payback dự báo ≈ 11,9 tháng** từ go-live (kế hoạch 10,6; vẫn dưới 18 tháng). Trước đó họ đã đo 1 tháng (03/11) đúng như kế hoạch.

@@ -151,6 +151,42 @@
 <li><strong>Baseline bị sửa</strong> để đẹp số — luôn hỏi baseline nào.</li>
 <li>Chỉ số đo <strong>khối lượng</strong>, không đo <strong>giá trị người dùng</strong>; thêm chỉ số chất lượng và giá trị.</li>
 </ul>
+<h2>Đi sâu: đọc EVM đúng cách và những cái bẫy</h2>
+<h3>Ba điều kiện để EVM đáng tin</h3>
+<ol>
+<li><strong>PV lấy từ baseline đã duyệt</strong>, không phải lịch đang sửa; 2. <strong>EV đo theo quy tắc rõ</strong> (0/100, 50/50 hoặc % theo cột mốc) và áp dụng nhất quán; 3. <strong>AC ghi đủ và đúng kỳ</strong>, kể cả lương nội bộ và chi phí nhà thầu chưa thanh toán. Thiếu một điều thì SPI/CPI chỉ là con số trang trí.</li>
+</ol>
+<h3>Chọn quy tắc tính EV</h3>
+<table>
+<thead>
+<tr>
+<th>Quy tắc</th>
+<th>Cách tính</th>
+<th>Hợp với</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0/100</strong></td>
+<td>Xong mới tính 100%</td>
+<td>Gói ngắn, dễ kiểm</td>
+</tr>
+<tr>
+<td><strong>50/50</strong></td>
+<td>Bắt đầu 50%, xong 100%</td>
+<td>Gói vừa, ít cần chi tiết</td>
+</tr>
+<tr>
+<td><strong>Cột mốc có trọng số</strong></td>
+<td>Tính theo % của từng cột mốc</td>
+<td>Gói dài, có bước trung gian</td>
+</tr>
+</tbody>
+</table>
+<h3>Ví dụ đọc T20 của FoodNow</h3>
+<p>BAC 2.140, PV 962, EV 789, AC 825 (triệu đồng): SV = EV − PV = −173; CV = EV − AC = −36; SPI = 0,82; CPI = 0,96. Chi phí gần khớp kế hoạch nhưng tiến độ chậm ~18%: vấn đề là <strong>năng suất và lịch</strong>, không phải vượt chi. Do đó hành động ưu tiên là gỡ nghẽn, nâng công suất hoặc cắt phạm vi, không phải cắt chi phí.</p>
+<h3>Ba bẫy thường gặp</h3>
+<p><strong>Bẫy 1 — SPI tự về 1,0 ở cuối:</strong> mọi dự án khi xong đều có SPI = 1, nên cuối dự án cần dùng <strong>độ trễ trên đường găng (float)</strong> để cảnh báo. <strong>Bẫy 2 — CPI tốt nhờ trì hoãn chi:</strong> AC thấp vì chưa nhận hoá đơn; kiểm tra công nợ. <strong>Bẫy 3 — EAC máy móc:</strong> công thức BAC/CPI giả định hiệu suất quá khứ lặp lại; nếu nguyên nhân chậm đã dứt thì dùng EAC = AC + ETC bottom-up.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Thứ Sáu 22/05/2026, cuối tuần 20 (kết thúc Sprint 7). Hà cập nhật EVM: <strong>BAC 2.140</strong>, <strong>PV 962</strong>, <strong>EV 789</strong>, <strong>AC 825</strong> (triệu VND). Kết quả: SV = −173, CV = −36, <strong>SPI = 0,82</strong> (đỏ), <strong>CPI = 0,96</strong> (xanh, sát ngưỡng); EAC = 2.140 ÷ 0,956 ≈ <strong>2.238</strong>, ETC = <strong>1.413</strong>, VAC = <strong>−98</strong>, TCPI = <strong>1,03</strong>. So với hai lần đo trước: SPI 0,95 (tuần 12) → 0,90 (tuần 16) → <strong>0,82</strong> — xu hướng đi xuống.</p>
 <p>Hà đọc số: SV −173 triệu tương đương khoảng <strong>200 ngày công</strong> — khoảng 3,5 tuần của cả đội. Nguyên nhân: Sprint 1–2 chậm; Tuấn bị rút 4 tuần; <strong>Sơn nghỉ</strong> ở tuần 14; conflict nhánh ở Sprint 6. <strong>CPI 0,96</strong> nhìn ổn, nhưng chi tiêu năm tháng đầu thấp hơn kế hoạch vì thiếu người (Ch14) — không phải tiết kiệm. Dự báo thô là go-live chậm 8 tuần. Nhưng chị nhìn thêm đường găng: chuỗi thanh toán vẫn còn bảo đảm nhờ fast-tracking; chỉ nhánh dev (float 5 ngày) bị áp lực.</p>

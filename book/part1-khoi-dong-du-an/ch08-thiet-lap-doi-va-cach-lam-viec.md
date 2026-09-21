@@ -116,6 +116,29 @@ Khi đội không ngồi chung, cần ba điều chỉnh:
 
 Với đội offshore, thêm: người kết nối (bridge) hai phía, buổi handover cuối ngày, và một mục tiêu chung thay vì "đội họ" và "đội mình".
 
+## Đi sâu: thoả thuận làm việc và xây văn hoá đội từ tuần đầu
+
+### Working Agreement: mười dòng là đủ
+
+Thay vì tài liệu dài, đội cùng viết khoảng mười dòng: giờ core hours (ví dụ 10:00–16:00), kênh cho việc khẩn và không khẩn, thời gian phản hồi kỳ vọng, định nghĩa xong (DoD), quy tắc PR và review, cách báo bị chặn, cách xử lý bất đồng, cách gọi nhau trong họp. Dán ở nơi ai cũng thấy và xem lại ở mỗi retrospective.
+
+### Đội phân tán: bốn quy tắc giảm ma sát
+
+| Quy tắc | Lý do |
+|---|---|
+| **Ghi lại quyết định bằng văn bản** | Người ở múi giờ/lịch khác không phải hỏi lại |
+| **Họp có agenda và biên bản một dòng mỗi quyết định** | Tránh họp "cho có" |
+| **Ưu tiên giao tiếp bất đồng bộ** | Bảo vệ thời gian tập trung |
+| **Một buổi gặp mặt hoặc video gần gũi mỗi sprint** | Duy trì quan hệ, giảm hiểu lầm |
+
+### Onboarding một người mới trong năm ngày
+
+Ngày 1: tài khoản, môi trường, gặp đội; ngày 2: đọc Charter, backlog, kiến trúc; ngày 3: sửa một lỗi nhỏ cùng người kèm; ngày 4: PR đầu tiên; ngày 5: chia sẻ ngắn về điều còn khó hiểu. Danh sách kiểm này giúp người mới đóng góp trong tuần đầu thay vì tuần thứ tư.
+
+### Chọn công cụ theo nhu cầu, không theo mốt
+
+Ba công cụ tối thiểu: theo dõi công việc (backlog/Jira), giao tiếp (chat), lưu tài liệu (wiki/thư mục có cấu trúc). Thêm công cụ chỉ khi có vấn đề cụ thể mà công cụ hiện tại không giải được, và chỉ định người sở hữu cho từng công cụ.
+
 ## Tình huống FoodNow
 
 Thứ Hai 05/01/2026, kickoff. Hà nhìn danh sách đội: mười hai người trên giấy nhưng **chỉ có một Backend** (Sơn); vị trí Backend thứ hai còn trống. Dũng nói: "Không có Backend thứ hai thì tích hợp thanh toán và API sẽ nghẽn ngay từ Sprint 1." Hà đánh giá bốn hướng: tuyển mới mất 4–8 tuần (quá chậm), freelancer tăng rủi ro bảo mật ở luồng thanh toán, điều chỉnh phạm vi thì chưa cần vì mới tuần đầu. Chị chọn **điều động nội bộ**: xin giám đốc BrightSoft một Backend đang rảnh từ dự án khác, và song song mở tuyển một người thay thế dài hạn làm phương án dự phòng.

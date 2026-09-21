@@ -236,6 +236,50 @@
 <li><strong>Phương án thay thế</strong>: vendor dự phòng (SMS B), ra mắt bản rút gọn (COD trước);</li>
 <li><strong>Dời và chấp nhận</strong>: dời mốc, thông báo Sponsor sớm.</li>
 </ol>
+<h2>Đi sâu: chọn và quản lý nhà cung cấp</h2>
+<h3>Bộ tiêu chí chấm điểm nhà cung cấp</h3>
+<table>
+<thead>
+<tr>
+<th>Tiêu chí</th>
+<th>Trọng số gợi ý</th>
+<th>Bằng chứng cần</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Năng lực kỹ thuật</strong></td>
+<td>30%</td>
+<td>Dự án tương tự, mã nguồn/PoC, phỏng vấn kỹ thuật</td>
+</tr>
+<tr>
+<td><strong>Chi phí tổng sở hữu</strong></td>
+<td>25%</td>
+<td>Báo giá chi tiết gồm phí duy trì và phí giao dịch</td>
+</tr>
+<tr>
+<td><strong>Độ tin cậy/SLA</strong></td>
+<td>20%</td>
+<td>Uptime công bố, tham chiếu khách hiện tại</td>
+</tr>
+<tr>
+<td><strong>Bảo mật/tuân thủ</strong></td>
+<td>15%</td>
+<td>Chứng nhận, chính sách dữ liệu</td>
+</tr>
+<tr>
+<td><strong>Khả năng hỗ trợ</strong></td>
+<td>10%</td>
+<td>Giờ hỗ trợ, thời gian phản hồi, ngôn ngữ</td>
+</tr>
+</tbody>
+</table>
+<h3>Bốn loại hợp đồng và ai gánh rủi ro</h3>
+<p>Giá cố định — nhà thầu gánh rủi ro chi phí, bên mua gánh rủi ro thay đổi phạm vi; Time &amp; Materials — bên mua gánh rủi ro chi phí; Cost-plus — bên mua gánh hầu hết; Mua theo gói/thuê bao — cả hai chia sẻ, rủi ro nằm ở lệ thuộc nhà cung cấp. Chọn theo mức độ rõ của phạm vi: phạm vi rõ → giá cố định, chưa rõ → T&amp;M có trần.</p>
+<h3>Điều khoản không nên bỏ qua</h3>
+<p>Điều khoản <strong>nghiệm thu</strong> (tiêu chí và thời hạn duyệt), <strong>SLA và phạt</strong>, <strong>sở hữu mã nguồn/dữ liệu</strong>, <strong>thoát khỏi hợp đồng (exit) và chuyển giao</strong>, <strong>bảo mật</strong>, <strong>giới hạn trách nhiệm</strong>. Với cổng thanh toán như PayEasy, thêm điều khoản môi trường thử nghiệm (sandbox) và thời hạn cấp khoá — vì đây chính là điểm chặn đường găng của FoodNow.</p>
+<h3>Quản lý sau ký</h3>
+<p>Họp định kỳ với nhà cung cấp, theo dõi SLA thực tế, ghi sự cố, đánh giá cuối giai đoạn. Đưa nhà cung cấp trọng yếu vào Stakeholder Register và RAID như một bên có quyền lực cao.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Thứ Hai 20/04/2026 (tuần 16). Yến báo bằng email: hồ sơ PayEasy đang dồn ứ; chứng nhận sẽ trễ <strong>3 tuần</strong>, mới hứa <strong>19/06</strong> thay vì 29/05. Hà biết ngay trên đường găng: đây là chuỗi thanh toán, không có float. Chị không hoảng vì đã có kế hoạch từ tháng 1.</p>
 <p>Trong 24 giờ, chị làm bốn việc. <strong>Một</strong>, cập nhật RAID: D-02 (ngày hứa 19/06), I-006 (Issue, P1) và báo anh Bảo. <strong>Hai</strong>, đề nghị anh Bảo gọi lãnh đạo PayEasy — vì hợp đồng chỉ phạt tối đa 3 triệu, đòn bẩy thật là quan hệ và uy tín của FoodNow với PayEasy. <strong>Ba</strong>, <strong>fast-tracking</strong>: thay vì chờ chứng nhận để bắt đầu end-to-end (01/06), đội dựng và kiểm thử toàn bộ luồng thanh toán trên sandbox và chỉ chuyển sang credential thật ở tuần cuối; nhờ vậy 3 tuần chờ không còn nằm trên đường găng. <strong>Bốn</strong>, <strong>crashing</strong>: thuê 2 Dev hợp đồng và 1 QA hợp đồng trong 4 tuần để chạy song song đối soát và kiểm thử, chi phí ≈ <strong>110 triệu</strong> — dưới ngưỡng 5% (≈ 120 triệu) mà Charter cho phép Hà tự quyết. Chị báo anh Bảo ngay trong ngày và ghi vào budget-tracking.</p>

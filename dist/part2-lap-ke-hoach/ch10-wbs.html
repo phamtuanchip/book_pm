@@ -238,6 +238,42 @@ flowchart LR
 </tr>
 </tbody>
 </table>
+<h2>Đi sâu: kiểm tra chất lượng một WBS</h2>
+<h3>Sáu phép thử trước khi chốt</h3>
+<ol>
+<li><strong>Quy tắc 100%</strong> — tổng các con phải bằng đúng phần cha, không thừa không thiếu; 2. <strong>Danh từ, không phải động từ</strong> — nút WBS là sản phẩm bàn giao (ví dụ &quot;Module thanh toán&quot;), còn hoạt động thuộc về lịch; 3. <strong>Không chồng lấn</strong> — một việc chỉ thuộc một nhánh; 4. <strong>Có chủ sở hữu duy nhất</strong> — mỗi work package một người chịu trách nhiệm; 5. <strong>Kích thước ước lượng được</strong> — thường 8–80 giờ công hoặc một đến hai tuần; 6. <strong>Có tiêu chí xong</strong> — nằm trong WBS Dictionary.</li>
+</ol>
+<h3>Ba cách phân rã và khi nào dùng</h3>
+<table>
+<thead>
+<tr>
+<th>Cách</th>
+<th>Cấu trúc cấp 2</th>
+<th>Hợp với</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Theo <strong>sản phẩm bàn giao</strong></td>
+<td>Ứng dụng khách, Tài xế, Nhà hàng, Admin</td>
+<td>Sản phẩm có nhiều thành phần rõ</td>
+</tr>
+<tr>
+<td>Theo <strong>pha vòng đời</strong></td>
+<td>Khởi động, Thiết kế, Xây, Kiểm thử, Triển khai</td>
+<td>Waterfall, mốc thanh toán theo pha</td>
+</tr>
+<tr>
+<td><strong>Lai</strong></td>
+<td>Sản phẩm ở cấp 2, pha ở cấp 3</td>
+<td>Phổ biến nhất trong dự án phần mềm</td>
+</tr>
+</tbody>
+</table>
+<h3>Bẫy &quot;gói công việc quản lý&quot; bị quên</h3>
+<p>Đội thường phân rã kỹ phần xây mà quên nhánh <strong>quản lý dự án, kiểm thử tích hợp, tài liệu, đào tạo, chuyển đổi dữ liệu, go-live</strong>. Cách kiểm: đối chiếu WBS với danh mục nhóm quy trình (khởi động, lập kế hoạch, thực thi, giám sát, đóng) và với DoD của dự án.</p>
+<h3>Từ WBS ra ước lượng: đừng cộng dồn tin cậy</h3>
+<p>Nếu mỗi work package ước lượng đúng 80% thì tổng của 66 gói không đúng 80%. Vì vậy cần dự phòng ở cấp dự án (contingency 12% của FoodNow), không nhồi vào từng gói khiến đội &quot;ăn hết&quot; theo định luật Parkinson.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Tuần 5 (02–06/02/2026), sau khi chốt Scope Statement v1.0, Hà ngồi với Dũng, Lan và Nam ba buổi chiều để dựng WBS. Ban đầu Dũng đưa ra một danh sách phân rã theo giai đoạn: &quot;Phân tích, Thiết kế, Code, Test, Deploy&quot;. Hà đề nghị đổi: &quot;Nếu mình phân theo giai đoạn thì rất khó trả lời anh Bảo câu hỏi 'App Tài xế đang ở đâu?'.&quot; Cả nhóm chuyển sang cấu trúc kết hợp: 8 nhóm cấp 2, sản phẩm ở cấp 3.</p>
 <p>Khi rà lại quy tắc 100%, Nam phát hiện: <strong>không có work package nào cho kiểm thử hiệu năng và bảo mật</strong>, và Lan chỉ ra thiếu <strong>đào tạo người dùng và tài liệu vận hành</strong>. Nếu không có bước này, hai hạng mục này sẽ trở thành &quot;việc phát sinh&quot; và ăn vào dự phòng. Kết quả là WBS baseline v1.0 có <strong>66 work package, tổng 1.927 ngày công</strong>, tương đương 87% năng lực đội. Hà lưu ý riêng với Sponsor: gói 6.1.1 (PayEasy) chưa tính thời gian chờ vendor — một dòng nhỏ giúp tránh tranh cãi sau này.</p>

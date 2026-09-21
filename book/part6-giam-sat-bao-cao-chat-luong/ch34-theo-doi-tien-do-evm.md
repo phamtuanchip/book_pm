@@ -81,6 +81,28 @@ Ngưỡng RAG (Red–Amber–Green) **đặt trước** và nhất quán qua bá
 - **Baseline bị sửa** để đẹp số — luôn hỏi baseline nào.
 - Chỉ số đo **khối lượng**, không đo **giá trị người dùng**; thêm chỉ số chất lượng và giá trị.
 
+## Đi sâu: đọc EVM đúng cách và những cái bẫy
+
+### Ba điều kiện để EVM đáng tin
+
+1. **PV lấy từ baseline đã duyệt**, không phải lịch đang sửa; 2. **EV đo theo quy tắc rõ** (0/100, 50/50 hoặc % theo cột mốc) và áp dụng nhất quán; 3. **AC ghi đủ và đúng kỳ**, kể cả lương nội bộ và chi phí nhà thầu chưa thanh toán. Thiếu một điều thì SPI/CPI chỉ là con số trang trí.
+
+### Chọn quy tắc tính EV
+
+| Quy tắc | Cách tính | Hợp với |
+|---|---|---|
+| **0/100** | Xong mới tính 100% | Gói ngắn, dễ kiểm |
+| **50/50** | Bắt đầu 50%, xong 100% | Gói vừa, ít cần chi tiết |
+| **Cột mốc có trọng số** | Tính theo % của từng cột mốc | Gói dài, có bước trung gian |
+
+### Ví dụ đọc T20 của FoodNow
+
+BAC 2.140, PV 962, EV 789, AC 825 (triệu đồng): SV = EV − PV = −173; CV = EV − AC = −36; SPI = 0,82; CPI = 0,96. Chi phí gần khớp kế hoạch nhưng tiến độ chậm ~18%: vấn đề là **năng suất và lịch**, không phải vượt chi. Do đó hành động ưu tiên là gỡ nghẽn, nâng công suất hoặc cắt phạm vi, không phải cắt chi phí.
+
+### Ba bẫy thường gặp
+
+**Bẫy 1 — SPI tự về 1,0 ở cuối:** mọi dự án khi xong đều có SPI = 1, nên cuối dự án cần dùng **độ trễ trên đường găng (float)** để cảnh báo. **Bẫy 2 — CPI tốt nhờ trì hoãn chi:** AC thấp vì chưa nhận hoá đơn; kiểm tra công nợ. **Bẫy 3 — EAC máy móc:** công thức BAC/CPI giả định hiệu suất quá khứ lặp lại; nếu nguyên nhân chậm đã dứt thì dùng EAC = AC + ETC bottom-up.
+
 ## Tình huống FoodNow
 
 Thứ Sáu 22/05/2026, cuối tuần 20 (kết thúc Sprint 7). Hà cập nhật EVM: **BAC 2.140**, **PV 962**, **EV 789**, **AC 825** (triệu VND). Kết quả: SV = −173, CV = −36, **SPI = 0,82** (đỏ), **CPI = 0,96** (xanh, sát ngưỡng); EAC = 2.140 ÷ 0,956 ≈ **2.238**, ETC = **1.413**, VAC = **−98**, TCPI = **1,03**. So với hai lần đo trước: SPI 0,95 (tuần 12) → 0,90 (tuần 16) → **0,82** — xu hướng đi xuống.

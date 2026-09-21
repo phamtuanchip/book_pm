@@ -93,6 +93,28 @@ Trích một phần **quyền hạn của PM** trong Charter FoodNow: *Hà đư�
 
 Nếu Charter của bạn dài 15 trang, bạn đang viết kế hoạch. Nếu kế hoạch của bạn không tham chiếu Charter, bạn đang làm dự án không có gốc.
 
+## Đi sâu: viết Business Case để người duyệt tin được
+
+### Cấu trúc một Business Case một trang rưỡi
+
+1. **Vấn đề/cơ hội** — một đoạn, có con số hiện tại (ví dụ nhà hàng nhận đơn qua điện thoại, sai đơn ~8%); 2. **Mục tiêu đo được** — 2–4 chỉ số; 3. **Các phương án** — gồm "không làm gì", "mua sẵn", "tự xây"; 4. **Chi phí** — một lần và định kỳ; 5. **Lợi ích** — định lượng và định tính, ghi rõ giả định; 6. **Rủi ro chính** và **đề xuất**. Người duyệt hiếm khi đọc quá hai trang: phần còn lại đẩy sang phụ lục.
+
+### Ba lỗi làm Business Case mất uy tín
+
+| Lỗi | Biểu hiện | Cách sửa |
+|---|---|---|
+| **Lợi ích thổi phồng** | Giả định 100% người dùng chuyển sang app ngay tháng đầu | Dùng ba kịch bản (thận trọng / cơ sở / lạc quan) và dựa vào số kịch bản cơ sở |
+| **Bỏ chi phí vận hành** | Chỉ tính chi phí xây, quên hosting, hỗ trợ, phí cổng thanh toán | Tính tổng chi phí sở hữu 3 năm |
+| **Không có người chịu trách nhiệm lợi ích** | Ai cũng nói "lợi ích sẽ đến" | Gắn mỗi lợi ích với một chủ sở hữu và mốc đo |
+
+### Kiểm tra độ nhạy bằng một bảng nhỏ
+
+Trước khi trình, đổi từng giả định chính ±20% và xem payback thay đổi ra sao. Nếu chỉ một giả định (ví dụ số đơn/ngày) làm payback từ 12 lên 30 tháng, đó là **giả định sống còn**: ghi vào Charter, đo sớm bằng pilot, và đặt làm điều kiện Go/No-Go giai đoạn sau.
+
+### Charter: ba câu hỏi phân biệt bản tốt và bản trang trí
+
+(a) Nếu PM nghỉ việc, người mới đọc Charter có biết mình được quyền quyết gì không? (b) Nếu khách đòi thêm tính năng, Charter có nói ai phê duyệt không? (c) Tiêu chí thành công có số và ngày không? Câu nào trả lời "không" thì bổ sung trước khi ký.
+
 ## Tình huống FoodNow
 
 Ngày 10/12/2025, hội đồng quản trị FoodNow họp để duyệt ngân sách. Anh Bảo trình bày Business Case do Hà và Lan chuẩn bị. Một thành viên hội đồng hỏi: "Nếu chúng ta không làm gì thì sao?" — Hà đã chuẩn bị bảng phương án A/B/C, nên trả lời bằng số liệu: phương án A giữ nguyên biên lợi nhuận thấp và không có dữ liệu khách; phương án B (SaaS white-label) không đáp ứng luồng riêng. Kết luận nghiêng về phương án C.

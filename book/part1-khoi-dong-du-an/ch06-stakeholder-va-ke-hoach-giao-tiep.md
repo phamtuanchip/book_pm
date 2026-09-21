@@ -120,6 +120,29 @@ Leo thang là chuyển một vấn đề lên người có đủ quyền giải 
 
 Mọi leo thang gồm năm phần: **vấn đề – tác động – phương án – khuyến nghị – hạn cần quyết định**. Đừng "ném" vấn đề lên mà không kèm đề xuất.
 
+## Đi sâu: quản lý stakeholder khó và duy trì kế hoạch giao tiếp
+
+### Bốn kiểu stakeholder "khó" và cách tiếp cận
+
+| Kiểu | Dấu hiệu | Cách tiếp cận |
+|---|---|---|
+| **Sponsor vắng mặt** | Không trả lời quyết định, chỉ xuất hiện khi có sự cố | Đặt lịch 1:1 cố định 20 phút mỗi hai tuần; gửi trước một câu hỏi cần quyết |
+| **Người phản đối thầm lặng** | Đồng ý ở cuộc họp, không dùng sản phẩm | Hỏi riêng: "Điều gì khiến anh/chị lo nhất?"; mời vào nhóm thử nghiệm |
+| **Người "biết hết"** | Can thiệp thiết kế, chen yêu cầu | Trao vai trò cố vấn có phạm vi; mọi đề xuất đi qua backlog |
+| **Người quá bận** | Không tới họp | Rút ngắn thông tin còn một trang, xin uỷ quyền cho người thay mặt |
+
+### Cập nhật Stakeholder Register định kỳ
+
+Register không phải văn bản một lần. Mỗi hai tuần, khi rà RAID, hỏi ba câu: có ai mới xuất hiện? có ai đổi quyền lực hay thái độ? chiến lược hiện tại có hiệu quả không? Ghi thay đổi kèm ngày để có lịch sử.
+
+### Kế hoạch giao tiếp: giảm lượng, tăng đúng người
+
+Lỗi hay gặp là gửi báo cáo cùng một mẫu cho mọi người. Nguyên tắc: nội dung theo **quyết định người đó cần đưa ra**. Sponsor cần RAG và quyết định; khách cần tiến độ theo tính năng; đội cần chi tiết công việc. Mỗi kênh có **chủ sở hữu**, **tần suất** và **định dạng** rõ, và ít nhất một lần mỗi giai đoạn hỏi người nhận "báo cáo này còn hữu ích không?".
+
+### RACI: bốn dấu hiệu bảng xấu
+
+(1) Hàng không có A hoặc có hai A; (2) cột một người có quá nhiều R; (3) quá nhiều C khiến quyết định chậm; (4) không ai trong bảng đã xem nó. Cách chữa: đọc lớn trong buổi kickoff và hỏi từng người "đúng chưa?".
+
 ## Tình huống FoodNow
 
 Sáng thứ Hai 26/01/2026, tuần 4. Trong lúc rà RAID, Lan nhắc: "Chị Hà, hôm qua em nghe anh Huy — CS Manager của FoodNow — hỏi bao giờ đội hỗ trợ được training. Em không thấy anh ấy trong danh sách." Hà mở Stakeholder Register: không có Huy. Chị tự hỏi lại bốn câu hỏi: *ai nhận cuộc gọi khi app lỗi?* — đội CS của anh Huy.

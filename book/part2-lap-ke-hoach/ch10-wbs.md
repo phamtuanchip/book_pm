@@ -109,6 +109,28 @@ Trích cấp 2 của WBS FoodNow:
 | 8 | Đóng dự án | 3 | 18 |
 | | **Tổng** | **66** | **1.927** |
 
+## Đi sâu: kiểm tra chất lượng một WBS
+
+### Sáu phép thử trước khi chốt
+
+1. **Quy tắc 100%** — tổng các con phải bằng đúng phần cha, không thừa không thiếu; 2. **Danh từ, không phải động từ** — nút WBS là sản phẩm bàn giao (ví dụ "Module thanh toán"), còn hoạt động thuộc về lịch; 3. **Không chồng lấn** — một việc chỉ thuộc một nhánh; 4. **Có chủ sở hữu duy nhất** — mỗi work package một người chịu trách nhiệm; 5. **Kích thước ước lượng được** — thường 8–80 giờ công hoặc một đến hai tuần; 6. **Có tiêu chí xong** — nằm trong WBS Dictionary.
+
+### Ba cách phân rã và khi nào dùng
+
+| Cách | Cấu trúc cấp 2 | Hợp với |
+|---|---|---|
+| Theo **sản phẩm bàn giao** | Ứng dụng khách, Tài xế, Nhà hàng, Admin | Sản phẩm có nhiều thành phần rõ |
+| Theo **pha vòng đời** | Khởi động, Thiết kế, Xây, Kiểm thử, Triển khai | Waterfall, mốc thanh toán theo pha |
+| **Lai** | Sản phẩm ở cấp 2, pha ở cấp 3 | Phổ biến nhất trong dự án phần mềm |
+
+### Bẫy "gói công việc quản lý" bị quên
+
+Đội thường phân rã kỹ phần xây mà quên nhánh **quản lý dự án, kiểm thử tích hợp, tài liệu, đào tạo, chuyển đổi dữ liệu, go-live**. Cách kiểm: đối chiếu WBS với danh mục nhóm quy trình (khởi động, lập kế hoạch, thực thi, giám sát, đóng) và với DoD của dự án.
+
+### Từ WBS ra ước lượng: đừng cộng dồn tin cậy
+
+Nếu mỗi work package ước lượng đúng 80% thì tổng của 66 gói không đúng 80%. Vì vậy cần dự phòng ở cấp dự án (contingency 12% của FoodNow), không nhồi vào từng gói khiến đội "ăn hết" theo định luật Parkinson.
+
 ## Tình huống FoodNow
 
 Tuần 5 (02–06/02/2026), sau khi chốt Scope Statement v1.0, Hà ngồi với Dũng, Lan và Nam ba buổi chiều để dựng WBS. Ban đầu Dũng đưa ra một danh sách phân rã theo giai đoạn: "Phân tích, Thiết kế, Code, Test, Deploy". Hà đề nghị đổi: "Nếu mình phân theo giai đoạn thì rất khó trả lời anh Bảo câu hỏi 'App Tài xế đang ở đâu?'." Cả nhóm chuyển sang cấu trúc kết hợp: 8 nhóm cấp 2, sản phẩm ở cấp 3.

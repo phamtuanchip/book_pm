@@ -8,12 +8,12 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 02 | Vai trò Project Manager trong dự án phần mềm | ✅ | 3467 |
 | 03 | Vòng đời dự án phần mềm & các mô hình: Waterfall, Agile, Hybrid | ✅ | 2385 |
 | 04 | Bộ khung kiến thức, chứng chỉ & lộ trình nghề PM | ✅ | 2444 |
-| 05 | Business Case & Project Charter | ✅ | 1977 |
-| 06 | Stakeholder & Kế hoạch giao tiếp | ✅ | 2067 |
+| 05 | Business Case & Project Charter | ✅ | 2334 |
+| 06 | Stakeholder & Kế hoạch giao tiếp | ✅ | 2410 |
 | 07 | Xác định phạm vi (Scope) & yêu cầu cấp cao | ✅ | 2249 |
-| 08 | Thiết lập đội & cách làm việc | ✅ | 2073 |
+| 08 | Thiết lập đội & cách làm việc | ✅ | 2374 |
 | 09 | Kickoff meeting | ✅ | 2177 |
-| 10 | WBS (Work Breakdown Structure) | ✅ | 2000 |
+| 10 | WBS (Work Breakdown Structure) | ✅ | 2318 |
 | 11 | Ước lượng | ✅ | 2236 |
 | 12 | Lập lịch: Timeline, Gantt, Critical Path | ✅ | 2582 |
 | 13 | Roadmap & Release Plan | ✅ | 2230 |
@@ -22,29 +22,29 @@ Trạng thái: ⬜ chưa · 🟨 đang viết · ✅ xong (đạt mục 9 README
 | 16 | Kế hoạch nguồn lực & năng lực đội | ✅ | 2121 |
 | 17 | Project Management Plan tổng hợp | ✅ | 2193 |
 | 18 | Quản lý rủi ro | ✅ | 2261 |
-| 19 | RAID Log: Risk, Assumption, Issue, Dependency | ✅ | 2096 |
+| 19 | RAID Log: Risk, Assumption, Issue, Dependency | ✅ | 2372 |
 | 20 | Quản lý thay đổi (Change Control) | ✅ | 2161 |
-| 21 | Quản lý phụ thuộc, vendor & mua sắm | ✅ | 2086 |
+| 21 | Quản lý phụ thuộc, vendor & mua sắm | ✅ | 2407 |
 | 22 | Quản lý cấu hình, tài liệu & tri thức dự án | ✅ | 2145 |
 | 23 | Scrum dưới góc nhìn PM | ✅ | 2272 |
 | 24 | Backlog & ưu tiên ở góc độ PM | ✅ | 2155 |
 | 25 | Kanban & chỉ số dòng chảy (Flow metrics) | ✅ | 2180 |
 | 26 | Hybrid & mở rộng quy mô (nhiều đội) | ✅ | 2241 |
-| 27 | Lãnh đạo & quản lý con người | ✅ | 2052 |
+| 27 | Lãnh đạo & quản lý con người | ✅ | 2384 |
 | 28 | Họp hiệu quả & nghi thức dự án | ✅ | 2255 |
 | 29 | PM và kỹ thuật: CI/CD, môi trường, nợ kỹ thuật, DevOps | ✅ | 2112 |
 | 30 | Delivery Plan tổng thể: từ Roadmap đến từng bản phát hành | ✅ | 2379 |
 | 31 | Chiến lược nhánh: GitFlow, GitHub Flow, Trunk-based | ✅ | 2350 |
 | 32 | Versioning, Tagging & Release Management theo kế hoạch | ✅ | 2220 |
 | 33 | Deployment Pipeline & Daily Deployment | ✅ | 2575 |
-| 34 | Theo dõi tiến độ: burndown, velocity, EVM | ✅ | 2137 |
+| 34 | Theo dõi tiến độ: burndown, velocity, EVM | ✅ | 2456 |
 | 35 | Báo cáo trạng thái & dashboard | ✅ | 2263 |
-| 36 | Quản lý kỳ vọng & khách hàng khó | ✅ | 2067 |
+| 36 | Quản lý kỳ vọng & khách hàng khó | ✅ | 2366 |
 | 37 | Kiểm thử, UAT & chuẩn bị phát hành | ✅ | 2290 |
 | 38 | Xử lý sự cố, leo thang & quản trị khủng hoảng dự án | ✅ | 2166 |
 | 39 | Go-live & Cutover | ✅ | 2253 |
 | 40 | Đóng dự án, bài học kinh nghiệm & bàn giao | ✅ | 2309 |
-| 41 | Sau dự án: đo lợi ích, PMO & danh mục dự án | ✅ | 2023 |
+| 41 | Sau dự án: đo lợi ích, PMO & danh mục dự án | ✅ | 2321 |
 | 42 | Tình huống về phạm vi & khách hàng | ✅ | 3267 |
 | 43 | Tình huống về tiến độ & nguồn lực | ✅ | 2743 |
 | 44 | Tình huống về con người & xung đột | ✅ | 2742 |

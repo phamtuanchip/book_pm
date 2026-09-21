@@ -69,6 +69,28 @@ Khi khách mất niềm tin (vì trễ, lỗi lặp, bị bất ngờ):
 5. **Giữ cam kết nhỏ đều đặn** để xây lại niềm tin; đừng hứa lớn.
 6. **Leo thang có chủ đích**: đưa lãnh đạo hai bên vào khi cần.
 
+## Đi sâu: đàm phán và giữ ranh giới với khách
+
+### Chuẩn bị đàm phán trong mười phút
+
+Trước mỗi cuộc gặp khó, viết ra: (1) **lợi ích thật** của mình và của khách (không phải lập trường); (2) **BATNA** — phương án nếu không thoả thuận; (3) **vùng thoả thuận (ZOPA)**; (4) **các thứ có thể trao đổi** (thời gian, phạm vi, chi phí, chất lượng). Ví dụ khách đòi thêm tính năng giữ nguyên ngày: lợi ích thật của họ có thể là một sự kiện ra mắt, khi đó cắt tính năng khác là thoả thuận khả thi.
+
+### Ba câu trả lời thay cho "không"
+
+| Câu | Ví dụ |
+|---|---|
+| **"Có, và..."** | "Có, làm được; nó cần thêm 6 ngày, ta bỏ mục nào ra hoặc dời ngày?" |
+| **"Chưa, vì..."** | "Chưa ở release này vì chưa qua CCB; mình đưa vào release sau." |
+| **"Thay vào đó..."** | "Không làm báo cáo tuỳ biến, nhưng xuất CSV cho phép anh/chị tự lọc." |
+
+### Ghi lại thoả thuận trong 24 giờ
+
+Sau mỗi cuộc họp có quyết định, gửi email chốt: **đã đồng ý gì, ai làm, ngày nào, ảnh hưởng gì đến lịch/ngân sách**. Nếu khách không phản hồi trong hai ngày làm việc, coi như đồng ý nhưng nhắc lại một lần. Thói quen này tiết kiệm hàng chục giờ tranh cãi về sau.
+
+### Khi khách mất niềm tin
+
+Ba bước: **thừa nhận** vấn đề, không bào chữa; **trình bày kế hoạch khắc phục** có mốc kiểm tra ngắn (một đến hai tuần); **minh bạch** hơn bình thường trong thời gian phục hồi (báo cáo hằng tuần thay vì hai tuần). Niềm tin lấy lại bằng chuỗi cam kết nhỏ đều được giữ.
+
 ## Tình huống FoodNow
 
 Thứ Hai 08/06/2026, sau buổi demo chạy thật cho HĐQT (03/06) rất thành công, anh Bảo gọi Hà: "Hội đồng thích lắm. Tôi muốn thêm **khuyến mãi** vào MVP để chiến dịch tháng 10 có điểm nhấn. **Không tăng ngân sách**, giữ ngày 03/10 nhé." Hà biết trước mình đối diện với một Sponsor đang phấn khởi và không muốn nghe "không".

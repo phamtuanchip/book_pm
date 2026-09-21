@@ -96,6 +96,30 @@ Mỗi phụ thuộc cần bốn thứ (Ch19): **ngày cần, ngày hứa, ngư�
 3. **Phương án thay thế**: vendor dự phòng (SMS B), ra mắt bản rút gọn (COD trước);
 4. **Dời và chấp nhận**: dời mốc, thông báo Sponsor sớm.
 
+## Đi sâu: chọn và quản lý nhà cung cấp
+
+### Bộ tiêu chí chấm điểm nhà cung cấp
+
+| Tiêu chí | Trọng số gợi ý | Bằng chứng cần |
+|---|---|---|
+| **Năng lực kỹ thuật** | 30% | Dự án tương tự, mã nguồn/PoC, phỏng vấn kỹ thuật |
+| **Chi phí tổng sở hữu** | 25% | Báo giá chi tiết gồm phí duy trì và phí giao dịch |
+| **Độ tin cậy/SLA** | 20% | Uptime công bố, tham chiếu khách hiện tại |
+| **Bảo mật/tuân thủ** | 15% | Chứng nhận, chính sách dữ liệu |
+| **Khả năng hỗ trợ** | 10% | Giờ hỗ trợ, thời gian phản hồi, ngôn ngữ |
+
+### Bốn loại hợp đồng và ai gánh rủi ro
+
+Giá cố định — nhà thầu gánh rủi ro chi phí, bên mua gánh rủi ro thay đổi phạm vi; Time & Materials — bên mua gánh rủi ro chi phí; Cost-plus — bên mua gánh hầu hết; Mua theo gói/thuê bao — cả hai chia sẻ, rủi ro nằm ở lệ thuộc nhà cung cấp. Chọn theo mức độ rõ của phạm vi: phạm vi rõ → giá cố định, chưa rõ → T&M có trần.
+
+### Điều khoản không nên bỏ qua
+
+Điều khoản **nghiệm thu** (tiêu chí và thời hạn duyệt), **SLA và phạt**, **sở hữu mã nguồn/dữ liệu**, **thoát khỏi hợp đồng (exit) và chuyển giao**, **bảo mật**, **giới hạn trách nhiệm**. Với cổng thanh toán như PayEasy, thêm điều khoản môi trường thử nghiệm (sandbox) và thời hạn cấp khoá — vì đây chính là điểm chặn đường găng của FoodNow.
+
+### Quản lý sau ký
+
+Họp định kỳ với nhà cung cấp, theo dõi SLA thực tế, ghi sự cố, đánh giá cuối giai đoạn. Đưa nhà cung cấp trọng yếu vào Stakeholder Register và RAID như một bên có quyền lực cao.
+
 ## Tình huống FoodNow
 
 Thứ Hai 20/04/2026 (tuần 16). Yến báo bằng email: hồ sơ PayEasy đang dồn ứ; chứng nhận sẽ trễ **3 tuần**, mới hứa **19/06** thay vì 29/05. Hà biết ngay trên đường găng: đây là chuỗi thanh toán, không có float. Chị không hoảng vì đã có kế hoạch từ tháng 1.

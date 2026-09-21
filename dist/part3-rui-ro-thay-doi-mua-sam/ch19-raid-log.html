@@ -223,6 +223,48 @@ flowchart LR
     I --&gt;|&quot;đã xử lý, còn nguy cơ tái diễn&quot;| R
 </pre></div>
 <p>Ba quy tắc: (1) <strong>không xoá dòng</strong> khi chuyển — đổi trạng thái và liên kết để giữ lịch sử; (2) mỗi chuyển đổi phải kèm hành động và người; (3) nếu một chủ đề xuất hiện 3 lần ở các loại khác nhau, gộp thành một nhóm theo dõi.</p>
+<h2>Đi sâu: vận hành RAID log hằng tuần</h2>
+<h3>Nghi thức 15 phút mỗi tuần</h3>
+<ol>
+<li>Đọc lại 5 mục điểm cao nhất; 2. đóng những mục đã xong hoặc hết hiệu lực; 3. thêm mục mới phát sinh từ tuần qua; 4. cập nhật điểm và chủ sở hữu; 5. chọn tối đa ba mục cần leo lên sponsor. Nếu buổi này vượt 20 phút, log đã quá dài hoặc phần lớn mục không có hành động.</li>
+</ol>
+<h3>Chuyển hoá giữa các loại</h3>
+<table>
+<thead>
+<tr>
+<th>Từ</th>
+<th>Sang</th>
+<th>Khi nào</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rủi ro</strong></td>
+<td><strong>Vấn đề</strong></td>
+<td>Sự kiện đã xảy ra</td>
+</tr>
+<tr>
+<td><strong>Giả định</strong></td>
+<td><strong>Rủi ro</strong></td>
+<td>Bằng chứng cho thấy giả định có thể sai</td>
+</tr>
+<tr>
+<td><strong>Vấn đề</strong></td>
+<td><strong>Thay đổi (CR)</strong></td>
+<td>Cách xử lý cần đổi phạm vi/lịch/ngân sách</td>
+</tr>
+<tr>
+<td><strong>Phụ thuộc</strong></td>
+<td><strong>Vấn đề</strong></td>
+<td>Bên kia trễ bàn giao</td>
+</tr>
+</tbody>
+</table>
+<p>Ghi lại chuyển hoá đó (cột lịch sử) để lessons learned có dữ liệu thật.</p>
+<h3>Chất lượng một mục RAID</h3>
+<p>Mục tốt trả lời năm câu: <strong>cái gì</strong>, <strong>vì sao quan trọng</strong>, <strong>ai sở hữu</strong>, <strong>hành động tiếp theo</strong>, <strong>hạn</strong>. Mục xấu: &quot;Khách có thể chậm phản hồi&quot; — không có chủ sở hữu và hành động. Viết lại: &quot;Nếu khách không duyệt UI trước 15/03 thì sprint 4 trễ 1 tuần; PM gửi bản duyệt cuối 10/03 và nhắc 13/03.&quot;</p>
+<h3>Đừng để RAID thành nghĩa địa</h3>
+<p>Log có 200 dòng nhưng chỉ 10 dòng đang sống thì mất giá trị. Mỗi quý lưu trữ các mục đã đóng sang tab riêng và giữ tab chính dưới khoảng 30 mục.</p>
 <h2>Tình huống FoodNow</h2>
 <p>Tuần 11, thứ Hai 16/03/2026. Trong buổi rà RAID 15 phút, đến mục Assumption, Hà đọc dòng A-02: <em>&quot;Khách gửi tài liệu API dữ liệu nhà hàng trước 15/03.&quot;</em> Chị hỏi Châu, người được giao xác nhận. Châu ngập ngừng: &quot;Bên nhà hàng chưa đưa, em đợi thêm.&quot; Hôm qua là 15/03.</p>
 <p>Hà đổi ngay A-02 thành <strong>Sai</strong>, tạo <strong>I-002</strong> (Issue: API dữ liệu nhà hàng chưa có, P3), cập nhật <strong>D-03</strong> (Dependency: ngày cần 15/03, ngày hứa lùi) và liên kết ba dòng. Việc cần API là tích hợp dữ liệu nhà hàng và migrate — nhánh phụ có float 5 ngày; chị tính nhanh: trễ dưới 2 tuần chưa chạm đường găng, nhưng trễ hơn sẽ làm Sơn (vốn gần đường găng) bị chồng việc. Chị gửi anh Bảo một tin ngắn: vấn đề – tác động – phương án – đề nghị: &quot;Anh nhờ anh Huy hoặc bộ phận vận hành gửi ngay cho Châu; nếu đến 27/03 chưa có, em sẽ leo thang lên cấp 2.&quot; Anh Bảo gọi thẳng cho đối tác; tài liệu đến ngày 03/04 (trễ 19 ngày).</p>

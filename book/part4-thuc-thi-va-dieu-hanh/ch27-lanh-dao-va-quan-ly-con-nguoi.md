@@ -83,6 +83,28 @@ Dấu hiệu: làm muộn kéo dài, cáu gắt, lỗi tăng, nghỉ ốm nhiề
 
 Nói thật là **tài sản cốt lõi**: nó quyết định bạn có nhận tin xấu sớm không. Xây bằng hành động: **cảm ơn người báo tin xấu**, không đổ lỗi, cho phép sai khi học; cho thấy tin xấu dẫn tới **hỗ trợ** chứ không phạt; tự nhận lỗi của mình công khai. Một lần bạn "bắn người đưa tin", cả đội sẽ ngừng nói.
 
+## Đi sâu: các cuộc trò chuyện khó của PM
+
+### Khung bốn bước cho phản hồi khó
+
+1. **Sự kiện** — nêu điều quan sát được, không diễn giải ("Tuần này ba PR bị trả lại vì thiếu test"); 2. **Tác động** — ảnh hưởng đến đội/khách; 3. **Câu hỏi** — mời người kia giải thích ("Bạn thấy chuyện gì đang xảy ra?"); 4. **Thoả thuận** — hành động cụ thể và ngày xem lại. Thứ tự này tránh phản hồi biến thành đánh giá con người.
+
+### Ba tình huống ngắn và câu mở đầu gợi ý
+
+| Tình huống | Câu mở đầu | Điều cần tránh |
+|---|---|---|
+| Thành viên liên tục trễ hạn | "Mình muốn hiểu điều gì đang cản bạn trước khi bàn giải pháp." | Chê ngay trước cả đội |
+| Hai người xung đột kéo dài | "Mình nghe mỗi người riêng trước, rồi mình cùng ngồi lại." | Chọn phe khi chưa nghe hết |
+| Người giỏi muốn nghỉ | "Điều gì sẽ khiến bạn ở lại thêm? Mình có thể làm gì trong khả năng?" | Hứa điều không thực hiện được |
+
+### Khi thành viên chủ chốt nghỉ việc
+
+Việc Backend senior nghỉ ở tuần 14 là tình huống thật của FoodNow: điều đầu tiên là **bảo toàn tri thức** (tài liệu hoá, bàn giao ít nhất hai tuần, ghép cặp với người kế nhiệm), tiếp theo là **đánh giá lại lịch** với năng suất giảm, rồi mới nghĩ đến tuyển thay thế. Đừng giấu đội; nói sớm thường giảm đồn đoán.
+
+### Quản lý lên: làm cho sếp dễ quyết
+
+Quản lý lên nghĩa là làm cho cấp trên ra quyết định dễ hơn: mang **hai đến ba phương án có khuyến nghị**, hạn cần quyết và hậu quả nếu trễ. "Em cần anh quyết X trước thứ Sáu, nếu không mốc Y sẽ lùi ba ngày" hiệu quả hơn "em thấy có vấn đề".
+
 ## Tình huống FoodNow
 
 Tuần 24 (15–19/06/2026). Dũng muốn dành hai tuần refactor module đơn hàng vì nợ kỹ thuật đang làm chậm mỗi story; Nam, sau đợt bug từ Sprint 8, muốn ưu tiên sửa bug và bổ sung test. Ở họp thứ Ba, Dũng nói: "Test viên không hiểu kiến trúc" — Nam im lặng và rời sớm. Từ đó hai người không trao đổi trực tiếp.
